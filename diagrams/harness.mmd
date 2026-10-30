@@ -1,0 +1,12 @@
+flowchart LR
+  user([使用者指令]) --> harness
+  subgraph harness[Harness]
+    direction TB
+    context-compaction[上下文管理<br/>Context Compaction]
+    permission-mode[權限<br/>Permission Mode]
+    hook[Hook]
+  end
+  harness -- 組裝 prompt --> llm[LLM]
+  llm -- 想呼叫工具 --> tool-use[Tool Use]
+  tool-use -- 執行結果 --> harness
+  harness -. 反覆直到完成 .-> agent-loop((Agent Loop))

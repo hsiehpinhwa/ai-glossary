@@ -1,0 +1,41 @@
+---
+import '../styles/lumen.css';
+interface Props { title: string; description: string; current?: 'terms' | 'graph' | 'about' }
+const { title, description, current } = Astro.props;
+---
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Radio+Canada:wdth,wght@75..100,400..700&family=Noto+Sans+TC:wght@400;600;700&display=swap" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2319636B'/%3E%3Crect x='4' y='4' width='8' height='8' fill='%23F2F0E8'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="head">
+    <div class="wrap">
+      <a class="brand cond" href="/">AI 名詞百科</a>
+      <span class="issue"><b>第 1 版</b> · 2026 秋 · 100 個名詞</span>
+      <nav aria-label="主要">
+        <a href="/" aria-current={current === 'terms' ? 'page' : undefined}>名詞</a>
+        <a href="/graph" aria-current={current === 'graph' ? 'page' : undefined}>關係圖</a>
+        <a href="/about" aria-current={current === 'about' ? 'page' : undefined}>關於</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><slot /></main>
+  <footer class="rv foot">
+    <div class="wrap grid">
+      <p class="c1-3 cond" style="font-size:1.3rem">AI 名詞百科</p>
+      <div class="c4-12">
+        <p>為在社群與 YouTube 教學裡學 AI 的人整理的名詞表。每個條目附一手來源；標 ⚠️ 的內容尚待查證。</p>
+        <p><a href="https://github.com/hsiehpinhwa/ai-glossary">GitHub 原始碼</a> · 內容最後查核 2026-10-30</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

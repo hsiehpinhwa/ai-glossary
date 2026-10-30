@@ -1,0 +1,10 @@
+flowchart LR
+  main[(main)] -- 開分支 --> branch[Branch]
+  branch -- commit 修改 --> pr{{Pull Request}}
+  pr --> ci-cd[CI 測試<br/>CI/CD]
+  pr --> code-review[Code Review]
+  ci-cd --> ok{通過？}
+  code-review --> ok
+  ok -- 是 --> merge[Merge]
+  merge --> main
+  ok -- 否 --> branch

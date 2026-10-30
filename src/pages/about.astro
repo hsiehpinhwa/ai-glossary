@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="關於｜AI 名詞百科" description="這份名詞表怎麼選詞、怎麼查核。" current="about">
+  <section class="wrap grid title">
+    <div class="c4-12">
+      <h1 class="cond">怎麼選、怎麼查</h1>
+      <p class="lede">這份名詞表寫給在社群和 YouTube 上學 AI、但不一定是工程師出身的人。重點放在動手做東西時一定會碰到的詞：Agent、Prompt，以及 AI coding 帶進來的 Git 工作流。</p>
+    </div>
+  </section>
+  <section class="wrap grid sec">
+    <div class="c1-3"><h2 class="cond">選詞</h2></div>
+    <div class="c4-12 entry">
+      <ul>
+        <li>種子來源：Anthropic、OpenAI、Google 的官方文件術語，GitHub Docs 的 Git 詞彙，以及主流 AI 教學影片的標題與章節。</li>
+        <li>收錄門檻：至少在兩類來源出現、初學者會在教學中卡住、是概念而不是產品名。</li>
+        <li>不收：純學術詞、產品名、一年內就會過時的版本號。</li>
+        <li>第 1 版的名單是判斷加抽樣驗證，不是詞頻統計。</li>
+      </ul>
+    </div>
+  </section>
+  <section class="wrap grid sec">
+    <div class="c1-3"><h2 class="cond">查核</h2></div>
+    <div class="c4-12 entry">
+      <ul>
+        <li>每個條目至少附一個一手來源。</li>
+        <li>介紹由一個獨立的查核流程逐句比對來源；查不到依據的句子會標 ⚠️ 需查證。</li>
+        <li>結構、字數、關係圖一致性每次更新都會自動檢查。</li>
+        <li>每個條目都記錄最後查核日期，名詞會隨 AI 發展持續增加。</li>
+      </ul>
+    </div>
+  </section>
+</Base>
