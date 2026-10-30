@@ -1,0 +1,7 @@
+flowchart LR
+  commit[本機 Commit] -- git push --> repository[(遠端 Repository<br/>GitHub)]
+  repository -- git pull --> local[你的本機分支]
+  repository -. 推到正式分支 .-> deploy[自動 Deploy]
+  repository -- 先 pull 再合併 --> merge[Merge]
+  merge -- 改到同一處 --> merge-conflict[Merge Conflict]
+  github[GitHub] --- repository

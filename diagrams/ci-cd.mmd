@@ -1,0 +1,9 @@
+flowchart LR
+  push[Push] --> trigger{觸發 CI}
+  pull-request[Pull Request] --> trigger
+  trigger --> build[自動建置]
+  build --> unit-test[Unit Test 與檢查]
+  unit-test -- 失敗 --> fix[紅叉叉<br/>退回修改]
+  unit-test -- 通過 --> ok[綠勾勾<br/>可以合併]
+  ok --> deploy[CD 自動 Deploy]
+  github[GitHub Actions] -. 執行 .-> trigger

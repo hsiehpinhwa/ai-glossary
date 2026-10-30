@@ -151,7 +151,9 @@ h1 { font-size: clamp(2.6rem, 6.2vw, 5rem); line-height: .94; letter-spacing: -.
 .graph { width: 100%; height: min(80vh, 900px); display: block; border-top: 1px solid var(--fg); border-bottom: 1px solid var(--fg); touch-action: none; }
 .graph line { stroke: var(--hair); stroke-width: 1; }
 .graph circle { fill: var(--fg); }
-.graph a text { fill: var(--fg); font-size: 11px; font-family: var(--sans); }
+.graph a { text-decoration: none; }
+.graph a text { fill: var(--fg); font-size: 13px; font-family: var(--sans); }
+.graph a:hover text, .graph a:focus text { text-decoration: underline; }
 .graph a:hover circle, .graph a:focus circle { fill: var(--fg); stroke: var(--fg); stroke-width: 4; }
 .graph a:focus { outline: none; }
 

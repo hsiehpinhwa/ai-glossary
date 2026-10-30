@@ -1,0 +1,9 @@
+flowchart LR
+  bench[(公開題庫<br/>例：SWE-bench)] --> m1[模型 A]
+  bench --> m2[模型 B]
+  m1 --> unit-test[跑測試判分<br/>Unit Test]
+  m2 --> unit-test
+  unit-test --> board[排行榜分數]
+  board -- 接近滿分 --> sat[飽和：失去鑑別力]
+  board -. 不等於 .-> eval[你自己的 Eval]
+  golden-dataset[(Golden Dataset)] --> eval

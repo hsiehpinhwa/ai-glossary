@@ -1,0 +1,8 @@
+flowchart LR
+  cases[列出要測的案例] --> red[Red<br/>寫一個會失敗的測試]
+  red --> green[Green<br/>寫剛好能通過的程式]
+  green --> refactor[Refactor<br/>整理程式碼]
+  refactor -- 下一個案例 --> red
+  coding-agent[Coding Agent<br/>反覆修到通過] -.-> green
+  red -- 累積成 --> unit-test[(Unit Test 測試集)]
+  unit-test --> regression[防止 Regression]

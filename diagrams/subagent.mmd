@@ -1,0 +1,9 @@
+flowchart TB
+  main([主 Agent<br/>和你對話]) -- 派出任務 --> sa1[Subagent A<br/>搜尋程式碼]
+  main -- 派出任務 --> sa2[Subagent B<br/>查文件]
+  system-prompt[專屬 System Prompt] -.-> sa1
+  tool-use[限定的工具權限<br/>Tool Use] -.-> sa2
+  sa1 --> context-window[(各自獨立的<br/>Context Window)]
+  sa2 --> context-window
+  context-window -- 只回傳摘要 --> main
+  multi-agent-orchestration[[Multi-agent Orchestration]] -. 更大規模的設計 .-> main

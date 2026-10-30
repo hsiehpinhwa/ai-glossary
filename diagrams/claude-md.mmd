@@ -1,0 +1,8 @@
+flowchart LR
+  repository[(Repository)] --> project[專案層級<br/>CLAUDE.md 或 AGENTS.md]
+  personal[個人層級<br/>套用到所有專案] --> load[每次開工時載入]
+  project --> load
+  load --> context-window[Context Window]
+  context-window --> coding-agent[Coding Agent]
+  skill[Skill<br/>需要時才載入] -.-> context-window
+  hook[Hook<br/>一定會執行的規則] -.-> coding-agent

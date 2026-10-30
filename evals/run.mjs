@@ -21,9 +21,11 @@ const LIMITS = { summaryMax: 40, introMin: 180, introMax: 220, relatedMin: 3 };
 const RELATIONS = ['is-a', 'part-of', 'uses', 'runs', 'enables', 'prerequisite', 'contrasts', 'related'];
 const SYMMETRIC = ['contrasts'];
 // Mainland vocabulary that reads as non-Taiwanese in Traditional script.
-const MAINLAND = { 信息: '資訊', 軟件: '軟體', 程序: '程式', 默認: '預設', 用戶: '使用者', 文檔: '文件', 網絡: '網路', 服務器: '伺服器', 代碼: '程式碼', 接口: '介面', 視頻: '影片', 項目: '專案', 調用: '呼叫', 運行: '執行', 質量: '品質', 數據庫: '資料庫', 內存: '記憶體', 硬件: '硬體', 屏幕: '螢幕', 鼠標: '滑鼠', 搜索: '搜尋', 創建: '建立', 支持: '支援' };
+const MAINLAND = { 信息: '資訊', 軟件: '軟體', 程序: '程式', 默認: '預設', 用戶: '使用者', 文檔: '文件', 網絡: '網路', 服務器: '伺服器', 接口: '介面', 視頻: '影片', 項目: '專案', 調用: '呼叫', 運行: '執行', 質量: '品質', 數據庫: '資料庫', 內存: '記憶體', 硬件: '硬體', 屏幕: '螢幕', 鼠標: '滑鼠', 搜索: '搜尋', 創建: '建立', 支持: '支援' };
 const SLOP = ['總而言之', '值得注意的是', '在當今', '扮演著重要的角色', '扮演重要角色', '賦能', '一站式', '不可或缺', '革命性', '顛覆', '眾所周知'];
 const toTw = OpenCC.Converter({ from: 'cn', to: 'tw' });
+const TW_OK = new Set(['台', '干', '准', '里']);
+const SIMP_PHRASES = [/(?<![錯誤狀態])代碼/g, /[這那哪]里/g, /[標水]准|准確|准備/g, /干淨|干燥/g];
 
 const issues = []; // { slug, level: 'error'|'warn', check, msg }
 const add = (slug, level, check, msg) => issues.push({ slug, level, check, msg });
@@ -40,7 +42,7 @@ export function diagramRefs(code, slugs) {
   let s = code.replace(/%%.*$/gm, '')
     .replace(/"[^"]*"/g, ' ')
     .replace(/\|[^|]*\|/g, ' ')
-    .replace(/--[^->\n]*?-->/g, '-->').replace(/-\.[^\n]*?\.->/g, '-->').replace(/==[^=>\n]*?==>/g, '-->');
+    .replace(/--[^->\n]*?-->/g, '-->').replace(/-\.[^\n]*?\.->?/g, '-->').replace(/==[^=>\n]*?==>/g, '-->');
   for (let i = 0; i < 4; i++) s = s.replace(/\[[^\[\]]*\]|\([^()]*\)|\{[^{}]*\}/g, ' ');
   s = s.replace(/^\s*(flowchart|graph|sequenceDiagram|stateDiagram(-v2)?|classDiagram|direction)\b.*$/gm, ' ');
   const ids = new Set(s.match(/[a-z0-9]+(?:-[a-z0-9]+)*/g) || []);
@@ -105,10 +107,13 @@ for (const [slug, { data: d, body, raw }] of terms) {
 
   // Language: Traditional script, Taiwanese vocabulary, no filler phrases
   const text = [d.summary, d.zh, body, d.diagram_caption, d.disambiguation, ...(d.when_to_use || [])].filter(Boolean).join('\n');
-  const conv = toTw(text);
+  // Character by character, not phrase by phrase: OpenCC's phrase rules rewrite valid Traditional text
+  // (只影響 -> 隻影響). Characters that are also standard in Taiwan are allowed; their simplified-only
+  // uses are caught by SIMP_PHRASES instead.
   const simp = new Set();
-  for (let i = 0; i < text.length; i++) if (text[i] !== conv[i]) simp.add(text[i]);
-  if (simp.size) add(slug, 'error', 'zh-tw', `含簡體字：${[...simp].join('')}`);
+  for (const ch of text) if (/[\u4e00-\u9fff]/.test(ch) && !TW_OK.has(ch) && toTw(ch) !== ch) simp.add(ch);
+  for (const re of SIMP_PHRASES) for (const m of text.match(re) || []) simp.add(m);
+  if (simp.size) add(slug, 'error', 'zh-tw', `含簡體字：${[...simp].join('、')}`);
   for (const [cn, tw] of Object.entries(MAINLAND)) if (text.includes(cn)) add(slug, 'warn', 'zh-tw', `用語「${cn}」，台灣慣用「${tw}」`);
   for (const p of SLOP) if (text.includes(p)) add(slug, 'warn', 'style', `套話「${p}」`);
 }

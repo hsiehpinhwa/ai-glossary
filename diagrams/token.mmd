@@ -1,0 +1,8 @@
+flowchart LR
+  text([輸入文字]) --> tok[Tokenizer 切分]
+  tok --> token[Token 序列]
+  token --> llm[LLM]
+  llm -- 逐個產生 --> outtok[輸出 Token]
+  token --> context-window[(Context Window<br/>用 token 算容量)]
+  outtok --> context-window
+  outtok --> bill[依 token 數計費]

@@ -1,0 +1,8 @@
+flowchart LR
+  golden-dataset[(Golden Dataset<br/>題目)] --> sys[受測系統的回答]
+  sys --> llm[評審 LLM]
+  rubric[評分標準] --> llm
+  llm --> reason[先寫理由]
+  reason --> score[分數或通過與否]
+  human[人工抽查校準] -.-> llm
+  score --> eval[彙整成 Eval 結果]

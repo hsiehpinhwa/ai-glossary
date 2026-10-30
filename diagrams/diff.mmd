@@ -1,0 +1,8 @@
+flowchart LR
+  old[舊版本] --> cmp{比對}
+  new[新版本] --> cmp
+  cmp --> out[+ 新增的行<br/>− 刪除的行]
+  out --> commit[Commit 前自我檢查]
+  out --> pull-request[Pull Request 頁面]
+  out --> ide[IDE 裡的差異檢視]
+  pull-request --> code-review[Code Review]

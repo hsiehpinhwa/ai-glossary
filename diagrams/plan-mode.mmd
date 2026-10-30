@@ -1,0 +1,9 @@
+flowchart LR
+  ask([提出需求]) --> explore[唯讀調查<br/>讀檔、搜尋]
+  subagent[Subagent<br/>協助蒐集資料] -.-> explore
+  permission-mode[Permission Mode<br/>切到規劃模式] -.-> explore
+  explore --> draft[提出計畫]
+  draft --> human-in-the-loop{你審查計畫<br/>Human-in-the-loop}
+  human-in-the-loop -- 修改意見 --> draft
+  human-in-the-loop -- 同意 --> exec[開始修改檔案]
+  exec --> result[完成並回報]

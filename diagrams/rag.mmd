@@ -1,0 +1,9 @@
+flowchart LR
+  docs[(公司文件)] --> chunking[Chunking]
+  chunking --> vector-database[(Vector Database)]
+  user([使用者問題]) --> retrieval[Retrieval<br/>找相關段落]
+  vector-database --> retrieval
+  retrieval --> reranking[Reranking<br/>重新排序]
+  reranking -- 前幾段 --> ctx[放進 Context]
+  ctx --> gen[LLM 依資料回答]
+  gen --> grounding[附出處的回答<br/>Grounding]

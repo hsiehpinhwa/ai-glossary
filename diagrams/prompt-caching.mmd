@@ -1,0 +1,9 @@
+flowchart LR
+  req1([第一次請求]) --> prefix[固定開頭<br/>工具、長文件]
+  system-prompt[System Prompt] --> prefix
+  prefix -- 寫入快取 --> cache[(快取)]
+  agent-loop[Agent Loop<br/>每輪重送整段對話] --> req2([下一次請求])
+  req2 --> hit{開頭完全相同？}
+  cache --> hit
+  hit -- 是 --> fast[直接讀快取<br/>便宜又快]
+  hit -- 否 --> full[重新處理整段]

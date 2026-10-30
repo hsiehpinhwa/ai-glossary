@@ -1,0 +1,8 @@
+flowchart LR
+  input([一封客戶 email]) --> api[API 請求]
+  schema[[JSON Schema<br/>姓名、email、需求]] --> api
+  api --> llm[模型生成<br/>受格式限制]
+  llm --> json[符合格式的 JSON]
+  json --> code[你的程式]
+  code --> database[(Database)]
+  tool-use[Tool Use<br/>工具參數也要對格式] -.-> schema

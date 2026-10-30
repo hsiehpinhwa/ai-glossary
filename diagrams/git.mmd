@@ -1,0 +1,8 @@
+flowchart LR
+  work[你的專案資料夾] -- 存檔點 --> commit[Commit]
+  commit --> repository[(Repository<br/>完整歷史)]
+  repository -- 開新路線 --> branch[Branch]
+  branch -- 合回主線 --> merge[Merge]
+  merge --> repository
+  repository -- 推上雲端備份 --> github[GitHub]
+  coding-agent[Coding Agent] -. 替你下 Git 指令 .-> commit

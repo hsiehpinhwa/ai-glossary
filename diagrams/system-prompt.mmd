@@ -1,0 +1,9 @@
+flowchart LR
+  dev([開發者]) -- 設定角色與規則 --> system-prompt[System Prompt]
+  user([使用者]) --> msgs[使用者訊息]
+  system-prompt --> prompt[完整的 Prompt]
+  msgs --> prompt
+  prompt --> llm[LLM]
+  llm --> out[依規則回應]
+  prompt-caching[Prompt Caching<br/>重用不變的開頭] -.-> system-prompt
+  prompt-injection[Prompt Injection<br/>試圖蓋過規則] -.-> msgs

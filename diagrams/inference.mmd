@@ -1,0 +1,8 @@
+flowchart LR
+  pre-training[訓練階段<br/>Pre-training] -- 產出 --> model[(訓練好的模型)]
+  user([新的輸入]) --> inference{{Inference}}
+  model --> inference
+  temperature[Temperature<br/>挑選方式] --> inference
+  inference -- 逐個產生 --> token[輸出 Token]
+  token --> out[回答]
+  reasoning-model[Reasoning Model<br/>多花思考 token] -. 更多運算 .-> inference

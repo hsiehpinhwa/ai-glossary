@@ -1,0 +1,11 @@
+flowchart LR
+  user([使用者請求]) --> trace
+  subgraph trace[Trace：一次請求的完整路徑]
+    s1[Span：組裝 prompt]
+    llm[Span：呼叫 LLM]
+    tool-use[Span：呼叫工具<br/>Tool Use]
+  end
+  trace --> metrics[指標<br/>延遲、錯誤率、token]
+  trace --> logs[日誌]
+  metrics --> dash[儀表板與警示]
+  trace -- 挑出失敗案例 --> golden-dataset[(Golden Dataset)]

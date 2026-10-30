@@ -1,0 +1,8 @@
+flowchart LR
+  q([使用者問題]) --> retrieval[Retrieval<br/>搜尋或查資料]
+  src[(文件／網頁／資料庫)] --> retrieval
+  retrieval --> rag[RAG<br/>放進 Context]
+  rag --> llm[LLM]
+  llm --> grounding[有出處的回答<br/>Grounding]
+  llm -. 沒有資料時 .-> hallucination[Hallucination 風險]
+  grounding --> check[使用者點開來源核對]

@@ -1,0 +1,9 @@
+flowchart LR
+  author[作者或 Coding Agent] --> pull-request{{Pull Request}}
+  pull-request --> diff[逐行看 Diff]
+  diff --> verdict{審查結論}
+  verdict -- 留言 --> author
+  verdict -- 要求修改 --> author
+  verdict -- 核准 --> gate{CI 也通過？}
+  ci-cd[CI/CD] --> gate
+  gate -- 是 --> merge[Merge]

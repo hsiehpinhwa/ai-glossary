@@ -1,0 +1,10 @@
+flowchart LR
+  input([輸入]) --> route{分類<br/>Routing}
+  route -- 類型 A --> s1[LLM 步驟 1<br/>擷取重點]
+  route -- 類型 B --> s2[另一條路徑]
+  s1 --> tool-use[Tool Use<br/>查資料]
+  tool-use --> s3[LLM 步驟 2<br/>整理]
+  s3 --> check{格式檢查}
+  check -- 不通過 --> s3
+  check -- 通過 --> human-in-the-loop[Human-in-the-loop<br/>人工確認]
+  human-in-the-loop --> out[輸出]

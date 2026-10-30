@@ -1,0 +1,10 @@
+flowchart LR
+  goal([定義成功標準]) --> draft[寫第一版 Prompt]
+  draft --> tech{加上技巧}
+  tech --> few-shot[給範例<br/>Few-shot]
+  tech --> chain-of-thought[要求逐步推理<br/>Chain-of-Thought]
+  tech --> system-prompt[設定角色<br/>System Prompt]
+  few-shot --> eval[跑 Eval 測試]
+  chain-of-thought --> eval
+  system-prompt --> eval
+  eval -- 分數不夠就改 --> draft

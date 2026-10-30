@@ -1,0 +1,8 @@
+flowchart LR
+  trigger([CI、排程或你的腳本]) --> cli[CLI<br/>一行指令帶入任務]
+  cli --> exec1[Agent 自行執行<br/>不會停下來問你]
+  permission-mode[Permission Mode<br/>事先決定允許哪些工具] --> exec1
+  exec1 --> out{輸出格式}
+  out --> text[純文字]
+  out --> structured-output[JSON<br/>Structured Output]
+  structured-output --> ci-cd[交給下一步<br/>CI/CD]

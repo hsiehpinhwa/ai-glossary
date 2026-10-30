@@ -1,0 +1,9 @@
+flowchart TB
+  user([使用者的問題]) --> lead[主導 Agent<br/>規劃與分工]
+  lead --> subagent[Subagent 1<br/>方向 A]
+  lead --> w2[Subagent 2<br/>方向 B]
+  lead --> w3[Subagent 3<br/>方向 C]
+  subagent --> combine[主導 Agent 整合]
+  w2 --> combine
+  w3 --> combine
+  combine --> deep-research[研究報告<br/>Deep Research]

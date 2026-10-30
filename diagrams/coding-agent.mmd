@@ -1,0 +1,9 @@
+flowchart LR
+  user([你的任務描述]) --> coding-agent[Coding Agent]
+  claude-md[CLAUDE.md<br/>專案規則] --> coding-agent
+  coding-agent -- 讀取與修改 --> repository[(Repository)]
+  coding-agent -- 執行指令、跑測試 --> tool-use[Tool Use]
+  tool-use -- 執行結果 --> coding-agent
+  permission-mode{Permission Mode<br/>要不要先問你} -.-> tool-use
+  coding-agent -- 完成 --> pull-request[Pull Request]
+  pull-request --> user

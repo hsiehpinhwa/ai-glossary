@@ -1,0 +1,8 @@
+flowchart LR
+  data[(大量文字資料)] --> pre-training[Pre-training<br/>練習預測下一個 token]
+  pre-training --> fine-tuning[Fine-tuning / RLHF<br/>調成助理]
+  fine-tuning --> llm[LLM]
+  user([使用者的 prompt]) --> token[切成 Token]
+  token --> llm
+  llm -- 逐個預測 --> out[回答文字]
+  transformer[Transformer 架構] -. 底層結構 .-> llm

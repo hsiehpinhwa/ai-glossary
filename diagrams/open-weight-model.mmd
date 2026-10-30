@@ -1,0 +1,6 @@
+flowchart LR
+  lab[模型開發者] -- 公開權重 --> parameter[(Parameter 檔案)]
+  parameter -- 下載 --> local[自己的電腦／伺服器]
+  local --> inference[本機 Inference<br/>資料不外流]
+  local --> lora[LoRA 微調<br/>用自己的資料]
+  closed[封閉模型<br/>只能透過 API] -. 對照 .-> inference

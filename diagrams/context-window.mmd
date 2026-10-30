@@ -1,0 +1,9 @@
+flowchart TB
+  sys[System Prompt] --> context-window
+  hist[對話歷史] --> context-window
+  docs[文件與工具結果] --> context-window
+  subgraph context-window[Context Window（以 token 計）]
+    out1[模型輸出與思考]
+  end
+  context-window -- 快滿了 --> context-compaction[Context Compaction<br/>摘要壓縮]
+  rag[RAG<br/>只放相關段落] --> context-window

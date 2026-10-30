@@ -1,0 +1,9 @@
+flowchart LR
+  q([研究問題]) --> plan[規劃要查的方向]
+  plan --> tool-use[Tool Use<br/>搜尋網頁]
+  multi-agent-orchestration[Multi-agent Orchestration<br/>多個 agent 分頭查] -.-> tool-use
+  tool-use --> read[閱讀與篩選來源]
+  read -- 資訊不足 --> plan
+  read --> report[附引用的報告]
+  report --> check{你查核關鍵事實}
+  hallucination[Hallucination<br/>仍可能出錯] -.-> check

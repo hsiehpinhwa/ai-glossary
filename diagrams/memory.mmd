@@ -1,0 +1,8 @@
+flowchart LR
+  s1([今天的工作]) -- 寫下重點 --> store[(外部記憶<br/>檔案或資料庫)]
+  store -- 開工前先讀 --> s2([明天的新對話])
+  s2 --> context-window[Context Window]
+  claude-md[CLAUDE.md<br/>專案層級的記憶] --> context-window
+  rag[RAG<br/>從資料庫檢索] -.-> context-window
+  context-compaction[Context Compaction<br/>對話內的壓縮] -.-> context-window
+  context-window --> agent[Agent 接續工作]

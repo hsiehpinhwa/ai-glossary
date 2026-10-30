@@ -1,0 +1,8 @@
+flowchart LR
+  cli[CLI 啟動本機伺服器] --> srv[localhost:3000]
+  environment-variable[.env 環境變數] --> srv
+  srv --> frontend[Frontend 預覽]
+  srv --> backend[Backend 測試]
+  frontend --> you([只有你的瀏覽器打得開])
+  friend([朋友]) -. 打不開 .-> srv
+  srv -- 確認沒問題 --> deploy[Deploy<br/>取得公開網址]

@@ -1,0 +1,8 @@
+flowchart LR
+  upstream[(原始專案<br/>upstream)] -- Fork --> mine[(你名下的副本)]
+  mine -- Clone --> clone[本機]
+  clone -- 開分支修改 --> branch[Branch]
+  branch -- push --> mine
+  mine -- 提出修改 --> pull-request{{Pull Request}}
+  pull-request -- 作者接受 --> upstream
+  github[GitHub] -. 提供 Fork 按鈕 .-> mine

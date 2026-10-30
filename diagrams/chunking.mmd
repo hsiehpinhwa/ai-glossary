@@ -1,0 +1,10 @@
+flowchart LR
+  doc[(長文件)] --> split{怎麼切？}
+  split --> fixed[固定長度]
+  split --> struct[依標題／段落]
+  split --> sem[依語意轉折]
+  fixed --> chunking[Chunk 片段]
+  struct --> chunking
+  sem --> chunking
+  chunking --> embedding[Embedding]
+  embedding --> vector-database[(Vector Database)]

@@ -1,0 +1,8 @@
+flowchart LR
+  user([使用者]) --> fe[前端畫面]
+  fe -- 透過 --> api[API]
+  api --> backend[Backend]
+  environment-variable[環境變數<br/>連線資訊] --> backend
+  backend --> sql[(關聯式資料庫<br/>SQL)]
+  backend --> nosql[(NoSQL)]
+  backend -. 另一類資料庫 .-> vector-database[(Vector Database)]

@@ -1,0 +1,9 @@
+flowchart LR
+  user([使用者的指令]) --> llm[LLM 判斷]
+  llm -- 要呼叫工具 --> tool-use[Tool Use]
+  tool-use -- 結果回饋 --> llm
+  llm -- 不再呼叫工具 --> done[回傳最終答案]
+  harness[Harness<br/>執行工具、管上下文] -.-> tool-use
+  hook[Hook<br/>攔截或阻擋] -.-> tool-use
+  context-compaction[Context Compaction<br/>上下文快滿時] -.-> llm
+  limit[回合數或預算上限] -.-> done

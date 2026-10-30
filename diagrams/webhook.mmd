@@ -1,0 +1,8 @@
+flowchart LR
+  svc[外部服務<br/>金流或 GitHub] -- 事件發生時主動送 HTTP 請求 --> backend[你的 Backend 網址]
+  setup([先登記網址與事件]) --> svc
+  backend --> act[開通會員<br/>或觸發 CI/CD]
+  act --> ci-cd[CI/CD]
+  poll[輪詢：一直呼叫 API] -. 對比 .-> api[API]
+  api -. 容易用光 .-> rate-limit[Rate Limit]
+  deploy[Deploy 後才收得到] -. 前提 .-> backend

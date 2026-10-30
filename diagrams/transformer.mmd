@@ -1,0 +1,7 @@
+flowchart LR
+  token[輸入 Token] --> embedding[Embedding<br/>轉成向量]
+  embedding --> attn[Self-attention<br/>計算彼此關係]
+  attn --> ff[運算層]
+  ff -- 堆疊很多層 --> attn
+  ff --> nexttok[預測下一個 Token]
+  nexttok --> llm[組成 LLM 的回答]

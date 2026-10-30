@@ -1,0 +1,9 @@
+flowchart LR
+  app([你的應用程式]) -- 提供工具清單 --> llm[LLM]
+  llm -- 決定呼叫哪個工具 --> req[工具請求<br/>名稱＋參數]
+  req --> exec[你的程式執行]
+  exec --> api[外部 API]
+  api --> result[執行結果]
+  result --> llm
+  llm --> answer[根據結果回答]
+  mcp[MCP<br/>標準化的工具連接] -.-> app

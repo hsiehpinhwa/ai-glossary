@@ -1,0 +1,8 @@
+flowchart TB
+  start([Agent 啟動]) --> meta[只載入每個 skill 的<br/>名稱與描述]
+  plugin[Plugin<br/>打包分享] -.-> meta
+  meta --> task{任務符合描述？}
+  task -- 是 --> full[讀入完整 SKILL.md]
+  task -- 否 --> skip[不佔用上下文]
+  slash-command[Slash Command<br/>手動叫用] --> full
+  full --> run[照指示執行<br/>需要時再讀腳本或參考檔]

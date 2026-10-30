@@ -1,0 +1,11 @@
+flowchart TB
+  subgraph workbench[IDE]
+    direction LR
+    editor[程式碼編輯器]
+    build[建置與除錯]
+    diff[Diff 檢視]
+  end
+  plugin[擴充套件<br/>Plugin] --> workbench
+  coding-agent[Coding Agent] -- 透過擴充接入 --> workbench
+  git[Git] --> diff
+  cli[CLI<br/>純文字操作] -. 另一種方式 .- workbench

@@ -1,0 +1,8 @@
+flowchart LR
+  l1[Operator<br/>人主導] --> l2[Collaborator<br/>一起分工]
+  l2 --> l3[Consultant<br/>AI 主導、人給方向]
+  l3 --> l4[Approver<br/>重大動作才找人]
+  l4 --> l5[Observer<br/>人只在旁監看]
+  permission-mode[Permission Mode<br/>工具裡的實際設定] -.-> l3
+  human-in-the-loop[Human-in-the-loop] -.-> l4
+  sandbox[Sandbox<br/>自主越高越需要隔離] -.-> l5

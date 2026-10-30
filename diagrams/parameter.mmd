@@ -1,0 +1,7 @@
+flowchart LR
+  data[(訓練資料)] --> pre-training[Pre-training<br/>反覆調整數值]
+  pre-training --> parameter[(Parameter / Weights<br/>數十億個數字)]
+  parameter --> llm[LLM 的能力]
+  parameter -- 下載權重 --> open-weight-model[Open-weight Model]
+  lora[LoRA<br/>加上少量新參數] --> parameter
+  temperature[Temperature<br/>使用時的設定] -. 不是學到的參數 .-> llm

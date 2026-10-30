@@ -1,0 +1,7 @@
+flowchart LR
+  coding-agent[AI 應用<br/>Coding Agent] -- 詢問有哪些能力 --> mcp-server{{MCP Server}}
+  mcp-server -- 工具 --> t[動作<br/>查詢、建立、修改]
+  mcp-server -- 資源 --> r[資料<br/>檔案、紀錄]
+  mcp-server -- 模板 --> p[Prompt 模板]
+  t --> api[外部服務的 API]
+  api-key[API Key 或 OAuth 授權] -.-> api

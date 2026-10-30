@@ -1,0 +1,9 @@
+flowchart LR
+  frontend[Frontend] -- 請求 --> api[API]
+  api --> be{Backend<br/>檢查身分與邏輯}
+  be --> database[(Database)]
+  environment-variable[環境變數] --> be
+  be -- 帶著 --> api-key[API Key]
+  api-key --> ext[外部服務<br/>例如 AI 模型]
+  be -- 回傳結果 --> frontend
+  deploy[Deploy] -. 放到伺服器 .-> be

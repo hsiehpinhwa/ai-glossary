@@ -1,0 +1,10 @@
+flowchart LR
+  marketplace[(Marketplace<br/>外掛目錄)] -- 安裝 --> plugin{{Plugin}}
+  plugin --> skill[Skill]
+  plugin --> subagent[Subagent]
+  plugin --> hook[Hook]
+  plugin --> mcp-server[MCP Server]
+  skill --> session[之後的每個 session<br/>都會載入]
+  subagent --> session
+  hook --> session
+  mcp-server --> session

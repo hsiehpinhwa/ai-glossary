@@ -1,0 +1,7 @@
+flowchart LR
+  git[本機的 Git] -- push --> repository[(GitHub 上的<br/>Repository)]
+  repository --> pull-request[Pull Request<br/>審查修改]
+  repository --> issue[Issue<br/>追蹤待辦]
+  repository --> fork[Fork<br/>參與別人專案]
+  repository --> ci-cd[GitHub Actions<br/>CI/CD]
+  ci-cd --> site[自動測試與部署]

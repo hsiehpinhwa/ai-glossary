@@ -1,0 +1,8 @@
+flowchart LR
+  q([使用者問題]) --> sem[語意搜尋]
+  q --> kw[關鍵字搜尋<br/>BM25]
+  sem --> vector-database[(Vector Database)]
+  vector-database --> fuse[合併結果]
+  kw --> fuse
+  fuse --> reranking[Reranking]
+  reranking -- 前幾段 --> rag[放進 RAG 的 prompt]

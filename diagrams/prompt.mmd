@@ -1,0 +1,9 @@
+flowchart LR
+  user([你輸入的文字]) --> assembled[完整的 Prompt]
+  system-prompt[System Prompt<br/>開發者預設的規則] --> assembled
+  few-shot[範例<br/>Few-shot] --> assembled
+  assembled -- 切成 token --> token[Token]
+  token --> context-window[(Context Window)]
+  context-window --> llm[LLM]
+  llm --> out[回應]
+  out -. 不滿意就改寫 .-> user

@@ -1,0 +1,10 @@
+flowchart LR
+  pre-training[Pre-training 模型<br/>可能編造或照做有害要求] --> methods{對齊方法}
+  methods --> rlhf[RLHF]
+  methods --> cai[Constitutional AI]
+  methods --> redteam[紅隊測試]
+  rlhf --> hhh[有幫助、誠實、無害]
+  cai --> hhh
+  redteam --> hhh
+  hhh --> eval[Eval 檢驗]
+  jailbreak[Jailbreak] -. 試圖繞過 .-> hhh

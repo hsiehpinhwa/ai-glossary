@@ -1,0 +1,8 @@
+flowchart LR
+  chunking[Chunk 文字片段] --> embedding[Embedding 模型]
+  embedding --> vector-database[(Vector Database<br/>向量＋metadata)]
+  q([使用者問題]) --> qe[問題轉成向量]
+  qe --> ann{ANN 相似度搜尋}
+  vector-database --> ann
+  ann -- 最接近的幾筆 --> retrieval[Retrieval 結果]
+  retrieval --> rag[交給 RAG 的 LLM]

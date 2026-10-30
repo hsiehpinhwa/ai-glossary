@@ -1,0 +1,8 @@
+flowchart LR
+  a[分支 A 改了第 10 行] --> merge[Merge]
+  b[分支 B 也改了第 10 行] --> merge
+  merge --> stop[Git 停下<br/>插入衝突標記]
+  stop --> fix[人或 AI 編輯成最終版本]
+  fix --> diff[看 Diff 確認沒弄丟]
+  diff --> done[Commit 完成合併]
+  pull-request[Pull Request<br/>顯示有衝突] -. 同樣要解 .-> stop

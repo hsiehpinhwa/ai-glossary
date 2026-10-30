@@ -1,0 +1,11 @@
+flowchart LR
+  task([任務]) --> run[Agent 執行中]
+  run --> risky{這一步重要<br/>或無法復原？}
+  risky -- 否 --> auto[自動繼續]
+  risky -- 是 --> pause[暫停並請人確認]
+  pause --> decide{人的決定}
+  decide -- 核准 --> auto
+  decide -- 修改 --> run
+  decide -- 拒絕 --> halt[停止]
+  permission-mode[Permission Mode] -.-> risky
+  autonomy-level[Autonomy Level] -.-> risky

@@ -1,0 +1,10 @@
+flowchart LR
+  sources([可用資訊<br/>檔案、工具、對話]) --> pick{這一步<br/>需要什麼？}
+  pick -- 需要時才載入 --> retrieval[Retrieval]
+  pick -- 存到外部 --> memory[(Memory)]
+  pick -- 交給別人查 --> subagent[Subagent]
+  retrieval --> context-window[[Context Window]]
+  memory --> context-window
+  subagent -- 只回傳摘要 --> context-window
+  context-window -- 快滿了 --> context-compaction[Context Compaction]
+  context-compaction --> context-window

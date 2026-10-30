@@ -1,0 +1,10 @@
+flowchart LR
+  llm[LLM<br/>決定要用哪個工具] --> host
+  subgraph host[MCP Host：AI 應用]
+    c1[MCP Client 1]
+    c2[MCP Client 2]
+  end
+  c1 -- 本機連線 --> mcp-server[MCP Server<br/>本機：檔案系統]
+  c2 -- 透過網路 --> s2[MCP Server<br/>遠端：雲端服務]
+  mcp-server --> tool-use[工具、資料、prompt 模板<br/>Tool Use]
+  s2 --> tool-use

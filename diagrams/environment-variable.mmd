@@ -1,0 +1,10 @@
+flowchart LR
+  code[同一份程式碼<br/>process.env] --> local{在哪裡執行？}
+  local -- 本機 --> envfile[.env 檔<br/>列進 .gitignore]
+  local -- 上線 --> platform[平台後台設定]
+  envfile --> localhost[Localhost]
+  platform --> deploy[重新 Deploy 才生效]
+  api-key[API Key] --> envfile
+  api-key --> platform
+  cli[CLI] -. 也能臨時設定 .-> code
+  backend[Backend] -. 讀取 .-> code

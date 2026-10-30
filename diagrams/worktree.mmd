@@ -1,0 +1,9 @@
+flowchart TB
+  repository[(Repository<br/>同一份 commit 歷史)] --> w1[資料夾 A<br/>新功能分支]
+  repository --> w2[資料夾 B<br/>修 bug 分支]
+  branch[Branch<br/>每個 worktree 一個] -.-> w1
+  branch -.-> w2
+  w1 --> a1[Agent 1]
+  w2 --> a2[Agent 2]
+  a1 -- 完成 --> merge[Merge 回主線]
+  a2 -- 完成 --> merge

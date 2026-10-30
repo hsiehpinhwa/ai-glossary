@@ -1,0 +1,8 @@
+flowchart LR
+  ctx([目前的文字]) --> llm[LLM]
+  llm --> probs[候選 token 的機率]
+  probs --> temperature{Temperature}
+  temperature -- 低 --> low[幾乎總選最可能的<br/>穩定、保守]
+  temperature -- 高 --> high[少見選項也可能被選<br/>多變、有創意]
+  low --> token[輸出 Token]
+  high --> token
