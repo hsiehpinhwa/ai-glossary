@@ -1,0 +1,39 @@
+{
+  "slug": "localhost",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "查詢 localhost 會指向本機回送位址",
+      "verdict": "supported",
+      "source_url": "https://www.rfc-editor.org/info/rfc6761/",
+      "note": "RFC 6761 §6.3."
+    },
+    {
+      "text": "IPv4 是 127.0.0.1",
+      "verdict": "unsupported",
+      "source_url": "https://datatracker.ietf.org/doc/html/draft-west-let-localhost-be-localhost-04",
+      "note": "Loopback is 127.0.0.0/8; 127.0.0.1 is the usual one. Changed to \"通常是\"."
+    },
+    {
+      "text": "連線不會離開這部電腦",
+      "verdict": "supported",
+      "source_url": "https://datatracker.ietf.org/doc/html/draft-west-let-localhost-be-localhost-04",
+      "note": "\"never traverse a remote network\"."
+    },
+    {
+      "text": "冒號後的數字叫埠號，用來區分不同程式",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Glossary/Port",
+      "note": "Source added."
+    },
+    {
+      "text": "要部署到雲端才會有公開網址",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/deployments",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "\"IPv4 是 127.0.0.1\" → \"IPv4 通常是 127.0.0.1\"; added MDN Port source."
+  ]
+}

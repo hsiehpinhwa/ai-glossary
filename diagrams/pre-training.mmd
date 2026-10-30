@@ -1,5 +1,5 @@
 flowchart LR
-  corpus[(網路文字、書籍、程式碼)] --> token[切成 Token]
+  corpus[(網頁、書籍等大量文字)] --> token[切成 Token]
   token --> task[練習預測下一個 token]
   task -- 調整 --> parameter[(Parameter)]
   parameter --> base[Base Model<br/>文章接龍機]

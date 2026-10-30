@@ -1,0 +1,31 @@
+{
+  "slug": "clone",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "clone 下載所有 commit 歷史和每條分支資訊，並記住遠端來源",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-clone",
+      "note": "Remote-tracking branches and origin."
+    },
+    {
+      "text": "建立新資料夾並切換到原專案目前使用的分支",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-clone",
+      "note": ""
+    },
+    {
+      "text": "有寫入權限再 push 回去",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-push",
+      "note": ""
+    },
+    {
+      "text": "fork 是在 GitHub 上建一份屬於你的副本；沒有權限時先 fork",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

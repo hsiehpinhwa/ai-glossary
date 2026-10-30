@@ -1,0 +1,25 @@
+{
+  "slug": "regression",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "改 prompt 或換模型可能讓某些案例退步",
+      "verdict": "supported",
+      "source_url": "https://anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "Anthropic 建議 regression eval 與能力 eval 分開，前者通過率應接近 100%",
+      "verdict": "supported",
+      "source_url": "https://anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "可接上 CI 自動檢查",
+      "verdict": "supported",
+      "source_url": "https://langfuse.com/resources/engineering/golden-dataset-evaluation.md",
+      "note": "GitHub Action in CI on each prompt change."
+    }
+  ],
+  "changes": []
+}

@@ -20,6 +20,7 @@ diagram_caption: 在 pre-training 好的模型上，用「輸入＋理想回答�
 sources:
   - { title: "Anthropic — Glossary", url: "https://platform.claude.com/docs/en/about-claude/glossary" }
   - { title: "OpenAI — Supervised fine-tuning", url: "https://developers.openai.com/api/docs/guides/supervised-fine-tuning" }
+  - { title: "Hu et al. — LoRA: Low-Rank Adaptation of Large Language Models (arXiv 2106.09685)", url: "https://arxiv.org/abs/2106.09685" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

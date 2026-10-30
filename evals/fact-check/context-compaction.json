@@ -1,0 +1,31 @@
+{
+  "slug": "context-compaction",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "接近上限時摘要舊內容取代原訊息",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "Claude Code 保留架構決策、未解 bug、實作細節，丟重複工具輸出，附最近檔案",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "可自動或 /compact 手動",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "早期指示可能遺失，長期規則寫進每次重新載入的 CLAUDE.md",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

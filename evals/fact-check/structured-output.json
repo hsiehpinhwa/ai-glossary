@@ -1,0 +1,25 @@
+{
+  "slug": "structured-output",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "依 JSON schema 輸出",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "note": ""
+    },
+    {
+      "text": "Anthropic 用 constrained decoding 保證符合 schema",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "note": ""
+    },
+    {
+      "text": "tool use 也有 strict 模式確保參數格式",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

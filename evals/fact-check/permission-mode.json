@@ -1,0 +1,49 @@
+{
+  "slug": "permission-mode",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "手動（default）模式只有讀取會自動放行",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": ""
+    },
+    {
+      "text": "Accept edits 讓它直接改檔案",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": "Also common filesystem commands."
+    },
+    {
+      "text": "Plan mode 只讀與規劃，計畫經核准才動手",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": "Plan mode reads files and proposes a plan, no edits until approved."
+    },
+    {
+      "text": "Auto 交給另一個分類模型審查每個動作",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": "\"a separate classifier model\"."
+    },
+    {
+      "text": "Bypass permissions 全部放行，官方建議只在隔離的容器或虛擬機使用",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": ""
+    },
+    {
+      "text": "禁止（deny）規則在每一種模式都有效",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": "\"Deny rules block in every mode, including bypassPermissions\"."
+    },
+    {
+      "text": "按 Shift+Tab 切換",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": "Cycles default → acceptEdits → plan."
+    }
+  ],
+  "changes": []
+}

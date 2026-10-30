@@ -1,0 +1,31 @@
+{
+  "slug": "observability",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "從外部看懂系統內部，不必事先知道問題",
+      "verdict": "supported",
+      "source_url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+      "note": "\"unknown unknowns\"."
+    },
+    {
+      "text": "trace 由 span 組成，span 有名稱、耗時、屬性",
+      "verdict": "supported",
+      "source_url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+      "note": ""
+    },
+    {
+      "text": "metrics 是數字、logs 是帶時間戳記的事件",
+      "verdict": "supported",
+      "source_url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+      "note": ""
+    },
+    {
+      "text": "從線上 trace 挑失敗案例補進 golden dataset",
+      "verdict": "supported",
+      "source_url": "https://langfuse.com/resources/engineering/golden-dataset-evaluation.md",
+      "note": "Vendor blog; Anthropic Demystifying evals also recommends turning production failures into tasks."
+    }
+  ],
+  "changes": []
+}

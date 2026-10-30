@@ -1,0 +1,19 @@
+{
+  "slug": "guardrails",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "OpenAI Agents SDK 有 input、output、tool guardrails，觸發即停止",
+      "verdict": "supported",
+      "source_url": "https://openai.github.io/openai-agents-python/guardrails/",
+      "note": ""
+    },
+    {
+      "text": "Anthropic 建議用輕量模型預先篩檢輸入",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

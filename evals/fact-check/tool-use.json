@@ -1,0 +1,19 @@
+{
+  "slug": "tool-use",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "也叫 function calling；模型回傳結構化呼叫，由應用程式執行再送回結果",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+      "note": ""
+    },
+    {
+      "text": "也有由 Anthropic 執行的 server tool，如網路搜尋",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

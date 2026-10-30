@@ -1,0 +1,48 @@
+{
+  "slug": "pull-request",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "PR 是請求把一個 branch 的修改合併進主線",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests",
+      "note": ""
+    },
+    {
+      "text": "PR 頁面列出 diff，團隊可逐行留言、要求修改",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews",
+      "note": ""
+    },
+    {
+      "text": "CI 也會自動跑測試",
+      "verdict": "unsupported",
+      "source_url": "https://docs.github.com/en/actions/get-started/continuous-integration",
+      "note": "Only when CI is configured. Rewritten to \"有設定 CI 的話\"."
+    },
+    {
+      "text": "全部通過、有人核准後才 merge",
+      "verdict": "unsupported",
+      "source_url": "https://docs.github.com/en/pull-requests/reference/branches",
+      "note": "Approvals/status checks are only enforced when the branch is protected. Rewritten to \"團隊可以規定…才能 merge\"."
+    },
+    {
+      "text": "coding agent 通常不直接改主線，而是開一個 PR 交給你看",
+      "verdict": "unverifiable",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": "No source for \"usually\". Docs show Claude Code creates PRs when asked; rewritten accordingly."
+    },
+    {
+      "text": "GitLab 把同一件事叫 Merge Request",
+      "verdict": "supported",
+      "source_url": "https://docs.gitlab.com/user/project/merge_requests/",
+      "note": "GitLab MR: central place to review and track code changes."
+    }
+  ],
+  "changes": [
+    "CI claim conditioned on CI being set up.",
+    "\"approval required before merge\" → teams can require it (protected branches).",
+    "agent \"usually opens a PR\" → you can ask the agent to open a PR.",
+    "Added sources: GitHub branches, Claude Code common workflows, GitLab merge requests."
+  ]
+}

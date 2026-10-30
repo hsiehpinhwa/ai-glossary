@@ -1,0 +1,31 @@
+{
+  "slug": "coding-agent",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "coding agent 讀程式碼、改檔、跑指令",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/overview",
+      "note": ""
+    },
+    {
+      "text": "Codex 是 OpenAI 的 coding agent",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/codex/overview.md",
+      "note": ""
+    },
+    {
+      "text": "開工讀 CLAUDE.md 或 AGENTS.md",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/overview",
+      "note": ""
+    },
+    {
+      "text": "可用 commit 或 PR 交付",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

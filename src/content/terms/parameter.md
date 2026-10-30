@@ -21,8 +21,8 @@ sources:
   - { title: "Google — Machine Learning Crash Course: What's a large language model?", url: "https://developers.google.com/machine-learning/crash-course/llm/transformers" }
   - { title: "Anthropic — Glossary", url: "https://platform.claude.com/docs/en/about-claude/glossary" }
   - { title: "NTIA — Dual-Use Foundation Models with Widely Available Model Weights", url: "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report" }
-needs_verification:
-  - 模型名稱中的 7B、70B 指參數量（B 為 billion，十億）
+  - { title: "IBM — Meta releases new Llama 3.1 models, including 405B parameter variant", url: "https://www.ibm.com/blog/llama-3/" }
+needs_verification: []
 last_verified: 2026-10-30
 ---
-Parameter（參數）是模型內部數量龐大的數字，也常被稱為權重（weights）。訓練時，模型反覆比對自己的預測和實際文字，一點一點調整這些數字；訓練結束後，它學到的語言規律和知識，就以這些數值的形式保存下來。社群常說的「7B」「70B」模型，指的是參數有幾十億個；Google 的教材提到，大型 Transformer 的參數可達數千億甚至上兆。參數越多通常能力越強，但也需要更多記憶體與運算，執行成本更高。你下載一個 open-weight 模型時，下載的主要就是這些參數檔案。別把它和 API 裡的 temperature、max_tokens 混淆：那些是每次呼叫時調整的設定，不會改變模型學到的內容。
+Parameter（參數）是模型內部數量龐大的數字，也常被稱為權重（weights）。訓練時，模型反覆比對自己的預測和實際文字，一點一點調整這些數字；訓練結束後，它學到的語言規律和知識，就以這些數值的形式保存下來。社群常說的「7B」「70B」模型，指的就是參數量，7B 約是 70 億個；Google 的教材提到，大型 Transformer 的參數可達數千億甚至上兆。參數越多通常能力越強，但也需要更多記憶體與運算，執行成本更高。你下載一個 open-weight 模型時，下載的主要就是這些參數檔案。別把它和 API 裡的 temperature、max_tokens 混淆：那些是每次呼叫時調整的設定，不會改變模型學到的內容。

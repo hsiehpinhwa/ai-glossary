@@ -1,0 +1,45 @@
+{
+  "slug": "open-weight-model",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Open-weight 模型公開權重供下載執行",
+      "verdict": "supported",
+      "source_url": "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report",
+      "note": ""
+    },
+    {
+      "text": "Llama 等系列為例",
+      "verdict": "unverifiable",
+      "source_url": "https://github.com/meta-llama/llama-models",
+      "note": "Llama 官方 repo 確認可下載權重，Mistral、Qwen 未查證；保留 needs_verification"
+    },
+    {
+      "text": "資料不必送給第三方",
+      "verdict": "supported",
+      "source_url": "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report",
+      "note": ""
+    },
+    {
+      "text": "OSI：只公開權重不是 open source AI，後者還要訓練程式碼與資料資訊",
+      "verdict": "supported",
+      "source_url": "https://opensource.org/blog/open-weights-are-good-open-source-is-better",
+      "note": ""
+    },
+    {
+      "text": "原文「因為你無法完整研究或重現它」",
+      "verdict": "unsupported",
+      "source_url": "https://opensource.org/blog/open-weights-are-good-open-source-is-better",
+      "note": "OSI 文章只說無法完整研究，未提重現；改為「無法完整研究它是怎麼來的」"
+    },
+    {
+      "text": "NTIA：讓資源較少者參與，同時評估濫用風險",
+      "verdict": "supported",
+      "source_url": "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "open-weight-model: 「無法完整研究或重現它」→「無法完整研究它是怎麼來的」"
+  ]
+}

@@ -6,4 +6,4 @@ flowchart LR
   req2 --> hit{開頭完全相同？}
   cache --> hit
   hit -- 是 --> fast[直接讀快取<br/>便宜又快]
-  hit -- 否 --> full[重新處理整段]
+  hit -- 否 --> full[改動處之後<br/>重新處理]

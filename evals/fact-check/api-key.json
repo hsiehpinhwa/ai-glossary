@@ -1,0 +1,52 @@
+{
+  "slug": "api-key",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "金鑰在 Console 產生",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/authentication",
+      "note": ""
+    },
+    {
+      "text": "請求時放在標頭裡",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/authentication",
+      "note": "Authorization: Bearer (x-api-key legacy)."
+    },
+    {
+      "text": "Python SDK 自動讀取 ANTHROPIC_API_KEY",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/authentication",
+      "note": ""
+    },
+    {
+      "text": "不要寫死在程式碼、不要 commit、不要放前端，由後端代為呼叫",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/docs/authentication/api-keys-best-practices",
+      "note": ""
+    },
+    {
+      "text": "存在環境變數或密鑰管理服務",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/authentication",
+      "note": "Secrets manager + env var."
+    },
+    {
+      "text": "vibe coding 一種「典型」事故是 AI 把金鑰推上公開 GitHub",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "No source for \"typical\"; rephrased as a risk to watch for."
+    },
+    {
+      "text": "懷疑外洩立刻停用或刪除，再換新",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/authentication",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "Source URL: French-locale /docs/fr/ → English /docs/en/manage-claude/authentication (same content).",
+    "\"典型的事故\" → \"要特別小心的情況\"."
+  ]
+}

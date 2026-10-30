@@ -1,0 +1,31 @@
+{
+  "slug": "alignment",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "InstructGPT：模型變大不會自然更懂使用者意圖，可能編造或有害",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2203.02155",
+      "note": ""
+    },
+    {
+      "text": "helpful、honest、harmless 框架",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+      "note": ""
+    },
+    {
+      "text": "方法包含 RLHF、Constitutional AI、紅隊測試、interpretability",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+      "note": ""
+    },
+    {
+      "text": "還沒有人知道如何讓非常強大的 AI 穩定做到這三點",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

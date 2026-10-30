@@ -1,0 +1,25 @@
+{
+  "slug": "human-in-the-loop",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "LangGraph interrupt 能暫停並保存狀態，等人核准、修改或拒絕",
+      "verdict": "supported",
+      "source_url": "https://docs.langchain.com/oss/python/langgraph/human-in-the-loop",
+      "note": ""
+    },
+    {
+      "text": "OWASP 建議高風險動作需人核准",
+      "verdict": "supported",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "note": ""
+    },
+    {
+      "text": "computer use 文件建議有實際後果的動作先請人確認",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

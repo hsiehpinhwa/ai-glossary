@@ -19,6 +19,7 @@ diagram_caption: 修改檔案後先看 diff、挑出要存的改動，再寫一�
 sources:
   - { title: "Git — git-commit Documentation", url: "https://git-scm.com/docs/git-commit" }
   - { title: "Pro Git — Branches in a Nutshell", url: "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell" }
+  - { title: "Git — git-push Documentation", url: "https://git-scm.com/docs/git-push" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

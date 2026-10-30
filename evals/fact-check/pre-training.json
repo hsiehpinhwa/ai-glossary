@@ -1,0 +1,39 @@
+{
+  "slug": "pre-training",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Pre-training 用大量未標註文字練習預測下一個 token",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "預訓練後的模型不太會照指令回答，之後經 fine-tuning 與 RLHF",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "預訓練運算量極大，但大致是一次性投入；使用端叫 inference",
+      "verdict": "supported",
+      "source_url": "https://www.cloudflare.com/learning/ai/inference-vs-training/",
+      "note": ""
+    },
+    {
+      "text": "模型知識大致只到訓練資料的時間點，之後的事靠搜尋或 RAG 補進 context",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": "Glossary RAG：可用訓練資料以外的最新資訊"
+    },
+    {
+      "text": "圖例原標「網路文字、書籍、程式碼」",
+      "verdict": "unverifiable",
+      "source_url": "https://arxiv.org/abs/2005.14165",
+      "note": "GPT-3 論文資料為網頁、書籍、Wikipedia，未列程式碼；圖例改為「網頁、書籍等大量文字」"
+    }
+  ],
+  "changes": [
+    "pre-training 圖例：語料節點「網路文字、書籍、程式碼」→「網頁、書籍等大量文字」"
+  ]
+}

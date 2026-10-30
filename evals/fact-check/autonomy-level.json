@@ -1,0 +1,27 @@
+{
+  "slug": "autonomy-level",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "華盛頓大學研究者 2025 年論文提出五級：operator、collaborator、consultant、approver、observer",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2506.12469",
+      "note": "affiliation 見 PDF"
+    },
+    {
+      "text": "observer 只能看紀錄、緊急停止",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/html/2506.12469",
+      "note": ""
+    },
+    {
+      "text": "權限模式從需確認、自動允許改檔到隔離環境不詢問",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": "default/acceptEdits/bypassPermissions；原文「每個動作都要確認」略誇大，default 模式讀檔不需確認，改為「多數動作」"
+    }
+  ],
+  "changes": [
+    "autonomy-level: 「每個動作都要你確認」→「多數動作都要你確認」"
+  ]
+}

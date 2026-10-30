@@ -22,4 +22,4 @@ sources:
 needs_verification: []
 last_verified: 2026-10-30
 ---
-Subagent 是主 agent 交辦任務的「分身」。主 agent 和你對話時，遇到需要大量搜尋或閱讀的子任務，就派一個 subagent 去做；subagent 有自己的 context window、自己的 system prompt 與工具權限，完成後只把精簡的結論交回來。好處是主對話不會被一大堆搜尋結果、log 和檔案內容塞滿，上下文保持乾淨，也能限制某個角色只能讀、不能改。以 Claude Code 為例，subagent 用一個 Markdown 檔定義名稱、描述、可用工具與指示，內建的 Explore 就是專門搜尋程式碼的唯讀角色。代價是 subagent 在自己的上下文裡工作，看不到主對話的完整脈絡，交代任務時要把背景說清楚。多個 agent 分工協作的整體設計，就是 multi-agent orchestration。
+Subagent 是主 agent 交辦任務的「分身」。主 agent 和你對話時，遇到需要大量搜尋或閱讀的子任務，就派一個 subagent 去做；subagent 有自己的 context window、自己的 system prompt 與工具權限，完成後只把精簡的結論交回來。好處是主對話不會被一大堆搜尋結果、log 和檔案內容塞滿，上下文保持乾淨，也能限制某個角色只能讀、不能改。以 Claude Code 為例，subagent 用一個 Markdown 檔定義名稱、描述、可用工具與指示，內建的 Explore 就是專門搜尋程式碼的唯讀角色。代價是一般的 subagent 從乾淨的上下文開始，看不到主對話的完整脈絡，交代任務時要把背景說清楚。多個 agent 分工協作的整體設計，就是 multi-agent orchestration。

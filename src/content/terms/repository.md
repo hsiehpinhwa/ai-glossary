@@ -19,6 +19,7 @@ diagram_caption: 本機 repo 累積 commit，push 後同步到 GitHub 上的遠�
 sources:
   - { title: "GitHub Docs — About repositories", url: "https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories" }
   - { title: "Pro Git — About Version Control", url: "https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" }
+  - { title: "Vercel Docs — Deploying to Vercel", url: "https://vercel.com/docs/deployments" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

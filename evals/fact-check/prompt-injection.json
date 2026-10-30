@@ -1,0 +1,31 @@
+{
+  "slug": "prompt-injection",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "OWASP 分直接與間接注入，間接來自網頁、email、檔案",
+      "verdict": "supported",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "note": ""
+    },
+    {
+      "text": "人眼看不見的內容也可能影響模型",
+      "verdict": "supported",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "note": ""
+    },
+    {
+      "text": "目前沒有完全防堵方法",
+      "verdict": "supported",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "note": "OWASP：不確定是否存在 fool-proof 方法"
+    },
+    {
+      "text": "緩解：最小權限、標示外部內容、篩檢、高風險動作人工確認",
+      "verdict": "supported",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

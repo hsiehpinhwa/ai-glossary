@@ -1,0 +1,27 @@
+{
+  "slug": "unit-test",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "範圍小、由寫程式的人用測試框架撰寫、執行快可頻繁跑",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/UnitTest.html",
+      "note": ""
+    },
+    {
+      "text": "agent 改完自己跑測試，失敗就繼續修",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": "\"run the new tests and fix any failures\"."
+    },
+    {
+      "text": "AI 輸出每次可能不同，eval 看通過率",
+      "verdict": "supported",
+      "source_url": "https://anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "note": "Source added."
+    }
+  ],
+  "changes": [
+    "Added Demystifying evals source."
+  ]
+}

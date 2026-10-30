@@ -1,0 +1,25 @@
+{
+  "slug": "prompt-engineering",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "先定義成功標準與可驗證測試再調整",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+      "note": ""
+    },
+    {
+      "text": "技巧：角色、few-shot、逐步思考、XML 標籤區隔",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/system-prompts",
+      "note": ""
+    },
+    {
+      "text": "context engineering 是新近受關注的延伸",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

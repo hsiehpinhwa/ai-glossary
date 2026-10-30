@@ -1,0 +1,25 @@
+{
+  "slug": "benchmark",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "SWE-bench 有 2,294 個來自真實 GitHub 的 issue",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2310.06770",
+      "note": ""
+    },
+    {
+      "text": "跑專案原本的測試，全部通過才算解決",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2310.06770",
+      "note": "FAIL_TO_PASS and PASS_TO_PASS must all pass."
+    },
+    {
+      "text": "分數接近滿分後會飽和",
+      "verdict": "supported",
+      "source_url": "https://anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

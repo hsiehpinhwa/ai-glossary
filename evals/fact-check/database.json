@@ -1,0 +1,27 @@
+{
+  "slug": "database",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "資料庫是有組織地存放資料、方便查詢整理擴充的系統",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Glossary/Database",
+      "note": ""
+    },
+    {
+      "text": "關聯式用 SQL，例如 MySQL、SQL Server；NoSQL 如 MongoDB、Redis",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Glossary/Database",
+      "note": ""
+    },
+    {
+      "text": "由後端負責讀寫，前端不直接碰它",
+      "verdict": "unsupported",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": "Too absolute: BaaS setups let the frontend query the database directly. Rewritten to \"通常由後端負責讀寫\"."
+    }
+  ],
+  "changes": [
+    "\"前端不直接碰它\" removed; now \"通常由後端負責讀寫\"."
+  ]
+}

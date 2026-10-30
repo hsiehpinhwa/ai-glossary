@@ -1,0 +1,33 @@
+{
+  "slug": "cli",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "terminal、shell、command line 的區分",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line",
+      "note": ""
+    },
+    {
+      "text": "CLI 能直接存取檔案系統，容易自動化重複工作",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line",
+      "note": ""
+    },
+    {
+      "text": "許多工具只有命令列版本",
+      "verdict": "unsupported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line",
+      "note": "MDN says many tools are used via the command line, not that they exist only there. Rewritten."
+    },
+    {
+      "text": "Claude Code、Codex CLI 住在終端機裡",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/overview",
+      "note": "Product fact; not separately fetched."
+    }
+  ],
+  "changes": [
+    "\"many tools only have a CLI version\" → \"many dev tools are used on the command line\"."
+  ]
+}

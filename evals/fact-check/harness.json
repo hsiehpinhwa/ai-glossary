@@ -1,0 +1,21 @@
+{
+  "slug": "harness",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "harness 執行 agent loop、工具、上下文管理",
+      "verdict": "supported",
+      "source_url": "https://docs.claude.com/en/docs/agent-sdk/overview",
+      "note": "Managed Agents: a hosted agent harness that runs the agent loop"
+    },
+    {
+      "text": "原文「社群常說同一模型放進不同 harness 表現可以差很多」",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "找不到權威來源佐證「社群常說」與「差很多」；改為較保守的「表現也可能明顯不同：工具設計、上下文管理都會影響結果」，依據為 BEA 與 context engineering 文章對工具與上下文的說明"
+    }
+  ],
+  "changes": [
+    "harness: 刪除「社群常說…表現可以差很多…錯誤復原」，改為工具設計與上下文管理會影響結果"
+  ]
+}

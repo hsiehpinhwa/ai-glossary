@@ -1,0 +1,39 @@
+{
+  "slug": "branch",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "branch 是指向某個 commit 的可移動標籤，開分支幾乎不花成本",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+      "note": ""
+    },
+    {
+      "text": "每次 commit，分支標籤往前移",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+      "note": ""
+    },
+    {
+      "text": "GitHub 新 repo 的預設分支叫 main",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/reference/branches",
+      "note": ""
+    },
+    {
+      "text": "Git 本身的預設名稱是 master",
+      "verdict": "unsupported",
+      "source_url": "https://git-scm.com/docs/git-init",
+      "note": "Incomplete: git-init says default is master \"currently\", changing to main in Git 3.0. Added that qualifier."
+    },
+    {
+      "text": "分支可以透過 pull request 或 merge 併回去",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/reference/branches",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "Git default branch: \"master\" → \"目前是 master（Git 3.0 起改為 main）\"; added git-init source."
+  ]
+}

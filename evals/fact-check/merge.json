@@ -1,0 +1,37 @@
+{
+  "slug": "merge",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Git 找出分岔點，把對方之後的修改套進目前分支",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "note": ""
+    },
+    {
+      "text": "沒有新 commit 時只把標籤往前移，叫 fast-forward",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "note": ""
+    },
+    {
+      "text": "兩邊都有新 commit 時建立連到兩邊的 merge commit",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "note": ""
+    },
+    {
+      "text": "兩邊改到同一處會停下來變成 merge conflict",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "note": ""
+    },
+    {
+      "text": "git pull 先下載遠端修改，再整合進目前分支",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-pull",
+      "note": "Note: newer git defaults to --ff-only; integration mode is configurable."
+    }
+  ],
+  "changes": []
+}

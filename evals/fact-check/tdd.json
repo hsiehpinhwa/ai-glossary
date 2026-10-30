@@ -1,0 +1,25 @@
+{
+  "slug": "tdd",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Kent Beck 在 1990 年代後期作為極限編程的一部分發展",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+      "note": ""
+    },
+    {
+      "text": "紅、綠、重構三步",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+      "note": ""
+    },
+    {
+      "text": "開始前先列出要涵蓋的案例",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

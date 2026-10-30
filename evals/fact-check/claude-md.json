@@ -1,0 +1,43 @@
+{
+  "slug": "claude-md",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "CLAUDE.md 每個 session 開始時載入",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/memory",
+      "note": ""
+    },
+    {
+      "text": "AGENTS.md 是開放格式、「給 agent 的 README」，Codex、Cursor 等支援",
+      "verdict": "supported",
+      "source_url": "https://agents.md/",
+      "note": ""
+    },
+    {
+      "text": "Claude Code 能讀 AGENTS.md",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/memory",
+      "note": ""
+    },
+    {
+      "text": "~/.claude/CLAUDE.md 套用所有專案",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/memory",
+      "note": ""
+    },
+    {
+      "text": "是上下文不是強制設定，要擋下動作用 hook；越具體精簡越會遵守",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/memory",
+      "note": ""
+    },
+    {
+      "text": "只在特定任務用的步驟移到 skill",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/memory",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

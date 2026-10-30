@@ -1,0 +1,25 @@
+{
+  "slug": "slash-command",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "/clear、/compact、/init 功能",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/commands",
+      "note": ""
+    },
+    {
+      "text": "自訂指令已併入 skill，兩種寫法產生同樣指令",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/skills",
+      "note": ""
+    },
+    {
+      "text": "參數以 $ARGUMENTS 傳入",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/skills",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

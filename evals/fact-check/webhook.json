@@ -1,0 +1,27 @@
+{
+  "slug": "webhook",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "事件發生時服務送 HTTP 請求到登記的網址",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/webhooks/about-webhooks",
+      "note": ""
+    },
+    {
+      "text": "輪詢浪費資源、容易用光 rate limit",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/webhooks/about-webhooks",
+      "note": ""
+    },
+    {
+      "text": "只跑在 localhost 的程式收不到，要部署或用轉發工具",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/webhooks/testing-webhooks",
+      "note": "GitHub recommends smee proxy to forward to a local server; source added."
+    }
+  ],
+  "changes": [
+    "Added GitHub testing-webhooks source."
+  ]
+}

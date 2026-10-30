@@ -1,0 +1,33 @@
+{
+  "slug": "subagent",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "subagent 有獨立 context window、system prompt、工具權限，只回傳摘要",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sub-agents",
+      "note": ""
+    },
+    {
+      "text": "用 Markdown 檔加 frontmatter 定義",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sub-agents",
+      "note": ""
+    },
+    {
+      "text": "內建 Explore 為唯讀搜尋程式碼",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sub-agents",
+      "note": ""
+    },
+    {
+      "text": "subagent 看不到主對話完整脈絡",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sub-agents",
+      "note": "一般 subagent 如此；但 Claude Code 的 fork subagent 會繼承整段對話，已改為「一般的 subagent」"
+    }
+  ],
+  "changes": [
+    "subagent: 補上「一般的」subagent 從乾淨上下文開始（fork 例外）"
+  ]
+}

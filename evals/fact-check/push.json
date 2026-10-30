@@ -1,0 +1,31 @@
+{
+  "slug": "push",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "git push 把本機 commit 上傳到遠端，只補上對方沒有的資料",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-push",
+      "note": ""
+    },
+    {
+      "text": "git pull 先下載再整合進目前分支",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-pull",
+      "note": ""
+    },
+    {
+      "text": "遠端有你沒拉過的 commit 時，Git 預設拒絕 push",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-push",
+      "note": "Non-fast-forward rejected."
+    },
+    {
+      "text": "部署平台推到正式分支就自動部署",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/deployments",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

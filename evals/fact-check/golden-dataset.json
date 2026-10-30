@@ -1,0 +1,31 @@
+{
+  "slug": "golden-dataset",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "標準答案經懂業務的人確認，作為可信標準",
+      "verdict": "supported",
+      "source_url": "https://langfuse.com/resources/engineering/golden-dataset-evaluation.md",
+      "note": "Also consistent with golden answers in Anthropic develop-tests."
+    },
+    {
+      "text": "最好來源是真實使用紀錄，再補邊界情況",
+      "verdict": "supported",
+      "source_url": "https://langfuse.com/resources/engineering/golden-dataset-evaluation.md",
+      "note": "Edge-case list also in Anthropic develop-tests."
+    },
+    {
+      "text": "固定版本，和基準比較，抓 regression",
+      "verdict": "supported",
+      "source_url": "https://langfuse.com/resources/engineering/golden-dataset-evaluation.md",
+      "note": ""
+    },
+    {
+      "text": "新失敗案例持續加入",
+      "verdict": "supported",
+      "source_url": "https://langfuse.com/resources/engineering/golden-dataset-evaluation.md",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

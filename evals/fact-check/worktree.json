@@ -1,0 +1,37 @@
+{
+  "slug": "worktree",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "同一個 repo 可開出多個工作資料夾，各自 checkout 一個 branch、共用同一份歷史",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "note": "Linked worktrees share everything except per-worktree files such as HEAD and index."
+    },
+    {
+      "text": "用 git worktree add 多開一個資料夾",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "note": ""
+    },
+    {
+      "text": "Git 預設不讓同一個 branch 同時出現在兩個 worktree",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "note": "add refuses unless --force."
+    },
+    {
+      "text": "Claude Code 提供 worktree 參數，一行指令開出隔離的平行 session",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": "claude --worktree <name>."
+    },
+    {
+      "text": "worktree 是平行跑多個 coding agent 最簡單的方法",
+      "verdict": "unverifiable",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": "\"Simplest\" is a judgment; docs present worktrees as the way to run parallel sessions without collisions. Left as framing."
+    }
+  ],
+  "changes": []
+}

@@ -24,4 +24,4 @@ sources:
 needs_verification: []
 last_verified: 2026-10-30
 ---
-RAG（Retrieval-Augmented Generation，檢索增強生成）是讓 LLM 根據外部資料回答的做法。流程分兩段：先 retrieval，依使用者的問題從公司文件、知識庫或網路找出最相關的幾段內容；再 generation，把這些段落連同問題一起放進 context window，請模型依據資料作答。這樣模型就能用到訓練資料以外的資訊，例如最新公告、內部手冊，也比較容易附上出處、減少憑空編造。典型的 RAG 系統包含 chunking、embedding、vector database、reranking 幾個環節，任何一環沒做好，模型就會拿到錯的資料。如果資料量小到整份放得進 prompt，Anthropic 建議直接放進去即可，不一定需要 RAG。客服機器人、企業知識庫、「和你的 PDF 聊天」這類產品，背後多半就是 RAG。
+RAG（Retrieval-Augmented Generation，檢索增強生成）是讓 LLM 根據外部資料回答的做法。流程分兩段：先 retrieval，依使用者的問題從公司文件、知識庫或網路找出最相關的幾段內容；再 generation，把這些段落連同問題一起放進 context window，請模型依據資料作答。這樣模型就能用到訓練資料以外的資訊，例如最新公告、內部手冊，也比較容易附上出處、減少憑空編造。典型的 RAG 系統包含 chunking、embedding、vector database、reranking 幾個環節，任何一環沒做好，模型就會拿到錯的資料。如果資料量小到整份放得進 prompt，Anthropic 建議直接放進去即可，不一定需要 RAG。客服機器人、企業知識庫、「和你的 PDF 聊天」，都是 RAG 常見的應用。

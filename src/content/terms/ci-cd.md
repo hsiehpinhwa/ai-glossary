@@ -19,6 +19,7 @@ sources:
   - { title: "GitHub Docs — Continuous integration", url: "https://docs.github.com/en/actions/get-started/continuous-integration" }
   - { title: "GitHub Docs — Continuous deployment", url: "https://docs.github.com/en/actions/get-started/continuous-deployment" }
   - { title: "GitHub Docs — Branches (protected branches)", url: "https://docs.github.com/en/pull-requests/reference/branches" }
+  - { title: "GitHub Docs — Events that trigger workflows", url: "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

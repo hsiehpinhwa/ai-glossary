@@ -1,0 +1,43 @@
+{
+  "slug": "context-window",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Context window 是模型一次能參考的範圍，包括回答本身，是工作記憶而非訓練資料",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "note": ""
+    },
+    {
+      "text": "system prompt、歷史、工具結果、思考都佔用同一空間",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "輸入超過上限時請求被拒（400 prompt is too long）",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "note": ""
+    },
+    {
+      "text": "輸出寫到上限時回答停止",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "note": "stop_reason model_context_window_exceeded"
+    },
+    {
+      "text": "內容越多準確度與回想能力下降，稱 context rot",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "note": ""
+    },
+    {
+      "text": "harness 會做 compaction 或改用 RAG 只放相關段落",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

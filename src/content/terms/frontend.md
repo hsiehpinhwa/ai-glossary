@@ -18,6 +18,7 @@ diagram_caption: 使用者在瀏覽器裡操作前端畫面，前端透過 API �
 sources:
   - { title: "AWS — Front End vs Back End", url: "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/" }
   - { title: "Google Cloud — Best practices for managing API keys", url: "https://docs.cloud.google.com/docs/authentication/api-keys-best-practices" }
+  - { title: "MDN — Client-side form validation", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

@@ -1,0 +1,31 @@
+{
+  "slug": "inference",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Inference 是訓練完成後處理新輸入的階段",
+      "verdict": "supported",
+      "source_url": "https://www.cloudflare.com/learning/ai/inference-vs-training/",
+      "note": ""
+    },
+    {
+      "text": "訓練大致是一次性，inference 持續發生、累積成本可觀",
+      "verdict": "supported",
+      "source_url": "https://www.cloudflare.com/learning/ai/inference-vs-training/",
+      "note": ""
+    },
+    {
+      "text": "Temperature 在生成時決定如何挑選 token",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "Reasoning model 產生額外思考 token，依 effort 換取品質、增加延遲與成本",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/reasoning",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

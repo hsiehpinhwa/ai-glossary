@@ -1,0 +1,31 @@
+{
+  "slug": "skill",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Skill 是含 SKILL.md 的資料夾，可附腳本與參考資料",
+      "verdict": "supported",
+      "source_url": "https://agentskills.io",
+      "note": ""
+    },
+    {
+      "text": "漸進載入：啟動只讀名稱與描述",
+      "verdict": "supported",
+      "source_url": "https://agentskills.io",
+      "note": ""
+    },
+    {
+      "text": "可用 /skill-name 手動叫用",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/skills",
+      "note": ""
+    },
+    {
+      "text": "由 Anthropic 開發後以開放標準釋出",
+      "verdict": "supported",
+      "source_url": "https://agentskills.io",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

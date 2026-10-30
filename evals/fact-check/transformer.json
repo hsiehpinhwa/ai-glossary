@@ -1,0 +1,37 @@
+{
+  "slug": "transformer",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Transformer 由 2017 年論文 Attention Is All You Need 提出",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "note": "v1 2017-06-12"
+    },
+    {
+      "text": "之前主流模型依序處理（recurrent），Transformer 完全依靠 attention、更易平行訓練",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "note": ""
+    },
+    {
+      "text": "self-attention 計算其他 token 對每個 token 的影響，例如判斷「它」指哪個名詞",
+      "verdict": "supported",
+      "source_url": "https://developers.google.com/machine-learning/crash-course/llm/transformers",
+      "note": "animal/street 例句"
+    },
+    {
+      "text": "原始設計分 encoder 與 decoder",
+      "verdict": "supported",
+      "source_url": "https://developers.google.com/machine-learning/crash-course/llm/transformers",
+      "note": ""
+    },
+    {
+      "text": "GPT 的 T 指 Transformer",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "未找到官方一手來源；保留於 needs_verification"
+    }
+  ],
+  "changes": []
+}

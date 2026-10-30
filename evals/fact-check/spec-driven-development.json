@@ -1,0 +1,37 @@
+{
+  "slug": "spec-driven-development",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "GitHub 的說法是從「程式碼才是真相」轉為「意圖才是真相」",
+      "verdict": "supported",
+      "source_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "note": ""
+    },
+    {
+      "text": "Spec Kit 流程分 Specify、Plan、Tasks、Implement 四步，各步內容如文中所述",
+      "verdict": "supported",
+      "source_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "note": ""
+    },
+    {
+      "text": "每一步都有檢查點，人可以在動手前修正方向",
+      "verdict": "supported",
+      "source_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "note": ""
+    },
+    {
+      "text": "vibe coding 適合快速原型，但用在重要系統或既有程式碼時不夠可靠",
+      "verdict": "supported",
+      "source_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "note": ""
+    },
+    {
+      "text": "需求改變時先改規格，再重新產生計畫與程式",
+      "verdict": "supported",
+      "source_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "computer-use",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "模型看截圖、送出滑鼠鍵盤動作，由開發者程式在 VM/容器執行並回傳截圖",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "note": ""
+    },
+    {
+      "text": "原文「能操作沒有 API 的軟體」",
+      "verdict": "unverifiable",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "note": "文件未直接寫；改為「能像人一樣操作圖形介面」"
+    },
+    {
+      "text": "原文「比直接呼叫 API 慢」",
+      "verdict": "unsupported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "note": "文件 Limitations 比較對象是人親手操作；已改"
+    },
+    {
+      "text": "座標與工具選擇可能出錯",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "note": ""
+    },
+    {
+      "text": "網頁或圖片文字可能讓模型偏離指示；建議最小權限隔離環境、不給登入資訊、付款或同意條款前人確認",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "computer-use: 「能操作沒有 API 的軟體…比直接呼叫 API 慢，座標也可能點錯」→「能像人一樣操作圖形介面；比人親手操作慢，座標和工具也可能選錯」"
+  ]
+}

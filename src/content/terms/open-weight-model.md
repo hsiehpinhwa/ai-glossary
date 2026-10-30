@@ -19,8 +19,8 @@ disambiguation: 社群常把它叫「開源模型」，但 Open Source Initiativ
 sources:
   - { title: "Open Source Initiative — Open Weights Are Good. Open Source Is Better.", url: "https://opensource.org/blog/open-weights-are-good-open-source-is-better" }
   - { title: "NTIA — Dual-Use Foundation Models with Widely Available Model Weights", url: "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report" }
-needs_verification:
-  - Llama、Mistral、Qwen 等系列屬於 open-weight 模型（各版本授權不同）
+  - { title: "IBM — Meta releases new Llama 3.1 models, including 405B parameter variant", url: "https://www.ibm.com/blog/llama-3/" }
+needs_verification: []
 last_verified: 2026-10-30
 ---
-Open-weight model 是指開發者把訓練好的 parameter（權重）公開，讓任何人能下載到自己的電腦或伺服器執行，Llama、Mistral、Qwen 等系列都是常被提到的例子。和只能透過 API 使用的封閉模型相比，它的好處是資料不必送給第三方，可以在本機跑 inference，也能用 LoRA 等方法依自己的資料 fine-tuning。代價是運算資源要自己準備，大模型很吃 GPU 記憶體。很多人把它叫「開源模型」，但 Open Source Initiative 指出，只公開權重、沒有公開訓練程式碼和資料，不算真正的 open source AI，因為你無法完整研究或重現它。美國 NTIA 的報告則認為，這類模型讓資源較少的團隊也能參與 AI 研發，同時也評估了被濫用的風險。
+Open-weight model 是指開發者把訓練好的 parameter（權重）公開，讓任何人能下載到自己的電腦或伺服器執行，Meta 的 Llama 系列就是常被提到的例子。和只能透過 API 使用的封閉模型相比，它的好處是資料不必送給第三方，可以在本機跑 inference，也能用 LoRA 等方法依自己的資料 fine-tuning。代價是運算資源要自己準備，大模型很吃 GPU 記憶體。很多人把它叫「開源模型」，但 Open Source Initiative 指出，只公開權重、沒有公開訓練程式碼和資料，不算真正的 open source AI，因為你無法完整研究它是怎麼來的。美國 NTIA 的報告則認為，這類模型讓資源較少的團隊也能參與 AI 研發，同時也評估了被濫用的風險。

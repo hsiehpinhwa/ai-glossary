@@ -1,0 +1,31 @@
+{
+  "slug": "multi-agent-orchestration",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Research 用 orchestrator-worker，同時派 3–5 個 subagent",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "note": ""
+    },
+    {
+      "text": "內部評測多 agent 比單 agent 高 90.2%",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "note": "Opus 4 主導＋Sonnet 4 subagent vs 單一 Opus 4"
+    },
+    {
+      "text": "token 約為聊天的 15 倍",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "note": ""
+    },
+    {
+      "text": "需共享脈絡或依賴深的工作不適合",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

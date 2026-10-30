@@ -1,0 +1,31 @@
+{
+  "slug": "merge-conflict",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "兩條分支改了同一行，或一邊改一邊刪檔，會產生衝突",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts",
+      "note": ""
+    },
+    {
+      "text": "Git 停下並插入衝突標記，<<<<<<< 到 ======= 是你這邊，======= 到 >>>>>>> 是對方",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "note": ""
+    },
+    {
+      "text": "手動編輯、刪標記後再 commit",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "note": ""
+    },
+    {
+      "text": "簡單衝突可在 GitHub 網頁解決，複雜的要在本機處理",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

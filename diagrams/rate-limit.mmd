@@ -1,5 +1,5 @@
 flowchart LR
-  app[你的 App 或 Agent] -- 帶 API Key --> api-key[API Key 額度]
+  app[你的 App 或 Agent] -- 帶 API Key --> api-key[API Key<br/>辨識帳號與組織]
   api-key --> api[API]
   api --> check{超過上限？}
   check -- 否 --> ok[正常回應]

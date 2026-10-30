@@ -1,0 +1,27 @@
+{
+  "slug": "commit",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "commit 存成快照，連同作者、說明和上一個 commit 的指標",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+      "note": "Commit object holds snapshot pointer, author, message, parent pointers."
+    },
+    {
+      "text": "先 git add 再 git commit -m",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-commit",
+      "note": ""
+    },
+    {
+      "text": "commit 只存在本機，要 push 才會上傳到遠端",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-push",
+      "note": "Source added."
+    }
+  ],
+  "changes": [
+    "Added git-push source for the local-only / push claim."
+  ]
+}

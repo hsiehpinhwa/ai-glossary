@@ -1,0 +1,47 @@
+{
+  "slug": "rate-limit",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "超過時回 HTTP 429，可能附 Retry-After",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429",
+      "note": ""
+    },
+    {
+      "text": "限制對象可能是 IP、帳號或某把 API key",
+      "verdict": "unsupported",
+      "source_url": "https://platform.claude.com/docs/en/api/rate-limits",
+      "note": "MDN: IP or users/apps; Claude API limits are per organization, not per key. Rewritten to \"IP、使用者或整個組織\"."
+    },
+    {
+      "text": "Claude API 限制 RPM、ITPM、OTPM，額度隨使用等級提高",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/api/rate-limits",
+      "note": ""
+    },
+    {
+      "text": "目的是防止濫用、分配運算能力",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/api/rate-limits",
+      "note": ""
+    },
+    {
+      "text": "exponential backoff 是逐次拉長等待",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/model-armor/retry-strategy",
+      "note": "Source added."
+    },
+    {
+      "text": "官方 SDK 多半已內建",
+      "verdict": "unverifiable",
+      "source_url": "https://platform.claude.com/docs/en/cli-sdks-libraries/overview",
+      "note": "Narrowed to Claude SDK, which documents built-in retries."
+    }
+  ],
+  "changes": [
+    "\"某把 API key\" → \"整個組織\".",
+    "SDK retry claim narrowed to Claude SDK; added SDK overview and Google retry-strategy sources.",
+    "Diagram label \"API Key 額度\" → \"API Key 辨識帳號與組織\"."
+  ]
+}

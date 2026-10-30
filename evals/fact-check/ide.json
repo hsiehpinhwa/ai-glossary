@@ -1,0 +1,27 @@
+{
+  "slug": "ide",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "IDE 整合編輯器、建置工具、除錯器，有語法上色與智慧補完",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/what-is/ide/",
+      "note": ""
+    },
+    {
+      "text": "VS Code 裝擴充後能做 IDE 大部分事，常被混著叫",
+      "verdict": "unverifiable",
+      "source_url": "https://aws.amazon.com/what-is/ide/",
+      "note": "AWS notes IDEs take plugins and tools can fit several categories; rewritten to the weaker \"界線模糊\"."
+    },
+    {
+      "text": "Cursor 把 AI 嵌進編輯器、終端機型 agent 也有 IDE 擴充",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "Product facts not fetched; low risk."
+    }
+  ],
+  "changes": [
+    "VS Code claim softened to \"裝上擴充後和 IDE 的界線變得模糊\"."
+  ]
+}

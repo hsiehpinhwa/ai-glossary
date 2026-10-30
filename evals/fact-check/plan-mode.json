@@ -1,0 +1,25 @@
+{
+  "slug": "plan-mode",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Plan mode 只讀、提計畫，同意後才修改",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": ""
+    },
+    {
+      "text": "Shift+Tab 切換，狀態列顯示",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/common-workflows",
+      "note": ""
+    },
+    {
+      "text": "會派唯讀的 Plan subagent 蒐集資料",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sub-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

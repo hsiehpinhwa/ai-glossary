@@ -14,7 +14,7 @@ related:
   - { slug: token, rel: related }
   - { slug: agent-loop, rel: related }
   - { slug: inference, rel: related }
-diagram_caption: 第一次請求把固定的開頭寫進快取；下一次開頭完全相同就直接讀快取，只要有一個字不同就得重新處理整段。
+diagram_caption: 第一次請求把固定的開頭寫進快取；下一次開頭完全相同就直接讀快取；開頭只要有一個字不同，從改動處之後就得重新處理。
 sources:
   - { title: "Anthropic — Prompt caching", url: "https://platform.claude.com/docs/en/build-with-claude/prompt-caching" }
   - { title: "Anthropic — How the agent loop works (Agent SDK)", url: "https://code.claude.com/docs/en/agent-sdk/agent-loop" }

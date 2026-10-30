@@ -21,4 +21,4 @@ sources:
 needs_verification: []
 last_verified: 2026-10-30
 ---
-Agentic workflow 是把 LLM 和工具依照事先設計的路徑串起來：第一步分類輸入、第二步查資料、第三步整理、最後檢查格式，每一步由 AI 處理，但走哪條路是開發者寫死的。Anthropic 在〈Building effective agents〉裡把它和 agent 分開：workflow 依預先定義的程式路徑運作，agent 則由模型自己決定流程。常見模式有 prompt chaining（串接）、routing（分流）、parallelization（平行處理）、orchestrator-workers（指揮者與執行者）和 evaluator-optimizer（一個產出、一個評審）。Workflow 的好處是可預測、好除錯、成本好估，任務步驟固定時往往比完全自主的 agent 可靠。Anthropic 也建議先從最簡單的方案開始，有需要再增加複雜度。
+Agentic workflow 是把 LLM 和工具依照事先設計的路徑串起來：第一步分類輸入、第二步查資料、第三步整理、最後檢查格式，每一步由 AI 處理，但走哪條路是開發者寫死的。Anthropic 在〈Building effective agents〉裡把它和 agent 分開：workflow 依預先定義的程式路徑運作，agent 則由模型自己決定流程。常見模式有 prompt chaining（串接）、routing（分流）、parallelization（平行處理）、orchestrator-workers（指揮者與執行者）和 evaluator-optimizer（一個產出、一個評審）。Workflow 的好處是可預測、結果一致，適合步驟定義清楚的任務；完全自主的 agent 則成本更高，錯誤也可能一路累積。Anthropic 也建議先從最簡單的方案開始，有需要再增加複雜度。

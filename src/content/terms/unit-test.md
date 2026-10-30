@@ -19,6 +19,7 @@ diagram_caption: Unit test 給一個函式固定輸入、檢查輸出；coding a
 sources:
   - { title: "Martin Fowler — Unit Test", url: "https://martinfowler.com/bliki/UnitTest.html" }
   - { title: "Claude Code Docs — Common workflows", url: "https://code.claude.com/docs/en/common-workflows" }
+  - { title: "Anthropic — Demystifying evals for AI agents", url: "https://anthropic.com/engineering/demystifying-evals-for-ai-agents" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

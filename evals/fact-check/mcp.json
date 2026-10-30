@@ -1,0 +1,37 @@
+{
+  "slug": "mcp",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Anthropic 2024 年 11 月發表",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/news/model-context-protocol",
+      "note": "2024-11-25"
+    },
+    {
+      "text": "USB-C 比喻",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "note": ""
+    },
+    {
+      "text": "host 為每個 server 建立一個 client",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "note": ""
+    },
+    {
+      "text": "server 提供 tools、resources、prompts，可在本機或遠端",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "note": ""
+    },
+    {
+      "text": "Claude、ChatGPT、VS Code、Cursor 支援",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

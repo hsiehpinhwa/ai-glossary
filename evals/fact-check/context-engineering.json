@@ -1,0 +1,31 @@
+{
+  "slug": "context-engineering",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Anthropic：在推論過程挑選並維護最合適的一組 token",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "範圍含 system prompt、工具、MCP、外部資料、對話紀錄",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "內容越多回想越差，稱 context rot",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    },
+    {
+      "text": "手法：just-in-time 載入、筆記寫外部 memory、subagent 只回摘要、compaction",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

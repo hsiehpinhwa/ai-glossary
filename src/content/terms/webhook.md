@@ -17,6 +17,7 @@ related:
 diagram_caption: 你先在服務登記網址與事件，事件發生時服務主動送出 HTTP 請求到你的後端；相對地，輪詢 API 要一直去問，容易撞到 rate limit。
 sources:
   - { title: "GitHub Docs — About webhooks", url: "https://docs.github.com/en/webhooks/about-webhooks" }
+  - { title: "GitHub Docs — Testing webhooks", url: "https://docs.github.com/en/webhooks/testing-webhooks" }
 needs_verification: []
 last_verified: 2026-10-30
 ---

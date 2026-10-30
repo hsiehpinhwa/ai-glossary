@@ -1,0 +1,46 @@
+{
+  "slug": "environment-variable",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Node.js 用 process.env.PORT 讀值",
+      "verdict": "supported",
+      "source_url": "https://nodejs.org/learn/command-line/how-to-read-environment-variables-from-nodejs",
+      "note": ""
+    },
+    {
+      "text": "Claude Python SDK 自動讀取 ANTHROPIC_API_KEY",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/authentication",
+      "note": "Source added."
+    },
+    {
+      "text": "同一份程式在不同環境套用不同值",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/environment-variables",
+      "note": ""
+    },
+    {
+      "text": "本機寫在 .env，列進 .gitignore",
+      "verdict": "supported",
+      "source_url": "https://nextjs.org/docs/app/building-your-application/configuring/environment-variables",
+      "note": "Next.js: .env files added to .gitignore; source added."
+    },
+    {
+      "text": "部署平台改完只對新的部署生效",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/environment-variables",
+      "note": ""
+    },
+    {
+      "text": "「本機好好的，上線就壞」常見原因之一是忘了設定",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "\"Common cause\" not sourced; rewritten as a conditional consequence."
+    }
+  ],
+  "changes": [
+    "Added Claude auth and Next.js env-var sources.",
+    "Last sentence reworded from a frequency claim to a conditional."
+  ]
+}

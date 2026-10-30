@@ -1,0 +1,45 @@
+{
+  "slug": "fork",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "fork 是把別人的 repo 複製到你帳號底下",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": ""
+    },
+    {
+      "text": "設定和權限都獨立",
+      "verdict": "unsupported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": "GitHub: fork has its own settings but visibility/permissions are tied to upstream. Rewritten to \"有自己設定與協作空間的獨立 repo\"."
+    },
+    {
+      "text": "仍連結原始專案，稱為 upstream",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": ""
+    },
+    {
+      "text": "改好後發 PR 請原作者收回",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": ""
+    },
+    {
+      "text": "branch 在同一個 repo，適合有寫入權限的團隊；fork 是獨立 repo",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": ""
+    },
+    {
+      "text": "開源社群的 fork 也指專案分家另起爐灶",
+      "verdict": "supported",
+      "source_url": "https://en.wikipedia.org/wiki/Fork_(software_development)",
+      "note": "Source added."
+    }
+  ],
+  "changes": [
+    "Removed \"permissions are independent\"; added Wikipedia source for the disambiguation."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "memory",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "memory tool 在 /memories 目錄建立、讀取、修改檔案，由開發者程式決定存放",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool",
+      "note": ""
+    },
+    {
+      "text": "CLAUDE.md 為專案層級持續指示",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/memory",
+      "note": ""
+    },
+    {
+      "text": "compaction 與筆記（memory）互補",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}
