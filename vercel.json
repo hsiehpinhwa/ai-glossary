@@ -3,5 +3,7 @@
   "framework": "astro",
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "redirects": [{ "source": "/", "destination": "/glossary/", "permanent": false }],
+  "rewrites": [{ "source": "/glossary/:path*", "destination": "/:path*" }]
 }

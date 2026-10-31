@@ -1,6 +1,6 @@
 ---
 import { render } from 'astro:content';
-import { REL_ZH, diagramSvg, categories, type Term } from '../lib/terms';
+import { REL_ZH, diagramSvg, categories, href, type Term } from '../lib/terms';
 
 interface Props { term: Term; titles: Record<string, string>; heading?: 'h1' | 'h3'; inPanel?: boolean }
 const { term, titles, heading = 'h3', inPanel = false } = Astro.props;
@@ -30,7 +30,7 @@ const color = categories.find((c) => c.id === d.category)?.color;
       <h4>相關名詞</h4>
       <ul class="rel">
         {d.related.map((r) => (
-          <li><small>{REL_ZH[r.rel]}</small> <a href={`/terms/${r.slug}`} data-slug={r.slug}>{titles[r.slug] ?? r.slug}</a></li>
+          <li><small>{REL_ZH[r.rel]}</small> <a href={href(`/terms/${r.slug}`)} data-slug={r.slug}>{titles[r.slug] ?? r.slug}</a></li>
         ))}
       </ul>
       <h4>來源</h4>
@@ -38,7 +38,7 @@ const color = categories.find((c) => c.id === d.category)?.color;
       {d.needs_verification.length > 0 && (
         <p class="warn">⚠️ 需查證：{d.needs_verification.join('；')}</p>
       )}
-      {inPanel && <p class="src"><a href={`/terms/${term.id}`}>單獨頁面</a></p>}
+      {inPanel && <p class="src"><a href={href(`/terms/${term.id}`)}>單獨頁面</a></p>}
     </div>
   </div>
   {svg && (

@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Entry from '../components/Entry.astro';
-import { getTerms, categories } from '../lib/terms';
+import { getTerms, categories, href } from '../lib/terms';
 import { layout } from '../lib/graph';
 
 const terms = await getTerms();
@@ -42,7 +42,7 @@ const lit = new Set([...sky.nodes].sort((a, b) => b.deg - a.deg).slice(0, 12).ma
             <g>{sky.nodes.map((n, i) => {
               const r = 2.6 + Math.sqrt(n.deg) * 1.3;
               return (
-                <a href={`/terms/${n.id}`} data-slug={n.id} class={lit.has(n.id) ? 'lit' : undefined} style={`--c:${color[n.cat]};--tw:${(2.6 + (i * 37 % 23) / 10).toFixed(1)}s;--td:-${(i * 53 % 40) / 10}s`}>
+                <a href={href(`/terms/${n.id}`)} data-slug={n.id} class={lit.has(n.id) ? 'lit' : undefined} style={`--c:${color[n.cat]};--tw:${(2.6 + (i * 37 % 23) / 10).toFixed(1)}s;--td:-${(i * 53 % 40) / 10}s`}>
                   <title>{`${n.label}（${n.zh}）`}</title>
                   <circle class="halo" cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r={(r * 2.6).toFixed(1)} />
                   <circle class="st" cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r={r.toFixed(1)} />
@@ -74,7 +74,7 @@ const lit = new Set([...sky.nodes].sort((a, b) => b.deg - a.deg).slice(0, 12).ma
       </div>
       <div class="tiles">
         {s.terms.map((t, k) => (
-          <a class="tile" href={`/terms/${t.id}`} data-slug={t.id} style={`--k:${k}`}
+          <a class="tile" href={href(`/terms/${t.id}`)} data-slug={t.id} style={`--k:${k}`}
              data-search={[t.id, t.data.term, t.data.zh, ...t.data.aliases].join(' ').toLowerCase()}>
             <span class="n tnum" aria-hidden="true">{pad(numberOf.get(t.id)!)}</span>
             <span class="st" aria-hidden="true"></span>
