@@ -1,4 +1,4 @@
-// Render diagrams/<slug>.mmd to src/generated/diagrams/<slug>.svg with the Lumen palette.
+// Render diagrams/<slug>.mmd to src/generated/diagrams/<slug>.svg with the Nova palette.
 // Runs locally (needs Chromium + network for fonts); the SVGs are committed so Vercel never renders.
 // Usage: node scripts/render-diagrams.mjs [slug ...]
 import { createRequire } from 'node:module';
@@ -25,29 +25,32 @@ const config = {
   securityLevel: 'strict',
   flowchart: { htmlLabels: false, curve: 'basis', padding: 12, nodeSpacing: 36, rankSpacing: 44 },
   sequence: { mirrorActors: false },
+  // Nova dark palette: diagrams sit on the panel colour, lines in muted slate, nodes lifted one step.
   themeVariables: {
-    fontFamily: '"Radio Canada", "Noto Sans TC", sans-serif',
+    fontFamily: '"Manrope", "Noto Sans TC", sans-serif',
     fontSize: '15px',
-    background: '#F2F0E8',
-    primaryColor: '#F2F0E8',
-    primaryTextColor: '#0E1A1B',
-    primaryBorderColor: '#0E1A1B',
-    secondaryColor: '#CFE2E0',
-    tertiaryColor: '#F2F0E8',
-    lineColor: '#0E1A1B',
-    textColor: '#0E1A1B',
-    clusterBkg: '#CFE2E0',
-    clusterBorder: '#3A4F52',
-    edgeLabelBackground: '#F2F0E8',
-    actorBkg: '#F2F0E8', actorBorder: '#0E1A1B', signalColor: '#0E1A1B', noteBkgColor: '#CFE2E0', noteBorderColor: '#3A4F52',
+    darkMode: true,
+    background: '#0E1220',
+    primaryColor: '#151C33',
+    primaryTextColor: '#F1F5F9',
+    primaryBorderColor: '#5EEAD4',
+    secondaryColor: '#111831',
+    tertiaryColor: '#0E1220',
+    lineColor: '#8B95A8',
+    textColor: '#F1F5F9',
+    clusterBkg: 'rgba(129,140,248,0.10)',
+    clusterBorder: '#818CF8',
+    edgeLabelBackground: '#0E1220',
+    actorBkg: '#151C33', actorBorder: '#5EEAD4', actorTextColor: '#F1F5F9', signalColor: '#8B95A8', signalTextColor: '#F1F5F9',
+    noteBkgColor: '#111831', noteBorderColor: '#818CF8', noteTextColor: '#F1F5F9', labelBoxBkgColor: '#151C33', labelTextColor: '#F1F5F9', loopTextColor: '#F1F5F9',
   },
 };
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
 await page.setContent(`<!doctype html><html><head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Radio+Canada:wdth,wght@75..100,400..700&family=Noto+Sans+TC:wght@400;700&display=block">
-</head><body><div id="probe" style="font-family:'Radio Canada','Noto Sans TC';font-weight:400">Aa 中文 <b>粗體</b></div></body></html>`);
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Noto+Sans+TC:wght@400;700&display=block">
+</head><body><div id="probe" style="font-family:'Manrope','Noto Sans TC';font-weight:400">Aa 中文 <b>粗體</b></div></body></html>`);
 await page.addScriptTag({ content: mermaidJs });
 await page.evaluate(async () => { await document.fonts.ready; });
 await page.evaluate((c) => window.mermaid.initialize(c), config);

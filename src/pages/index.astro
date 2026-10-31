@@ -2,52 +2,87 @@
 import Base from '../layouts/Base.astro';
 import Entry from '../components/Entry.astro';
 import { getTerms, categories } from '../lib/terms';
+import { layout } from '../lib/graph';
 
 const terms = await getTerms();
 const titles = Object.fromEntries(terms.map((t) => [t.id, t.data.term]));
 const numberOf = new Map(terms.map((t, i) => [t.id, i + 1]));
+const color = Object.fromEntries(categories.map((c) => [c.id, c.color]));
 const sections = categories
   .map((c) => ({ ...c, terms: terms.filter((t) => t.data.category === c.id) }))
   .filter((s) => s.terms.length > 0);
 const pad = (n: number) => String(n).padStart(3, '0');
+
+// Hero sky: same relation graph as /graph, smaller canvas. The best-connected stars carry permanent labels.
+const SW = 760, SH = 600;
+const sky = layout(terms, SW, SH, { spread: 0.33, charge: -150, collide: 22, link: 46 });
+const lit = new Set([...sky.nodes].sort((a, b) => b.deg - a.deg).slice(0, 12).map((n) => n.id));
 ---
 <Base title="AI 名詞百科" description={`AI 社群與 YouTube 教學最常見的 ${terms.length} 個名詞：簡述、200 字介紹與圖例。`} current="terms">
-  <section class="wrap grid title">
-    <div class="c4-12">
-      <h1 class="cond">AI 社群最常見的 <span class="mk">{terms.length}</span> 個名詞</h1>
-      <p class="lede">從 Token、Agent 到 PR、Hook、Harness。按下方塊，先讀一句話的簡述和 200 字介紹，再看一張圖：它什麼時候派上用場、和哪些名詞連在一起。</p>
-      <div class="tools">
-        <div class="field">
-          <label for="q">搜尋名詞（英文、中文或別名）</label>
-          <input id="q" type="search" placeholder="例如：harness、合併請求、PR" autocomplete="off" />
+  <section class="hero">
+    <div class="orb a" aria-hidden="true"></div>
+    <div class="orb b" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <p class="badge rise"><span class="dot"></span>第 1 版 · {terms.length} 個名詞 · 持續增加中</p>
+        <h1 class="rise" style="--d:1">AI 社群最常見的 <span class="g">{terms.length}</span> 個名詞</h1>
+        <p class="lede rise" style="--d:2">從 Token、Agent 到 PR、Hook、Harness。按下方塊，先讀一句話的簡述和 200 字介紹，再看一張圖：它什麼時候派上用場、和哪些名詞連在一起。</p>
+        <div class="tools rise" style="--d:3">
+          <div class="field">
+            <label class="sr" for="q">搜尋名詞（英文、中文或別名）</label>
+            <input id="q" type="search" placeholder="搜尋：harness、合併請求、PR" autocomplete="off" />
+          </div>
         </div>
-        <div class="filters" role="group" aria-label="依類別篩選">
-          <button type="button" aria-pressed="true" data-cat="">全部</button>
-          {sections.map((s) => <button type="button" aria-pressed="false" data-cat={s.id}>{s.zh}</button>)}
-        </div>
+        <p class="note" id="status" aria-live="polite"></p>
       </div>
-      <p class="note" id="status" aria-live="polite"></p>
+      <figure class="rise" style="--d:2;margin:0">
+        <svg class="sky" viewBox={`0 0 ${SW} ${SH}`} role="img" aria-label={`名詞星圖：${sky.nodes.length} 個名詞、${sky.links.length} 條關係，依類別上色`}>
+          <g class="spin">
+            <g>{sky.links.map((l, i) => <line class="ln" style={`--i:${i}`} x1={l.s.x.toFixed(1)} y1={l.s.y.toFixed(1)} x2={l.t.x.toFixed(1)} y2={l.t.y.toFixed(1)} />)}</g>
+            <g>{sky.nodes.map((n, i) => {
+              const r = 2.6 + Math.sqrt(n.deg) * 1.3;
+              return (
+                <a href={`/terms/${n.id}`} data-slug={n.id} class={lit.has(n.id) ? 'lit' : undefined} style={`--c:${color[n.cat]};--tw:${(2.6 + (i * 37 % 23) / 10).toFixed(1)}s;--td:-${(i * 53 % 40) / 10}s`}>
+                  <title>{`${n.label}（${n.zh}）`}</title>
+                  <circle class="halo" cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r={(r * 2.6).toFixed(1)} />
+                  <circle class="st" cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r={r.toFixed(1)} />
+                  <text x={(n.x + r + 4).toFixed(1)} y={(n.y + 4).toFixed(1)}>{n.label}</text>
+                </a>
+              );
+            })}</g>
+          </g>
+        </svg>
+        <figcaption class="legend">{categories.map((c) => <span style={`--c:${c.color}`}>{c.zh}</span>)}</figcaption>
+      </figure>
     </div>
   </section>
 
-  {sections.map((s) => (
-    <section class="wrap grid sec" data-sec={s.id} aria-labelledby={`h-${s.id}`}>
-      <div class="c1-3">
-        <h2 class="cond" id={`h-${s.id}`}>{s.zh}</h2>
-        <p class="note en">{s.en} · <span class="tnum">{s.terms.length}</span> 個</p>
+  <div class="filters-bar">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="依類別篩選">
+        <button type="button" aria-pressed="true" data-cat="">全部</button>
+        {sections.map((s) => <button type="button" aria-pressed="false" data-cat={s.id} style={`--c:${s.color}`}><i aria-hidden="true"></i>{s.zh}</button>)}
       </div>
-      <div class="c4-12">
-        <div class="tiles">
-          {s.terms.map((t) => (
-            <a class="tile" href={`/terms/${t.id}`} data-slug={t.id}
-               data-search={[t.id, t.data.term, t.data.zh, ...t.data.aliases].join(' ').toLowerCase()}>
-              <span class="n cond tnum" aria-hidden="true">{pad(numberOf.get(t.id)!)}</span>
-              <span class="st" aria-hidden="true"></span>
-              <span class="t cond">{t.data.term}<span class="z">{t.data.zh}</span></span>
-            </a>
-          ))}
-          <div class="panel" hidden role="region" aria-label="名詞說明"><div class="in"><div class="rv leaf"></div></div></div>
-        </div>
+    </div>
+  </div>
+
+  {sections.map((s) => (
+    <section class="wrap sec" data-sec={s.id} aria-labelledby={`h-${s.id}`} style={`--c:${s.color}`}>
+      <div class="sec-h">
+        <h2 id={`h-${s.id}`}>{s.zh}</h2>
+        <p class="en">{s.en} · <span class="tnum">{s.terms.length}</span></p>
+      </div>
+      <div class="tiles">
+        {s.terms.map((t, k) => (
+          <a class="tile" href={`/terms/${t.id}`} data-slug={t.id} style={`--k:${k}`}
+             data-search={[t.id, t.data.term, t.data.zh, ...t.data.aliases].join(' ').toLowerCase()}>
+            <span class="n tnum" aria-hidden="true">{pad(numberOf.get(t.id)!)}</span>
+            <span class="st" aria-hidden="true"></span>
+            <span class="pv" aria-hidden="true">{t.data.summary}</span>
+            <span class="t">{t.data.term}<span class="z">{t.data.zh}</span></span>
+          </a>
+        ))}
+        <div class="panel" hidden role="region" aria-label="名詞說明"><div class="in"><div class="leaf"></div></div></div>
       </div>
     </section>
   ))}
@@ -104,12 +139,17 @@ const pad = (n: number) => String(n).padStart(3, '0');
     history.replaceState(null, '', '#' + slug);
     if (focusPanel) (leaf.querySelector('.h') as HTMLElement | null)?.setAttribute('tabindex', '-1');
     const top = tile.getBoundingClientRect().top;
-    if (top < 60 || top > innerHeight * .6) tile.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    if (top < 130 || top > innerHeight * .6) tile.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }
 
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const star = target.closest<SVGAElement>('.sky a[data-slug]');
+    if (star) {
+      const t = tiles.find((x) => x.dataset.slug === star.dataset.slug);
+      if (t) { e.preventDefault(); resetFilters(); open(t); t.focus({ preventScroll: true }); return; }
+    }
     const tile = target.closest<HTMLAnchorElement>('.tile');
     if (tile) { e.preventDefault(); open(tile); return; }
     if (target.closest('[data-close]')) { const t = openTile; close(); t?.focus(); return; }
@@ -146,6 +186,12 @@ const pad = (n: number) => String(n).padStart(3, '0');
     }
     empty.hidden = shown > 0;
     status.textContent = s || cat ? `顯示 ${shown} 個名詞` : '';
+  }
+  function resetFilters() {
+    if (!q.value && !cat) return;
+    q.value = ''; cat = '';
+    document.querySelectorAll('.filters button').forEach((x) => x.setAttribute('aria-pressed', String((x as HTMLElement).dataset.cat === '')));
+    apply();
   }
   q.addEventListener('input', apply);
   for (const b of document.querySelectorAll<HTMLButtonElement>('.filters button')) {

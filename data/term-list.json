@@ -3,47 +3,56 @@
   {
    "id": "model",
    "zh": "模型基礎",
-   "en": "Models"
+   "en": "Models",
+   "color": "#818CF8"
   },
   {
    "id": "prompt",
    "zh": "Prompt 與 Context",
-   "en": "Prompt & Context"
+   "en": "Prompt & Context",
+   "color": "#F472B6"
   },
   {
    "id": "agent",
    "zh": "Agent 架構",
-   "en": "Agents"
+   "en": "Agents",
+   "color": "#5EEAD4"
   },
   {
    "id": "coding",
    "zh": "AI Coding 工具鏈",
-   "en": "AI Coding"
+   "en": "AI Coding",
+   "color": "#FBBF24"
   },
   {
    "id": "git",
    "zh": "Git 與協作",
-   "en": "Git & Collaboration"
+   "en": "Git & Collaboration",
+   "color": "#FB923C"
   },
   {
    "id": "dev",
    "zh": "開發與部署",
-   "en": "Build & Deploy"
+   "en": "Build & Deploy",
+   "color": "#60A5FA"
   },
   {
    "id": "rag",
    "zh": "RAG 與資料",
-   "en": "RAG & Data"
+   "en": "RAG & Data",
+   "color": "#C084FC"
   },
   {
    "id": "eval",
    "zh": "Evals 與品質",
-   "en": "Evals & Quality"
+   "en": "Evals & Quality",
+   "color": "#4ADE80"
   },
   {
    "id": "training",
    "zh": "訓練與對齊",
-   "en": "Training & Alignment"
+   "en": "Training & Alignment",
+   "color": "#F87171"
   }
  ],
  "terms": [

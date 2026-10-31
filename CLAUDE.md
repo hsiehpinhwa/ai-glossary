@@ -1,6 +1,6 @@
 # AI 名詞百科
 
-Astro 靜態站。一個名詞 = `src/content/terms/<slug>.md` + `diagrams/<slug>.mmd`。設計來自 Ark Design 的 Lumen Academy 模組（`src/styles/lumen.css`）。
+Astro 靜態站。一個名詞 = `src/content/terms/<slug>.md` + `diagrams/<slug>.mmd`。設計來自 Ark Design 的 Nova 模組（`src/styles/nova.css`），首頁主視覺是名詞星圖（`src/lib/graph.ts`）。類別色在 `data/term-list.json` 的 `color`。
 
 ## 新增或修改名詞
 

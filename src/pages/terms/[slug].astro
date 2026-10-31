@@ -12,13 +12,10 @@ const { term, titles } = Astro.props;
 const cat = categories.find((c) => c.id === term.data.category)!;
 ---
 <Base title={`${term.data.term}（${term.data.zh}）｜AI 名詞百科`} description={term.data.summary} current="terms">
-  <section class="wrap title">
-    <div class="rv leaf" style="padding:2.5rem clamp(1rem,3vw,2.5rem)">
+  <section class="wrap page" style={`--c:${cat.color}`}>
+    <a class="back" href={`/#${term.id}`}>← 回到名詞表 · {cat.zh}</a>
+    <div class="leaf">
       <Entry term={term} titles={titles} heading="h1" />
     </div>
-    <p class="note" style="margin-top:1.25rem"><a href={`/#${term.id}`}>回到名詞表</a> · 類別：{cat.zh}</p>
   </section>
 </Base>
-<style is:global>
-  .stage-1, .stage-2, .stage-3 { opacity: 1; transform: none; }
-</style>
