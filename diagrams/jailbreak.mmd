@@ -1,0 +1,10 @@
+flowchart LR
+  user([使用者]) --> jailbreak[越獄話術<br/>角色扮演、假設情境]
+  prompt-injection[Prompt Injection] -. 較廣的類別 .-> jailbreak
+  jailbreak --> guardrails[Guardrails<br/>輸入篩檢]
+  guardrails --> system-prompt[System Prompt<br/>產品規則]
+  system-prompt --> model[模型]
+  alignment[Alignment<br/>安全訓練] --> model
+  model --> ok{守住了？}
+  ok -- 是 --> refuse[拒絕或安全回應]
+  ok -- 否 --> leak[產生有害內容]

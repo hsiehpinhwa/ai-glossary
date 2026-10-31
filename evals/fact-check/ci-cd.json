@@ -1,0 +1,39 @@
+{
+  "slug": "ci-cd",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "CI 要求頻繁 commit 到共用 repo，每次提交自動建置測試，可加格式檢查、安全掃描",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/actions/get-started/continuous-integration",
+      "note": ""
+    },
+    {
+      "text": "CD 用自動化發布上線",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/actions/get-started/continuous-deployment",
+      "note": ""
+    },
+    {
+      "text": "GitHub Actions 可在 push 或 pull request 時觸發",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+      "note": "Source added; CI page alone did not mention pull_request."
+    },
+    {
+      "text": "PR 上顯示 CI 結果",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/actions/get-started/continuous-integration",
+      "note": ""
+    },
+    {
+      "text": "可把主線設成檢查沒過不能合併",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/reference/branches",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "Added \"Events that trigger workflows\" source."
+  ]
+}

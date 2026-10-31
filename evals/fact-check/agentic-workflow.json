@@ -1,0 +1,33 @@
+{
+  "slug": "agentic-workflow",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Anthropic 區分 workflow（預先定義路徑）與 agent（模型自己決定）",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": ""
+    },
+    {
+      "text": "五種模式：prompt chaining、routing、parallelization、orchestrator-workers、evaluator-optimizer",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": ""
+    },
+    {
+      "text": "原文「好除錯、成本好估」",
+      "verdict": "unsupported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": "文章只說 workflow 提供 predictability and consistency；agent 成本較高、錯誤會累積。已改寫"
+    },
+    {
+      "text": "建議先從最簡單方案開始",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "agentic-workflow: 「可預測、好除錯、成本好估…比 agent 可靠」→「可預測、結果一致，適合步驟定義清楚的任務；agent 成本更高、錯誤可能累積」"
+  ]
+}

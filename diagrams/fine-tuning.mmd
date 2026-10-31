@@ -1,0 +1,7 @@
+flowchart LR
+  pre-training[Pre-training 好的模型] --> ft{Fine-tuning}
+  data[(範例資料<br/>輸入＋理想回答)] --> ft
+  ft --> tuned[特化後的模型]
+  lora[LoRA<br/>只訓練少量參數] -. 省成本做法 .-> ft
+  tuned --> eval[Eval<br/>確認變好還是變差]
+  rag[RAG<br/>補知識的另一條路] -. 對照 .-> tuned

@@ -1,0 +1,25 @@
+{
+  "slug": "ralph-loop",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Geoffrey Huntley 2025 年 7 月部落格介紹，名取自 Ralph Wiggum",
+      "verdict": "supported",
+      "source_url": "https://ghuntley.com/ralph/",
+      "note": "2025-07-14；HumanLayer 補充 6 月 meetup 首次發表"
+    },
+    {
+      "text": "最單純形式為 Bash 迴圈餵 PROMPT.md",
+      "verdict": "supported",
+      "source_url": "https://ghuntley.com/ralph/",
+      "note": ""
+    },
+    {
+      "text": "每輪新 context、一次只做一件事、測試與型別檢查做背壓、犯錯時補提示",
+      "verdict": "supported",
+      "source_url": "https://ghuntley.com/ralph/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

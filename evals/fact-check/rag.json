@@ -1,0 +1,39 @@
+{
+  "slug": "rag",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "先 retrieval 再 generation，把段落放進 context window",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "可用訓練資料以外的資訊、較易附出處、減少編造",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": "\"ground the model response in evidence\"."
+    },
+    {
+      "text": "典型 RAG 包含 chunking、embedding、vector database",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    },
+    {
+      "text": "資料量小到放得進 prompt，Anthropic 建議直接放",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": "Under 200k tokens."
+    },
+    {
+      "text": "客服機器人等產品背後「多半」就是 RAG",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "Frequency not sourced; rewritten as common applications."
+    }
+  ],
+  "changes": [
+    "Last sentence: \"背後多半就是 RAG\" → \"都是 RAG 常見的應用\"."
+  ]
+}

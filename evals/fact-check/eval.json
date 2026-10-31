@@ -1,0 +1,33 @@
+{
+  "slug": "eval",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "評分方式：程式判斷、LLM 評審、人工審查",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+      "note": ""
+    },
+    {
+      "text": "AI 輸出每次可能不一樣，eval 看通過率",
+      "verdict": "supported",
+      "source_url": "https://anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "note": "pass@k / pass^k; source added."
+    },
+    {
+      "text": "改 prompt、換模型時重跑同一份 eval，及早抓 regression",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/evals",
+      "note": ""
+    },
+    {
+      "text": "社群常說「沒有 eval 就沒有迭代」",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "No authoritative source; cut."
+    }
+  ],
+  "changes": [
+    "Cut the unsourced \"community saying\"; added Demystifying evals source."
+  ]
+}

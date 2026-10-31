@@ -1,0 +1,37 @@
+{
+  "slug": "git",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Git 記錄檔案變化，可看出誰在何時改了什麼，也能退回檔案或整個專案的舊版本",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control",
+      "note": ""
+    },
+    {
+      "text": "commit 把當下狀態存成快照",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+      "note": ""
+    },
+    {
+      "text": "branch 讓你另開路線，再 merge 回來",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+      "note": ""
+    },
+    {
+      "text": "Git 是分散式的，每份 clone 都帶完整歷史，等於一份備份",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control",
+      "note": "\"Every clone is really a full backup of all the data.\""
+    },
+    {
+      "text": "Git 是在你電腦上跑的工具，GitHub 是存放 Git 專案的網站",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/get-started/quickstart/about-github-and-git",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

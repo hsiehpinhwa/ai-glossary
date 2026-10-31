@@ -1,0 +1,45 @@
+{
+  "slug": "agent-loop",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "模型決定回答或呼叫工具，harness 執行並送回，直到不再呼叫工具",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "修測試例子共四個回合",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "原文「簡單問題一兩輪結束」",
+      "verdict": "unsupported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": "文件寫 two or three turns；已改為兩三個回合"
+    },
+    {
+      "text": "複雜任務可串起幾十次工具呼叫",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "可設 max_turns、max_budget_usd；上下文快滿自動 compaction",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "/loop 在同一工作階段依間隔重跑 prompt",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/scheduled-tasks",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "agent-loop: 「簡單問題一兩輪結束」→「兩三個回合結束」"
+  ]
+}

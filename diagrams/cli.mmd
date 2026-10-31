@@ -1,0 +1,9 @@
+flowchart LR
+  you([你]) -- 輸入指令 --> term[終端機]
+  coding-agent[Coding Agent] -- 代你下指令 --> term
+  term --> shell{Shell 執行}
+  shell --> git[Git 指令]
+  shell --> install[安裝套件]
+  shell --> localhost[啟動 Localhost 伺服器]
+  shell -- 文字結果 --> term
+  ide[IDE<br/>圖形介面] -. 另一種操作方式 .- term

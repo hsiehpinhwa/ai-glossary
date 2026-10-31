@@ -1,0 +1,8 @@
+flowchart LR
+  q([使用者問題]) --> retrieval[Retrieval<br/>快速撈候選]
+  vector-database[(Vector Database)] --> retrieval
+  retrieval -- 例如 150 段 --> cand[候選段落]
+  cand --> reranking{{Reranker 模型<br/>逐段打相關分數}}
+  q --> reranking
+  reranking -- 只留前 20 段 --> ctx[放進 Context]
+  ctx --> rag[RAG 回答]

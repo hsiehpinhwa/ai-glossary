@@ -1,0 +1,8 @@
+flowchart LR
+  edit[修改檔案] --> diff[檢查 Diff]
+  diff -- 挑出要存的改動 --> stage[暫存區<br/>git add]
+  stage -- 寫一句說明 --> snap((Commit 快照))
+  coding-agent[Coding Agent] -. 提議或代寫訊息 .-> snap
+  snap --> branch[Branch 往前一步]
+  branch --> push[Push]
+  push --> repository[(遠端 Repository)]

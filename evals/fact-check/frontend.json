@@ -1,0 +1,33 @@
+{
+  "slug": "frontend",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "HTML 結構、CSS 樣式、JavaScript 互動",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": ""
+    },
+    {
+      "text": "前端送 HTTP 請求給 backend",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": ""
+    },
+    {
+      "text": "email 格式等簡單檢查可先在前端做",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation",
+      "note": "Source added; MDN also says server must validate too."
+    },
+    {
+      "text": "秘密不該放在前端",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/docs/authentication/api-keys-best-practices",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "Added MDN form validation source."
+  ]
+}

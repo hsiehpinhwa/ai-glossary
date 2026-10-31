@@ -1,0 +1,39 @@
+{
+  "slug": "prompt-caching",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "快取預設 5 分鐘，每次使用重新計時",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "note": ""
+    },
+    {
+      "text": "讀快取價格為一小部分，5 分鐘寫入為 1.25 倍",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "note": ""
+    },
+    {
+      "text": "快取以 prefix 為單位，前面改動則之後失效",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "note": ""
+    },
+    {
+      "text": "Claude Code/Agent SDK 自動快取 system prompt 與工具定義",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "圖例與說明原寫「有一個字不同就得重新處理整段」",
+      "verdict": "unsupported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "note": "系統會找出已快取的最長前綴；只有改動處之後要重新處理"
+    }
+  ],
+  "changes": [
+    "prompt-caching 圖例與 caption：「有一個字不同就得重新處理整段」→「從改動處之後就得重新處理」"
+  ]
+}

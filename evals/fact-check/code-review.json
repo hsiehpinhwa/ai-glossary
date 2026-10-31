@@ -1,0 +1,33 @@
+{
+  "slug": "code-review",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "GitHub 審查有三種結論：留言、核准、要求修改",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews",
+      "note": ""
+    },
+    {
+      "text": "要求修改（處理完才能合併）",
+      "verdict": "unsupported",
+      "source_url": "https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews",
+      "note": "Docs: feedback \"the author should address before merging\"; it does not by itself block merging. Rewritten to \"作者應先處理再合併\"."
+    },
+    {
+      "text": "審查者能直接在某一行建議改法",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews",
+      "note": ""
+    },
+    {
+      "text": "可以把重要分支設成受保護，沒有核准就不能合併",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/reference/branches",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "\"request changes\" no longer described as a hard merge block."
+  ]
+}

@@ -1,0 +1,9 @@
+flowchart LR
+  app[你的 App] -- 帶著 --> api-key[API Key]
+  app -- 用 --> sdk[SDK]
+  sdk -- HTTP 請求 --> backend[服務端<br/>Backend]
+  api-key --> backend
+  backend -- 回應資料 --> app
+  backend -. 太頻繁 .-> rate-limit[Rate Limit]
+  backend -. 事件發生主動通知 .-> webhook[Webhook]
+  mcp[MCP] -. 讓 AI agent 使用外部服務 .-> backend

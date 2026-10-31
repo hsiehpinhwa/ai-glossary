@@ -1,0 +1,31 @@
+{
+  "slug": "distillation",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "老師模型產生回答，用來 fine-tune 學生模型",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/api-model-distillation/",
+      "note": "LLM-era API description. Hinton original uses soft targets; not contradicted."
+    },
+    {
+      "text": "2015 Hinton 等人示範把 ensemble 壓縮進單一模型",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/1503.02531",
+      "note": ""
+    },
+    {
+      "text": "OpenAI 在 API 提供蒸餾流程，讓小模型在特定任務接近大模型、成本低",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/api-model-distillation/",
+      "note": "Oct 2024."
+    },
+    {
+      "text": "蒸餾完要用 eval 確認",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/api-model-distillation/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

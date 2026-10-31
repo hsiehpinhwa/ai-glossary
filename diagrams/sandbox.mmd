@@ -1,0 +1,11 @@
+flowchart LR
+  coding-agent[Coding Agent] -- 執行指令 --> box
+  subgraph box[Sandbox]
+    cmd[Shell 指令與子程序]
+  end
+  cmd -- 寫入 --> wd[專案資料夾：允許]
+  cmd -. 寫入 .-> other[其他位置：擋下]
+  cmd -- 連網 --> proxy{網域在允許清單？}
+  proxy -- 是 --> net[外部網站]
+  proxy -- 否 --> deny[拒絕連線]
+  permission-mode[Permission Mode] -. 可以少問幾次 .-> coding-agent

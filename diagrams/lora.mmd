@@ -1,0 +1,8 @@
+flowchart LR
+  open-weight-model[Open-weight Model] --> base[(基礎模型權重<br/>凍結不動)]
+  data[(自己的資料)] --> train[只訓練小矩陣]
+  fine-tuning[Fine-tuning 的一種] -.-> train
+  train --> adapter[LoRA 權重<br/>小檔案]
+  base --> merged[合併後的模型]
+  adapter -- 合併 --> merged
+  adapter -- 換一組 --> other[其他任務的 LoRA]

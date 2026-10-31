@@ -1,0 +1,7 @@
+flowchart LR
+  someone[使用者或你自己] -- 回報 bug 或需求 --> issue{{Issue}}
+  issue -- 指派 --> coding-agent[Coding Agent 或隊友]
+  coding-agent --> fixbranch[開分支修改]
+  fixbranch --> pull-request{{Pull Request<br/>用 fixes 關鍵字}}
+  pull-request -- 合併 --> closed[Issue 自動關閉]
+  repository[Repository] -. 存放 .-> issue

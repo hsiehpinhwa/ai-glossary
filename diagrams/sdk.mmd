@@ -1,0 +1,9 @@
+flowchart LR
+  code[你的程式] --> sdk[SDK 套件]
+  api-key[API Key] --> sdk
+  sdk -- 組好請求 --> api[API]
+  api -. 429 .-> rate-limit[Rate Limit]
+  rate-limit -. SDK 自動重試 .-> sdk
+  agentsdk[Agent SDK] -- 多包一層迴圈與工具 --> sdk
+  agentsdk --> harness[Harness]
+  harness --> agent[Agent]

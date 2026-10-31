@@ -1,0 +1,45 @@
+{
+  "slug": "headless-mode",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "claude -p 非互動執行，可 pipe 輸入輸出",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/headless",
+      "note": ""
+    },
+    {
+      "text": "輸出格式 text、json、stream-json",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/headless",
+      "note": ""
+    },
+    {
+      "text": "未核准的動作在 -p 中被拒",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/headless",
+      "note": ""
+    },
+    {
+      "text": "CI 中自動 code review、修 lint",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/overview",
+      "note": ""
+    },
+    {
+      "text": "原文「翻譯字串」",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "未在來源找到；改為來源列出的「分類 issue」"
+    },
+    {
+      "text": "同樣能力以 Agent SDK 提供",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/headless",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "headless-mode: 用途「翻譯字串」→「分類 issue」；新增 Claude Code Overview 為來源"
+  ]
+}

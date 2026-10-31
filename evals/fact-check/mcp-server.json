@@ -1,0 +1,31 @@
+{
+  "slug": "mcp-server",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "三種 primitive：工具、資源、prompt 模板",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "note": ""
+    },
+    {
+      "text": "client 先用 tools/list 詢問工具",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "note": ""
+    },
+    {
+      "text": "本機 stdio、遠端 Streamable HTTP；授權用 OAuth 或 API key",
+      "verdict": "supported",
+      "source_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "note": ""
+    },
+    {
+      "text": "抓取外部內容的 server 可能帶進 prompt injection",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/mcp",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

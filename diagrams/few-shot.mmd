@@ -1,0 +1,8 @@
+flowchart LR
+  ex1[範例 1<br/>輸入 → 輸出] --> prompt[Prompt]
+  ex2[範例 2] --> prompt
+  ex3[範例 3] --> prompt
+  task([新的輸入]) --> prompt
+  prompt --> llm[LLM]
+  llm --> out[照同樣模式輸出]
+  fine-tuning[Fine-tuning<br/>改模型權重] -. 另一條路 .-> llm

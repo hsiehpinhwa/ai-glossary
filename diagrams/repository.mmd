@@ -1,0 +1,7 @@
+flowchart LR
+  local[(本機 repo)] -- 累積 --> commit[Commit]
+  commit -- push --> push[Push / Pull]
+  push --> github[(GitHub 上的<br/>遠端 repo)]
+  github -- 下載到別臺電腦 --> clone[Clone]
+  github -- 複製到別人帳號 --> fork[Fork]
+  git[Git] -. 管理版本 .-> local

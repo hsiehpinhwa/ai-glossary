@@ -1,0 +1,9 @@
+flowchart LR
+  img[圖片／截圖] --> enc[切成小區塊]
+  aud[音訊／影片] --> enc
+  txt[文字] --> token[Token]
+  enc --> token
+  token --> context-window[(Context Window)]
+  context-window --> llm[多模態 LLM]
+  llm --> out[文字回答]
+  llm -. 看螢幕決定動作 .-> computer-use[Computer Use]

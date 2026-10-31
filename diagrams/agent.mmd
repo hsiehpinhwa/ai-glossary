@@ -1,0 +1,8 @@
+flowchart LR
+  goal([使用者給的目標]) --> llm[LLM<br/>決定下一步]
+  llm -- 需要行動 --> tool-use[Tool Use<br/>搜尋、讀檔、執行]
+  tool-use -- 結果回饋 --> llm
+  memory[(Memory)] <--> llm
+  llm -- 判斷完成 --> done[交付成果]
+  harness[Harness<br/>執行工具與權限] -.-> tool-use
+  agent-loop((Agent Loop)) -. 反覆 .-> llm

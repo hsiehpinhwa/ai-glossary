@@ -1,0 +1,25 @@
+{
+  "slug": "few-shot",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "GPT-3 論文（2020）展示只靠 prompt 示範、不更新權重即可完成翻譯、問答",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2005.14165",
+      "note": ""
+    },
+    {
+      "text": "zero-shot / one-shot 定義",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2005.14165",
+      "note": ""
+    },
+    {
+      "text": "Anthropic 建議 3–5 個範例、貼近實際、彼此有差異、用標籤分開",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/system-prompts",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

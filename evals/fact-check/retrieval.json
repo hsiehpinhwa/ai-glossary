@@ -1,0 +1,31 @@
+{
+  "slug": "retrieval",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "語意搜尋用 embedding；BM25 擅長精準比對錯誤代碼等",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    },
+    {
+      "text": "結合兩者合併排序，漏掉的段落更少",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    },
+    {
+      "text": "候選再經 reranking",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    },
+    {
+      "text": "agent 用工具搜尋也屬廣義 retrieval",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": "Glossary: model can retrieve with tool use."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,10 @@
+flowchart LR
+  app[你的 App 或 Agent] -- 帶 API Key --> api-key[API Key<br/>辨識帳號與組織]
+  api-key --> api[API]
+  api --> check{超過上限？}
+  check -- 否 --> ok[正常回應]
+  check -- 是 --> err[429 Too Many Requests<br/>Retry-After]
+  err --> wait[等待後重試<br/>間隔逐次拉長]
+  wait --> api
+  sdk[SDK] -. 內建重試 .-> wait
+  token[Token 數] -. 也計入額度 .-> check

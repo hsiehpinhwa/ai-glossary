@@ -1,0 +1,37 @@
+{
+  "slug": "hallucination",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Hallucination 是模型產生看似合理但錯誤的內容",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/why-language-models-hallucinate/",
+      "note": ""
+    },
+    {
+      "text": "拼字等有規律的東西隨規模消失，生日這類低頻任意事實難以預測",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/why-language-models-hallucinate/",
+      "note": ""
+    },
+    {
+      "text": "只看答對率的評測鼓勵模型亂猜",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/why-language-models-hallucinate/",
+      "note": ""
+    },
+    {
+      "text": "Anthropic 列出：允許說不知道、引用原文、每個說法附出處、只依提供的文件",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "note": ""
+    },
+    {
+      "text": "這些方法只能減少、無法消除",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "jailbreak",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "OWASP 把 jailbreak 視為 prompt injection 的一種，目標是讓模型忽略安全規範",
+      "verdict": "supported",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "note": ""
+    },
+    {
+      "text": "Anthropic：越獄時使用者本人就是攻擊者",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+      "note": ""
+    },
+    {
+      "text": "防禦：輕量模型篩檢輸入、system prompt 規則、持續監控",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

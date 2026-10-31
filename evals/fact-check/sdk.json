@@ -1,0 +1,31 @@
+{
+  "slug": "sdk",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "SDK 包含程式庫、說明文件、範例和 API",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/what-is/sdk/",
+      "note": ""
+    },
+    {
+      "text": "Claude 官方提供七種語言的 SDK（含 Python、TypeScript、Go、Java）",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/cli-sdks-libraries/overview",
+      "note": "Python, TypeScript, C#, Go, Java, PHP, Ruby."
+    },
+    {
+      "text": "內建串流、型別檢查與自動重試",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/cli-sdks-libraries/overview",
+      "note": ""
+    },
+    {
+      "text": "Agent SDK 包含 agent 迴圈、工具與上下文管理",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/overview",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

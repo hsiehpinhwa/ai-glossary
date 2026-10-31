@@ -1,0 +1,9 @@
+flowchart TB
+  spec[[規格與待辦清單<br/>PROMPT.md]] --> start[腳本啟動新的 Agent]
+  start --> coding-agent[Coding Agent<br/>挑一件最重要的事]
+  agent-loop((Agent Loop)) -. 每一輪的內部 .-> coding-agent
+  coding-agent --> unit-test{跑測試<br/>Unit Test}
+  unit-test -- 失敗 --> coding-agent
+  unit-test -- 通過 --> update[更新待辦清單]
+  update --> reset[這一輪結束<br/>context 全部丟掉]
+  reset -- 再來一次 --> start

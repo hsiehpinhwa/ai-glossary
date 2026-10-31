@@ -1,0 +1,8 @@
+flowchart LR
+  code[一個函式<br/>例：計算折扣] --> unit-test[Unit Test<br/>給定輸入，檢查輸出]
+  coding-agent[Coding Agent] -- 改完自己跑 --> unit-test
+  unit-test --> pass{通過？}
+  pass -- 否 --> fix[修程式]
+  fix --> unit-test
+  pass -- 是 --> ci-cd[每次修改自動執行<br/>CI/CD]
+  ci-cd --> regression[防止 Regression]

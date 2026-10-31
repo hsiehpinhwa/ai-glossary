@@ -1,0 +1,31 @@
+{
+  "slug": "deep-research",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "OpenAI 2025 年 2 月推出，需 5–30 分鐘",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/introducing-deep-research/",
+      "note": ""
+    },
+    {
+      "text": "Gemini 有 Deep Research",
+      "verdict": "supported",
+      "source_url": "https://blog.google/products/gemini/deep-research-gemini-2-5-pro-experimental/",
+      "note": ""
+    },
+    {
+      "text": "Anthropic Research 用多 agent 平行搜尋",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "note": ""
+    },
+    {
+      "text": "可能幻覺、難分可靠來源與傳聞",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/introducing-deep-research/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

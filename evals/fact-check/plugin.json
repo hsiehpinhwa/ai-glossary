@@ -1,0 +1,37 @@
+{
+  "slug": "plugin",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "plugin 打包 skill、agent、hook、MCP server",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/plugins",
+      "note": ""
+    },
+    {
+      "text": "多來自 marketplace；/plugin 安裝；可選 user/project/local scope",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/plugins/install.md",
+      "note": ""
+    },
+    {
+      "text": "啟用的 plugin 每個 session 都存在：名稱描述佔上下文、MCP 在背景執行、hook 觸發",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/plugins",
+      "note": ""
+    },
+    {
+      "text": "plugin 以你的身分執行",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/plugins",
+      "note": ""
+    },
+    {
+      "text": "IDE 擴充與 Claude Code plugin 不同",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/plugins",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

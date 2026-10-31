@@ -1,0 +1,8 @@
+flowchart LR
+  localhost[Localhost 開發] --> push[Push]
+  push --> github[GitHub]
+  github --> ci-cd[CI/CD 自動建置]
+  environment-variable[平台上的環境變數] --> ci-cd
+  ci-cd -- 一般分支 --> preview[Preview 網址]
+  ci-cd -- 正式分支 --> prod[Production 網站]
+  prod -. 出問題 .-> rollback[回滾到上一版]

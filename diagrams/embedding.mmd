@@ -1,0 +1,7 @@
+flowchart LR
+  chunking[文件切成 Chunk] --> emb[Embedding 模型]
+  q([使用者問題]) --> emb
+  emb --> vec[向量<br/>一串數字]
+  vec --> vector-database[(Vector Database)]
+  vector-database -- 找最接近的向量 --> retrieval[Retrieval]
+  retrieval --> rag[交給 LLM 回答<br/>RAG]

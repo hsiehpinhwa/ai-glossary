@@ -1,0 +1,25 @@
+{
+  "slug": "api",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "API 是軟體提供給其他程式使用的一組功能與規則，可視為合約",
+      "verdict": "supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Glossary/API",
+      "note": ""
+    },
+    {
+      "text": "web API 透過 HTTP 送請求、回傳資料",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": "Frontend sends HTTP requests to backend."
+    },
+    {
+      "text": "語言模型以 API 開放給開發者",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

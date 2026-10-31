@@ -1,0 +1,31 @@
+{
+  "slug": "vibe-coding",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Karpathy 2025 年 2 月於 X 提出，「忘記程式碼存在」",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/VibeCoding.html",
+      "note": "X 原文無法抓取，以 Fowler 文章佐證"
+    },
+    {
+      "text": "Fowler：關鍵在不看 AI 產生的程式碼",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/VibeCoding.html",
+      "note": ""
+    },
+    {
+      "text": "適合原型與個人工具；安全與維護風險",
+      "verdict": "supported",
+      "source_url": "https://martinfowler.com/bliki/VibeCoding.html",
+      "note": ""
+    },
+    {
+      "text": "正式應用改用 spec-driven development",
+      "verdict": "supported",
+      "source_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

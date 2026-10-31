@@ -1,0 +1,39 @@
+{
+  "slug": "fine-tuning",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Fine-tuning 是在預訓練模型上用額外資料再訓練，讓輸出模仿資料模式",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "監督式微調用「輸入＋正確回答」範例，適合格式、分類、指令遵循",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/supervised-fine-tuning",
+      "note": ""
+    },
+    {
+      "text": "需要最新或私有資料通常改用 RAG",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "微調可能影響原本表現，要先有 eval",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/supervised-fine-tuning",
+      "note": "Only invest in fine-tuning after setting up evals"
+    },
+    {
+      "text": "LoRA 只訓練少量參數，大幅降低成本",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2106.09685",
+      "note": "trainable params 降 10,000 倍、GPU 記憶體降 3 倍"
+    }
+  ],
+  "changes": [
+    "fine-tuning: 新增 LoRA 原始論文為來源（原本 LoRA 說法無來源）"
+  ]
+}

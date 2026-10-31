@@ -1,0 +1,10 @@
+flowchart LR
+  change([改 prompt、換模型<br/>或改程式]) --> suite
+  subgraph suite[回歸測試]
+    unit-test[Unit Test]
+    eval[Eval]
+  end
+  golden-dataset[(Golden Dataset)] --> eval
+  suite --> ok{舊案例都通過？}
+  ok -- 是 --> ci-cd[繼續合併與部署<br/>CI/CD]
+  ok -- 否 --> fix[發現 Regression<br/>先修再上線]

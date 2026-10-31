@@ -1,0 +1,43 @@
+{
+  "slug": "rlhf",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "InstructGPT 三步：示範 SFT、排名訓練獎勵模型、強化學習",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2203.02155",
+      "note": ""
+    },
+    {
+      "text": "同時不偏離原本太遠",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2203.02155",
+      "note": "Per-token KL penalty from the SFT model."
+    },
+    {
+      "text": "模型變大不代表更會照意圖做事",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2203.02155",
+      "note": ""
+    },
+    {
+      "text": "Claude 經過 RLHF 訓練",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "學到的是那群標註者與研究者的偏好",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2203.02155",
+      "note": "§5.2."
+    },
+    {
+      "text": "Constitutional AI 用 AI 回饋取代部分人工",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2212.08073",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

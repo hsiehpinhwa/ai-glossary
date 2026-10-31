@@ -1,0 +1,8 @@
+flowchart LR
+  spec[Specify<br/>寫規格：做什麼、為什麼] --> plan1[Plan<br/>技術架構與限制]
+  plan1 --> tasks[Tasks<br/>拆成小任務]
+  tasks --> impl[Implement<br/>逐項實作]
+  coding-agent[Coding Agent] --> impl
+  impl --> tdd[測試驗證<br/>TDD]
+  tdd -- 不符規格 --> spec
+  vibe-coding[Vibe Coding<br/>不寫規格直接做] -. 對照 .-> impl

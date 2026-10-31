@@ -1,0 +1,7 @@
+flowchart LR
+  q([複雜問題]) --> direct[直接回答]
+  q --> cot[先寫出推理步驟]
+  few-shot[附推理過程的範例<br/>Few-shot] --> cot
+  cot --> step1[步驟 1] --> step2[步驟 2] --> ans[最終答案]
+  direct -. 容易跳步出錯 .-> wrong[錯誤答案]
+  reasoning-model[Reasoning Model<br/>回答前先思考] -. 相近的概念 .-> cot

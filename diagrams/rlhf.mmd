@@ -1,0 +1,8 @@
+flowchart LR
+  pre-training[Pre-training 模型] --> sft[步驟一：人類示範<br/>監督式 Fine-tuning]
+  sft --> rank[步驟二：人類替回答排名]
+  rank --> rm[(獎勵模型)]
+  rm --> rl[步驟三：強化學習<br/>追求高分]
+  sft --> rl
+  rl --> llm[好用的助理 LLM]
+  llm -. 目標 .-> alignment[Alignment]

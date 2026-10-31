@@ -1,0 +1,25 @@
+{
+  "slug": "temperature",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Temperature 控制輸出隨機程度，高較多變、低較保守",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "temperature 0 也不保證完全相同輸出",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "只影響挑字隨機程度，不改變知識",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": "由定義推得"
+    }
+  ],
+  "changes": []
+}

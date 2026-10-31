@@ -1,0 +1,551 @@
+{
+ "categories": [
+  {
+   "id": "model",
+   "zh": "模型基礎",
+   "en": "Models"
+  },
+  {
+   "id": "prompt",
+   "zh": "Prompt 與 Context",
+   "en": "Prompt & Context"
+  },
+  {
+   "id": "agent",
+   "zh": "Agent 架構",
+   "en": "Agents"
+  },
+  {
+   "id": "coding",
+   "zh": "AI Coding 工具鏈",
+   "en": "AI Coding"
+  },
+  {
+   "id": "git",
+   "zh": "Git 與協作",
+   "en": "Git & Collaboration"
+  },
+  {
+   "id": "dev",
+   "zh": "開發與部署",
+   "en": "Build & Deploy"
+  },
+  {
+   "id": "rag",
+   "zh": "RAG 與資料",
+   "en": "RAG & Data"
+  },
+  {
+   "id": "eval",
+   "zh": "Evals 與品質",
+   "en": "Evals & Quality"
+  },
+  {
+   "id": "training",
+   "zh": "訓練與對齊",
+   "en": "Training & Alignment"
+  }
+ ],
+ "terms": [
+  {
+   "slug": "llm",
+   "term": "LLM",
+   "category": "model"
+  },
+  {
+   "slug": "token",
+   "term": "Token",
+   "category": "model"
+  },
+  {
+   "slug": "context-window",
+   "term": "Context Window",
+   "category": "model"
+  },
+  {
+   "slug": "transformer",
+   "term": "Transformer",
+   "category": "model"
+  },
+  {
+   "slug": "parameter",
+   "term": "Parameter",
+   "category": "model"
+  },
+  {
+   "slug": "pre-training",
+   "term": "Pre-training",
+   "category": "model"
+  },
+  {
+   "slug": "fine-tuning",
+   "term": "Fine-tuning",
+   "category": "model"
+  },
+  {
+   "slug": "inference",
+   "term": "Inference",
+   "category": "model"
+  },
+  {
+   "slug": "hallucination",
+   "term": "Hallucination",
+   "category": "model"
+  },
+  {
+   "slug": "temperature",
+   "term": "Temperature",
+   "category": "model"
+  },
+  {
+   "slug": "embedding",
+   "term": "Embedding",
+   "category": "model"
+  },
+  {
+   "slug": "multimodal",
+   "term": "Multimodal",
+   "category": "model"
+  },
+  {
+   "slug": "reasoning-model",
+   "term": "Reasoning Model",
+   "category": "model"
+  },
+  {
+   "slug": "open-weight-model",
+   "term": "Open-weight Model",
+   "category": "model"
+  },
+  {
+   "slug": "prompt",
+   "term": "Prompt",
+   "category": "prompt"
+  },
+  {
+   "slug": "system-prompt",
+   "term": "System Prompt",
+   "category": "prompt"
+  },
+  {
+   "slug": "prompt-engineering",
+   "term": "Prompt Engineering",
+   "category": "prompt"
+  },
+  {
+   "slug": "context-engineering",
+   "term": "Context Engineering",
+   "category": "prompt"
+  },
+  {
+   "slug": "few-shot",
+   "term": "Few-shot",
+   "category": "prompt"
+  },
+  {
+   "slug": "chain-of-thought",
+   "term": "Chain-of-Thought",
+   "category": "prompt"
+  },
+  {
+   "slug": "structured-output",
+   "term": "Structured Output",
+   "category": "prompt"
+  },
+  {
+   "slug": "prompt-caching",
+   "term": "Prompt Caching",
+   "category": "prompt"
+  },
+  {
+   "slug": "prompt-injection",
+   "term": "Prompt Injection",
+   "category": "prompt"
+  },
+  {
+   "slug": "jailbreak",
+   "term": "Jailbreak",
+   "category": "prompt"
+  },
+  {
+   "slug": "agent",
+   "term": "Agent",
+   "category": "agent"
+  },
+  {
+   "slug": "agentic-workflow",
+   "term": "Agentic Workflow",
+   "category": "agent"
+  },
+  {
+   "slug": "agent-loop",
+   "term": "Agent Loop",
+   "category": "agent"
+  },
+  {
+   "slug": "tool-use",
+   "term": "Tool Use",
+   "category": "agent"
+  },
+  {
+   "slug": "harness",
+   "term": "Harness",
+   "category": "agent"
+  },
+  {
+   "slug": "subagent",
+   "term": "Subagent",
+   "category": "agent"
+  },
+  {
+   "slug": "multi-agent-orchestration",
+   "term": "Multi-agent Orchestration",
+   "category": "agent"
+  },
+  {
+   "slug": "plan-mode",
+   "term": "Plan Mode",
+   "category": "agent"
+  },
+  {
+   "slug": "memory",
+   "term": "Memory",
+   "category": "agent"
+  },
+  {
+   "slug": "guardrails",
+   "term": "Guardrails",
+   "category": "agent"
+  },
+  {
+   "slug": "human-in-the-loop",
+   "term": "Human-in-the-loop",
+   "category": "agent"
+  },
+  {
+   "slug": "computer-use",
+   "term": "Computer Use",
+   "category": "agent"
+  },
+  {
+   "slug": "deep-research",
+   "term": "Deep Research",
+   "category": "agent"
+  },
+  {
+   "slug": "ralph-loop",
+   "term": "Ralph Loop",
+   "category": "agent"
+  },
+  {
+   "slug": "context-compaction",
+   "term": "Context Compaction",
+   "category": "agent"
+  },
+  {
+   "slug": "autonomy-level",
+   "term": "Autonomy Level",
+   "category": "agent"
+  },
+  {
+   "slug": "vibe-coding",
+   "term": "Vibe Coding",
+   "category": "coding"
+  },
+  {
+   "slug": "coding-agent",
+   "term": "Coding Agent",
+   "category": "coding"
+  },
+  {
+   "slug": "claude-md",
+   "term": "CLAUDE.md",
+   "category": "coding"
+  },
+  {
+   "slug": "skill",
+   "term": "Skill",
+   "category": "coding"
+  },
+  {
+   "slug": "hook",
+   "term": "Hook",
+   "category": "coding"
+  },
+  {
+   "slug": "slash-command",
+   "term": "Slash Command",
+   "category": "coding"
+  },
+  {
+   "slug": "plugin",
+   "term": "Plugin",
+   "category": "coding"
+  },
+  {
+   "slug": "mcp",
+   "term": "MCP",
+   "category": "coding"
+  },
+  {
+   "slug": "mcp-server",
+   "term": "MCP Server",
+   "category": "coding"
+  },
+  {
+   "slug": "headless-mode",
+   "term": "Headless Mode",
+   "category": "coding"
+  },
+  {
+   "slug": "sandbox",
+   "term": "Sandbox",
+   "category": "coding"
+  },
+  {
+   "slug": "permission-mode",
+   "term": "Permission Mode",
+   "category": "coding"
+  },
+  {
+   "slug": "worktree",
+   "term": "Worktree",
+   "category": "coding"
+  },
+  {
+   "slug": "spec-driven-development",
+   "term": "Spec-driven Development",
+   "category": "coding"
+  },
+  {
+   "slug": "git",
+   "term": "Git",
+   "category": "git"
+  },
+  {
+   "slug": "repository",
+   "term": "Repository",
+   "category": "git"
+  },
+  {
+   "slug": "commit",
+   "term": "Commit",
+   "category": "git"
+  },
+  {
+   "slug": "branch",
+   "term": "Branch",
+   "category": "git"
+  },
+  {
+   "slug": "merge",
+   "term": "Merge",
+   "category": "git"
+  },
+  {
+   "slug": "pull-request",
+   "term": "Pull Request",
+   "category": "git"
+  },
+  {
+   "slug": "code-review",
+   "term": "Code Review",
+   "category": "git"
+  },
+  {
+   "slug": "diff",
+   "term": "Diff",
+   "category": "git"
+  },
+  {
+   "slug": "clone",
+   "term": "Clone",
+   "category": "git"
+  },
+  {
+   "slug": "push",
+   "term": "Push",
+   "category": "git"
+  },
+  {
+   "slug": "merge-conflict",
+   "term": "Merge Conflict",
+   "category": "git"
+  },
+  {
+   "slug": "fork",
+   "term": "Fork",
+   "category": "git"
+  },
+  {
+   "slug": "issue",
+   "term": "Issue",
+   "category": "git"
+  },
+  {
+   "slug": "github",
+   "term": "GitHub",
+   "category": "git"
+  },
+  {
+   "slug": "cli",
+   "term": "CLI",
+   "category": "dev"
+  },
+  {
+   "slug": "ide",
+   "term": "IDE",
+   "category": "dev"
+  },
+  {
+   "slug": "api",
+   "term": "API",
+   "category": "dev"
+  },
+  {
+   "slug": "api-key",
+   "term": "API Key",
+   "category": "dev"
+  },
+  {
+   "slug": "sdk",
+   "term": "SDK",
+   "category": "dev"
+  },
+  {
+   "slug": "frontend",
+   "term": "Frontend",
+   "category": "dev"
+  },
+  {
+   "slug": "backend",
+   "term": "Backend",
+   "category": "dev"
+  },
+  {
+   "slug": "database",
+   "term": "Database",
+   "category": "dev"
+  },
+  {
+   "slug": "environment-variable",
+   "term": "Environment Variable",
+   "category": "dev"
+  },
+  {
+   "slug": "localhost",
+   "term": "Localhost",
+   "category": "dev"
+  },
+  {
+   "slug": "deploy",
+   "term": "Deploy",
+   "category": "dev"
+  },
+  {
+   "slug": "ci-cd",
+   "term": "CI/CD",
+   "category": "dev"
+  },
+  {
+   "slug": "webhook",
+   "term": "Webhook",
+   "category": "dev"
+  },
+  {
+   "slug": "rate-limit",
+   "term": "Rate Limit",
+   "category": "dev"
+  },
+  {
+   "slug": "rag",
+   "term": "RAG",
+   "category": "rag"
+  },
+  {
+   "slug": "vector-database",
+   "term": "Vector Database",
+   "category": "rag"
+  },
+  {
+   "slug": "chunking",
+   "term": "Chunking",
+   "category": "rag"
+  },
+  {
+   "slug": "retrieval",
+   "term": "Retrieval",
+   "category": "rag"
+  },
+  {
+   "slug": "reranking",
+   "term": "Reranking",
+   "category": "rag"
+  },
+  {
+   "slug": "grounding",
+   "term": "Grounding",
+   "category": "rag"
+  },
+  {
+   "slug": "eval",
+   "term": "Eval",
+   "category": "eval"
+  },
+  {
+   "slug": "benchmark",
+   "term": "Benchmark",
+   "category": "eval"
+  },
+  {
+   "slug": "llm-as-a-judge",
+   "term": "LLM-as-a-Judge",
+   "category": "eval"
+  },
+  {
+   "slug": "golden-dataset",
+   "term": "Golden Dataset",
+   "category": "eval"
+  },
+  {
+   "slug": "regression",
+   "term": "Regression",
+   "category": "eval"
+  },
+  {
+   "slug": "unit-test",
+   "term": "Unit Test",
+   "category": "eval"
+  },
+  {
+   "slug": "tdd",
+   "term": "TDD",
+   "category": "eval"
+  },
+  {
+   "slug": "observability",
+   "term": "Observability",
+   "category": "eval"
+  },
+  {
+   "slug": "rlhf",
+   "term": "RLHF",
+   "category": "training"
+  },
+  {
+   "slug": "alignment",
+   "term": "Alignment",
+   "category": "training"
+  },
+  {
+   "slug": "distillation",
+   "term": "Distillation",
+   "category": "training"
+  },
+  {
+   "slug": "lora",
+   "term": "LoRA",
+   "category": "training"
+  }
+ ]
+}

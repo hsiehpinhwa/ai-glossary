@@ -1,0 +1,43 @@
+{
+  "slug": "sandbox",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Sandbox 開啟後，指令只能寫入專案資料夾等少數位置",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sandboxing",
+      "note": "Defaults: working directory, per-user temp dir, added dirs."
+    },
+    {
+      "text": "對外連線經過代理，只有允許清單上的網域才連得到",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sandboxing",
+      "note": "Proxy checks each host against allowed domains, which start empty."
+    },
+    {
+      "text": "macOS 用 Seatbelt、Linux 用 bubblewrap 實作",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sandboxing",
+      "note": ""
+    },
+    {
+      "text": "sandbox 裡的指令可以不必每次都問你",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/sandboxing",
+      "note": "Auto-allow mode approves sandboxed commands without a prompt; some exceptions still prompt."
+    },
+    {
+      "text": "prompt injection 可能誘導 agent 做出危險動作",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": "Permission-modes page warns bypass mode offers no protection against prompt injection; sandbox page itself speaks of a compromised agent."
+    },
+    {
+      "text": "完全不問就放行時，官方建議只在隔離的容器或虛擬機裡使用",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/permission-modes",
+      "note": "bypassPermissions: isolated containers and VMs only."
+    }
+  ],
+  "changes": []
+}

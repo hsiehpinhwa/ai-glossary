@@ -1,0 +1,37 @@
+{
+  "slug": "hook",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Hook 在 lifecycle 特定時間點執行，提供確定性控制",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/hooks-guide",
+      "note": ""
+    },
+    {
+      "text": "事件含 PreToolUse、PostToolUse、UserPromptSubmit、SessionStart、Stop、Notification",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/hooks-guide",
+      "note": ""
+    },
+    {
+      "text": "可擋下 .env 編輯並告訴 Claude 原因",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/hooks-guide",
+      "note": ""
+    },
+    {
+      "text": "git hooks 在 git 執行特定時點觸發",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/githooks",
+      "note": ""
+    },
+    {
+      "text": "React Hooks 讓元件使用 React 功能，如 useState",
+      "verdict": "supported",
+      "source_url": "https://react.dev/reference/react/hooks",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

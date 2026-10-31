@@ -1,0 +1,49 @@
+---
+import { render } from 'astro:content';
+import { REL_ZH, diagramSvg, type Term } from '../lib/terms';
+
+interface Props { term: Term; titles: Record<string, string>; heading?: 'h1' | 'h3'; inPanel?: boolean }
+const { term, titles, heading = 'h3', inPanel = false } = Astro.props;
+const d = term.data;
+const { Content } = await render(term);
+const svg = diagramSvg(term.id);
+const H = heading;
+---
+<article class="entry">
+  <div class="stage-1">
+    <div class="top">
+      <H class="h cond">{d.term}</H>
+      {inPanel && <button class="close" type="button" data-close>收合</button>}
+    </div>
+    <p class="zh">{d.zh}{d.aliases.length > 0 && <> · 也稱 {d.aliases.join('、')}</>}</p>
+    <p class="sum">{d.summary}</p>
+  </div>
+  <div class="cols stage-2">
+    <div class="text">
+      <div class="intro"><Content /></div>
+      {d.disambiguation && <p class="dis"><b>別搞混：</b>{d.disambiguation}</p>}
+    </div>
+    <div class="side">
+      <h4>什麼時候會用到</h4>
+      <ul>{d.when_to_use.map((w) => <li>{w}</li>)}</ul>
+      <h4>相關名詞</h4>
+      <ul class="rel">
+        {d.related.map((r) => (
+          <li><small>{REL_ZH[r.rel]}</small> <a href={`/terms/${r.slug}`} data-slug={r.slug}>{titles[r.slug] ?? r.slug}</a></li>
+        ))}
+      </ul>
+      <h4>來源</h4>
+      <p class="src">{d.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s.url} rel="noopener" target="_blank">{s.title}</a></>)}</p>
+      {d.needs_verification.length > 0 && (
+        <p class="warn">⚠️ 需查證：{d.needs_verification.join('；')}</p>
+      )}
+      {inPanel && <p class="src"><a href={`/terms/${term.id}`}>單獨頁面</a></p>}
+    </div>
+  </div>
+  {svg && (
+    <figure class="fig stage-3">
+      <div class="svg" set:html={svg} />
+      <figcaption>{d.diagram_caption}</figcaption>
+    </figure>
+  )}
+</article>

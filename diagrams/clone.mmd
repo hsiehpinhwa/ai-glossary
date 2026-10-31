@@ -1,0 +1,7 @@
+flowchart LR
+  github[(GitHub 上的<br/>Repository)] -- git clone --> local[本機副本<br/>含完整歷史]
+  local --> work[修改與 commit]
+  work --> perm{有寫入權限？}
+  perm -- 有 --> push[Push 回原專案]
+  perm -- 沒有 --> fork[先 Fork 一份]
+  fork -- 再 clone 自己那份 --> local

@@ -1,0 +1,37 @@
+{
+  "slug": "llm",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "LLM 用海量文字訓練，能產生文字、回答、摘要",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "核心任務是根據前文預測下一個 token",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": "Glossary: Pretraining 預測下一個詞"
+    },
+    {
+      "text": "先 pre-training，再經 fine-tuning 與 RLHF 調成助理",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "「大」指 parameter 多，Google 教材提到可達數千億甚至上兆",
+      "verdict": "supported",
+      "source_url": "https://developers.google.com/machine-learning/crash-course/llm/transformers",
+      "note": "Transformers contain hundreds of billion or even trillions of parameters"
+    },
+    {
+      "text": "不知道答案時會編出看似合理的內容（hallucination）",
+      "verdict": "supported",
+      "source_url": "https://openai.com/index/why-language-models-hallucinate/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

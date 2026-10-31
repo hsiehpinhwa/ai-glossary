@@ -1,0 +1,10 @@
+flowchart LR
+  user([用一句話描述需求]) --> prompt[Prompt]
+  prompt --> coding-agent[Coding Agent<br/>寫程式]
+  coding-agent --> run[直接執行看結果]
+  run --> ok{能用嗎？}
+  ok -- 不行，貼錯誤訊息 --> prompt
+  ok -- 可以 --> ship{要給別人用？}
+  ship -- 自己玩 --> done([完成])
+  ship -- 要上線 --> spec-driven-development[補規格<br/>Spec-driven Development]
+  spec-driven-development --> code-review[測試與 Code Review]

@@ -1,0 +1,162 @@
+---
+import Base from '../layouts/Base.astro';
+import Entry from '../components/Entry.astro';
+import { getTerms, categories } from '../lib/terms';
+
+const terms = await getTerms();
+const titles = Object.fromEntries(terms.map((t) => [t.id, t.data.term]));
+const numberOf = new Map(terms.map((t, i) => [t.id, i + 1]));
+const sections = categories
+  .map((c) => ({ ...c, terms: terms.filter((t) => t.data.category === c.id) }))
+  .filter((s) => s.terms.length > 0);
+const pad = (n: number) => String(n).padStart(3, '0');
+---
+<Base title="AI 名詞百科" description={`AI 社群與 YouTube 教學最常見的 ${terms.length} 個名詞：簡述、200 字介紹與圖例。`} current="terms">
+  <section class="wrap grid title">
+    <div class="c4-12">
+      <h1 class="cond">AI 社群最常見的 <span class="mk">{terms.length}</span> 個名詞</h1>
+      <p class="lede">從 Token、Agent 到 PR、Hook、Harness。按下方塊，先讀一句話的簡述和 200 字介紹，再看一張圖：它什麼時候派上用場、和哪些名詞連在一起。</p>
+      <div class="tools">
+        <div class="field">
+          <label for="q">搜尋名詞（英文、中文或別名）</label>
+          <input id="q" type="search" placeholder="例如：harness、合併請求、PR" autocomplete="off" />
+        </div>
+        <div class="filters" role="group" aria-label="依類別篩選">
+          <button type="button" aria-pressed="true" data-cat="">全部</button>
+          {sections.map((s) => <button type="button" aria-pressed="false" data-cat={s.id}>{s.zh}</button>)}
+        </div>
+      </div>
+      <p class="note" id="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  {sections.map((s) => (
+    <section class="wrap grid sec" data-sec={s.id} aria-labelledby={`h-${s.id}`}>
+      <div class="c1-3">
+        <h2 class="cond" id={`h-${s.id}`}>{s.zh}</h2>
+        <p class="note en">{s.en} · <span class="tnum">{s.terms.length}</span> 個</p>
+      </div>
+      <div class="c4-12">
+        <div class="tiles">
+          {s.terms.map((t) => (
+            <a class="tile" href={`/terms/${t.id}`} data-slug={t.id}
+               data-search={[t.id, t.data.term, t.data.zh, ...t.data.aliases].join(' ').toLowerCase()}>
+              <span class="n cond tnum" aria-hidden="true">{pad(numberOf.get(t.id)!)}</span>
+              <span class="st" aria-hidden="true"></span>
+              <span class="t cond">{t.data.term}<span class="z">{t.data.zh}</span></span>
+            </a>
+          ))}
+          <div class="panel" hidden role="region" aria-label="名詞說明"><div class="in"><div class="rv leaf"></div></div></div>
+        </div>
+      </div>
+    </section>
+  ))}
+  <p class="wrap empty note" id="empty" hidden>沒有符合的名詞。換個關鍵字，或清除篩選。</p>
+
+  {terms.map((t) => (
+    <template id={`tpl-${t.id}`}><Entry term={t} titles={titles} inPanel /></template>
+  ))}
+</Base>
+
+<script>
+  const tiles = [...document.querySelectorAll<HTMLAnchorElement>('.tile')];
+  let openTile: HTMLAnchorElement | null = null;
+
+  for (const t of tiles) {
+    t.setAttribute('role', 'button');
+    t.setAttribute('aria-expanded', 'false');
+    t.querySelector('.st')!.textContent = '展開';
+  }
+
+  function rowEnd(tile: HTMLElement): HTMLElement {
+    // Last visible tile on the same row, so the panel opens directly under the clicked row.
+    const row = [...tile.parentElement!.querySelectorAll<HTMLElement>('.tile:not([hidden])')].filter((x) => x.offsetTop === tile.offsetTop);
+    return row[row.length - 1];
+  }
+
+  function close() {
+    if (!openTile) return;
+    openTile.setAttribute('aria-expanded', 'false');
+    openTile.querySelector('.st')!.textContent = '展開';
+    const p = openTile.parentElement!.querySelector<HTMLElement>('.panel')!;
+    p.classList.remove('open');
+    p.hidden = true;
+    openTile = null;
+  }
+
+  function open(tile: HTMLAnchorElement, focusPanel = false) {
+    const slug = tile.dataset.slug!;
+    if (openTile === tile) { close(); return; }
+    close();
+    const panel = tile.parentElement!.querySelector<HTMLElement>('.panel')!;
+    const leaf = panel.querySelector('.leaf')!;
+    const tpl = document.getElementById('tpl-' + slug) as HTMLTemplateElement;
+    leaf.replaceChildren(tpl.content.cloneNode(true));
+    rowEnd(tile).after(panel);
+    panel.id = 'panel-' + slug;
+    tile.setAttribute('aria-controls', panel.id);
+    panel.hidden = false;
+    void panel.offsetHeight; // commit the 0fr state so the row transition runs
+    panel.classList.add('open');
+    tile.setAttribute('aria-expanded', 'true');
+    tile.querySelector('.st')!.textContent = '收合';
+    openTile = tile;
+    history.replaceState(null, '', '#' + slug);
+    if (focusPanel) (leaf.querySelector('.h') as HTMLElement | null)?.setAttribute('tabindex', '-1');
+    const top = tile.getBoundingClientRect().top;
+    if (top < 60 || top > innerHeight * .6) tile.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const tile = target.closest<HTMLAnchorElement>('.tile');
+    if (tile) { e.preventDefault(); open(tile); return; }
+    if (target.closest('[data-close]')) { const t = openTile; close(); t?.focus(); return; }
+    const rel = target.closest<HTMLAnchorElement>('.panel a[data-slug]');
+    if (rel) {
+      const next = tiles.find((x) => x.dataset.slug === rel.dataset.slug && !x.hidden);
+      if (next) { e.preventDefault(); open(next); next.focus(); }
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    const tile = (e.target as HTMLElement).closest?.('.tile') as HTMLAnchorElement | null;
+    if (tile && e.key === ' ') { e.preventDefault(); open(tile); }
+    if (e.key === 'Escape' && openTile) { const t = openTile; close(); t.focus(); }
+  });
+  let rt = 0;
+  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (openTile) rowEnd(openTile).after(openTile.parentElement!.querySelector('.panel')!); }, 120) as unknown as number; });
+
+  // Search and category filter
+  const q = document.getElementById('q') as HTMLInputElement;
+  const status = document.getElementById('status')!;
+  const empty = document.getElementById('empty')!;
+  let cat = '';
+  function apply() {
+    close();
+    const s = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const sec of document.querySelectorAll<HTMLElement>('[data-sec]')) {
+      let n = 0;
+      for (const t of sec.querySelectorAll<HTMLElement>('.tile')) {
+        const ok = (!cat || sec.dataset.sec === cat) && (!s || t.dataset.search!.includes(s));
+        t.hidden = !ok; if (ok) n++;
+      }
+      sec.hidden = n === 0; shown += n;
+    }
+    empty.hidden = shown > 0;
+    status.textContent = s || cat ? `顯示 ${shown} 個名詞` : '';
+  }
+  q.addEventListener('input', apply);
+  for (const b of document.querySelectorAll<HTMLButtonElement>('.filters button')) {
+    b.addEventListener('click', () => {
+      cat = b.dataset.cat!;
+      document.querySelectorAll('.filters button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    });
+  }
+
+  const hash = decodeURIComponent(location.hash.slice(1));
+  const first = tiles.find((t) => t.dataset.slug === hash);
+  if (first) open(first);
+</script>

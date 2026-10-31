@@ -1,0 +1,43 @@
+{
+  "slug": "system-prompt",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "API 有獨立 system 欄位",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/system-prompts",
+      "note": ""
+    },
+    {
+      "text": "OpenAI 稱 developer message，優先於 user message",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+      "note": ""
+    },
+    {
+      "text": "一句角色設定就能讓回應更聚焦",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/system-prompts",
+      "note": "Even a single sentence makes a difference"
+    },
+    {
+      "text": "每輪都一起送進模型",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "prompt injection 試圖蓋過規則",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+      "note": ""
+    },
+    {
+      "text": "固定內容搭配 prompt caching",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

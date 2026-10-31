@@ -1,0 +1,25 @@
+{
+  "slug": "agent",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "agent 通常是 LLM 在迴圈中根據環境回饋使用工具",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": ""
+    },
+    {
+      "text": "由模型主導流程與工具使用，與 workflow 不同",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": ""
+    },
+    {
+      "text": "可在檢查點暫停找人、設停止條件",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

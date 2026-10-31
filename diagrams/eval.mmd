@@ -1,0 +1,10 @@
+flowchart LR
+  golden-dataset[(Golden Dataset<br/>題目＋標準答案)] --> sys[模型 / Agent 作答]
+  sys --> score{評分}
+  score --> rule[程式規則]
+  score --> llm-as-a-judge[LLM-as-a-Judge]
+  score --> human[人工審查]
+  rule --> report[通過率報告]
+  llm-as-a-judge --> report
+  human --> report
+  report -- 比較修改前後 --> regression[抓 Regression]

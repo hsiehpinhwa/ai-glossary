@@ -1,0 +1,31 @@
+{
+  "slug": "embedding",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Embedding 是浮點數向量，距離代表相關程度",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/embeddings",
+      "note": ""
+    },
+    {
+      "text": "用途包括搜尋、分群、推薦、異常偵測、分類",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/embeddings",
+      "note": ""
+    },
+    {
+      "text": "常用 cosine similarity",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/embeddings",
+      "note": ""
+    },
+    {
+      "text": "vector database 存向量並找最相似者；查詢用同一 embedding 模型",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/vector-database/",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

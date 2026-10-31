@@ -1,0 +1,39 @@
+{
+  "slug": "repository",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "repo 包含程式碼、檔案及每個檔案的修改歷史",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories",
+      "note": ""
+    },
+    {
+      "text": "GitHub 上的 repo 可設為公開（所有人可見）或私人（只開放給指定的人）",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories",
+      "note": "Internal visibility also exists for Enterprise; omitted, not wrong."
+    },
+    {
+      "text": "commit 累積在本機，push 後遠端才更新",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-push",
+      "note": ""
+    },
+    {
+      "text": "可以 clone 到自己電腦，或在 GitHub 上 fork 成自己名下的副本",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/get-started/about-forks",
+      "note": ""
+    },
+    {
+      "text": "部署平台連結一個 repo 來自動上線",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/deployments",
+      "note": "Source added."
+    }
+  ],
+  "changes": [
+    "Added Vercel deployments source for the deploy-from-repo claim."
+  ]
+}

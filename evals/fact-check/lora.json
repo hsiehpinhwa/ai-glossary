@@ -1,0 +1,37 @@
+{
+  "slug": "lora",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "凍結原權重，加入兩個小矩陣",
+      "verdict": "supported",
+      "source_url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+      "note": ""
+    },
+    {
+      "text": "2021 年論文：可訓練參數減少約一萬倍，GPU 記憶體約降為三分之一",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2106.09685",
+      "note": ""
+    },
+    {
+      "text": "LoRA 權重小，可為同一基礎模型準備多組",
+      "verdict": "supported",
+      "source_url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+      "note": ""
+    },
+    {
+      "text": "可合併回原模型，執行時不增加延遲",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2106.09685",
+      "note": ""
+    },
+    {
+      "text": "在 Transformer 通常只加在 attention 層",
+      "verdict": "supported",
+      "source_url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

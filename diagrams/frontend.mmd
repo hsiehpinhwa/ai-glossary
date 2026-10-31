@@ -1,0 +1,8 @@
+flowchart LR
+  you([使用者]) -- 點擊與輸入 --> fe[Frontend<br/>HTML / CSS / JS]
+  fe -- HTTP 請求 --> api[API]
+  api --> backend[Backend]
+  backend -- 回應資料 --> fe
+  vibe-coding[Vibe Coding] -. AI 最快做出畫面 .-> fe
+  fe -. 開發時預覽 .-> localhost[Localhost]
+  fe -. 完成後 .-> deploy[Deploy 上線]

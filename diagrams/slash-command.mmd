@@ -1,0 +1,8 @@
+flowchart LR
+  user([輸入 /]) --> menu[指令選單]
+  menu --> builtin[內建指令]
+  menu --> skill[自訂指令<br/>Skill]
+  builtin -- 產生規則檔 --> claude-md[CLAUDE.md]
+  builtin -- 壓縮上下文 --> context-compaction[Context Compaction]
+  skill --> run[載入事先寫好的 prompt<br/>加上你的參數執行]
+  plugin[Plugin] -. 提供 .-> skill

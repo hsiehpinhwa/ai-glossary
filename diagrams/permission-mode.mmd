@@ -1,0 +1,9 @@
+flowchart TB
+  action([Agent 想執行一個動作]) --> mode{目前的 Permission Mode}
+  mode -- 手動 --> ask[先問你]
+  mode -- Accept edits --> edit[改檔案直接做<br/>其他指令先問]
+  mode -- Plan --> plan-mode[只讀和規劃<br/>Plan Mode]
+  mode -- Auto --> judge[分類模型審查<br/>安全才放行]
+  mode -- Bypass --> all[全部放行<br/>只在隔離環境用]
+  ask --> human-in-the-loop[Human-in-the-loop]
+  all -.-> sandbox[Sandbox 或容器]

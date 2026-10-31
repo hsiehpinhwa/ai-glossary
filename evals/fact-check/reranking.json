@@ -1,0 +1,31 @@
+{
+  "slug": "reranking",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "reranker 模型對每段候選打相關分數再排序",
+      "verdict": "supported",
+      "source_url": "https://docs.cohere.com/docs/rerank",
+      "note": ""
+    },
+    {
+      "text": "Anthropic 實驗取 150 段、留 20 段，失敗率更低",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    },
+    {
+      "text": "Cohere rerank 可接在關鍵字、向量或混合搜尋後，不必重建索引，減少 token",
+      "verdict": "supported",
+      "source_url": "https://docs.cohere.com/docs/rerank",
+      "note": ""
+    },
+    {
+      "text": "多一次模型呼叫，增加延遲與費用",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

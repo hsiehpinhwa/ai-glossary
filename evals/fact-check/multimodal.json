@@ -1,0 +1,31 @@
+{
+  "slug": "multimodal",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "主流模型能看截圖、照片、圖表",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/vision",
+      "note": ""
+    },
+    {
+      "text": "Gemini 能處理音訊與影片",
+      "verdict": "supported",
+      "source_url": "https://ai.google.dev/gemini-api/docs/video-understanding",
+      "note": ""
+    },
+    {
+      "text": "圖片切成小區塊換算 token，Claude 文件有公式",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/vision",
+      "note": "28×28 patch，⌈w/28⌉×⌈h/28⌉"
+    },
+    {
+      "text": "看圖可能數錯、估錯位置，小或模糊的圖易出錯甚至幻覺",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/vision",
+      "note": "Limitations: counting, spatial, accuracy"
+    }
+  ],
+  "changes": []
+}

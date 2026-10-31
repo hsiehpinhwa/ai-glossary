@@ -1,0 +1,37 @@
+{
+  "slug": "grounding",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Google Cloud 把 grounding 描述為把模型輸出連到可驗證的資料來源",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+      "note": "Page meta description."
+    },
+    {
+      "text": "可接 Google 搜尋、地圖和自己的資料",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+      "note": ""
+    },
+    {
+      "text": "要求只根據提供的資料作答並標出依據",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "note": ""
+    },
+    {
+      "text": "RAG 是實現 grounding 的常見方法",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+      "note": "\"Grounding responses using RAG\"."
+    },
+    {
+      "text": "能降低錯誤但不保證零錯誤",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

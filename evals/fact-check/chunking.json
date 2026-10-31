@@ -1,0 +1,31 @@
+{
+  "slug": "chunking",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "embedding 模型一次能讀的長度有限；整份轉一個向量會稀釋細節",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/chunking-strategies/",
+      "note": ""
+    },
+    {
+      "text": "太大搜尋不準、浪費；太小缺上下文",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/chunking-strategies/",
+      "note": ""
+    },
+    {
+      "text": "固定長度、句子段落、文件結構、語意轉折四類，建議先從固定長度開始",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/chunking-strategies/",
+      "note": ""
+    },
+    {
+      "text": "contextual retrieval 在每段前補上脈絡說明",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

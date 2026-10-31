@@ -1,0 +1,31 @@
+{
+  "slug": "diff",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "最常見格式以行為單位，加號為新增、減號為刪除",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-diff",
+      "note": ""
+    },
+    {
+      "text": "git diff 可比對未 commit 的修改與 commit、或兩條分支",
+      "verdict": "supported",
+      "source_url": "https://git-scm.com/docs/git-diff",
+      "note": ""
+    },
+    {
+      "text": "GitHub PR 頁面顯示差異",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests",
+      "note": "Files changed tab."
+    },
+    {
+      "text": "VS Code 這類編輯器也用同樣方式畫出差異",
+      "verdict": "unverifiable",
+      "source_url": "",
+      "note": "Common knowledge, no source fetched; low risk, kept."
+    }
+  ],
+  "changes": []
+}

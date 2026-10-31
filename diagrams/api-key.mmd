@@ -1,0 +1,8 @@
+flowchart LR
+  console[服務後台產生金鑰] --> environment-variable[環境變數]
+  environment-variable --> backend[Backend 讀取]
+  backend -- 附在請求裡 --> api[API]
+  api -. 依金鑰計量 .-> rate-limit[Rate Limit / 帳單]
+  console -. 寫死在程式或前端 .-> leak[公開 repo 外流<br/>被盜用]
+  leak -- 立刻停用並換新 --> console
+  deploy[Deploy 平台] -. 另外設定 .-> environment-variable

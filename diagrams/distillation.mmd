@@ -1,0 +1,7 @@
+flowchart LR
+  teacher[老師模型<br/>大、強、貴] -- 產生大量回答 --> data[(訓練資料)]
+  data --> fine-tuning[Fine-tuning]
+  student[學生模型<br/>小、便宜] --> fine-tuning
+  fine-tuning --> small[蒸餾後的小模型]
+  small --> inference[Inference<br/>更快、更省]
+  small --> eval[Eval<br/>比對老師的表現]

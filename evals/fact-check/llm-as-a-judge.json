@@ -1,0 +1,25 @@
+{
+  "slug": "llm-as-a-judge",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "2023 年研究：強模型當評審與人類一致率超過 80%，和人類彼此相當",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2306.05685",
+      "note": ""
+    },
+    {
+      "text": "偏誤：位置、長度、自我偏好",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2306.05685",
+      "note": ""
+    },
+    {
+      "text": "給具體評分標準、限定格式如 1–5 分、先說理由再給分",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

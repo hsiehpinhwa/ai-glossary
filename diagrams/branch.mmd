@@ -1,0 +1,9 @@
+flowchart LR
+  main[(main)] -- 開分支 --> branch[Branch]
+  branch --> commit[Commit 修改]
+  commit --> commit2[再 Commit]
+  commit2 --> pull-request{{Pull Request}}
+  pull-request -- 通過 --> merge[Merge]
+  merge --> main
+  commit2 -. 改壞了就丟掉 .-> drop[刪除分支]
+  worktree[Worktree] -. 多個 agent 各用一條 .-> branch

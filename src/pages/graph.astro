@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import { getTerms, categories } from '../lib/terms';
+import { forceSimulation, forceLink, forceManyBody, forceCenter, forceCollide, forceX, forceY } from 'd3-force';
+
+// Layout runs at build time, so the page is a static SVG that works without JavaScript.
+const terms = await getTerms();
+const ids = new Set(terms.map((t) => t.id));
+const W = 1400, H = 900;
+const catIndex = new Map(categories.map((c, i) => [c.id, i]));
+const nodes = terms.map((t) => {
+  const a = ((catIndex.get(t.data.category) ?? 0) / categories.length) * Math.PI * 2;
+  return { id: t.id, label: t.data.term, zh: t.data.zh, cat: t.data.category, ax: W / 2 + Math.cos(a) * 500, ay: H / 2 + Math.sin(a) * 320, x: 0, y: 0, deg: 0 };
+});
+const seen = new Set<string>();
+const links: { source: string; target: string }[] = [];
+for (const t of terms) for (const r of t.data.related) {
+  if (!ids.has(r.slug)) continue;
+  const k = [t.id, r.slug].sort().join('|');
+  if (seen.has(k)) continue;
+  seen.add(k); links.push({ source: t.id, target: r.slug });
+}
+for (const l of links) { nodes.find((n) => n.id === l.source)!.deg++; nodes.find((n) => n.id === l.target)!.deg++; }
+let seed = 1; const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const sim = forceSimulation(nodes as any).randomSource(rand)
+  .force('link', forceLink(links as any).id((d: any) => d.id).distance(70).strength(0.4))
+  .force('charge', forceManyBody().strength(-320))
+  .force('collide', forceCollide(34))
+  .force('x', forceX((d: any) => d.ax).strength(0.06))
+  .force('y', forceY((d: any) => d.ay).strength(0.06))
+  .force('center', forceCenter(W / 2, H / 2))
+  .stop();
+for (let i = 0; i < 400; i++) sim.tick();
+const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+for (const n of nodes) { n.x = clamp(n.x, 40, W - 40); n.y = clamp(n.y, 30, H - 30); }
+const pos = new Map(nodes.map((n) => [n.id, n]));
+---
+<Base title="名詞關係圖｜AI 名詞百科" description="所有名詞之間的關係，一張圖看完。" current="graph">
+  <section class="wrap grid title">
+    <div class="c4-12">
+      <h1 class="cond">名詞之間的關係</h1>
+      <p class="lede">每個點是一個名詞，每條線是條目裡寫下的一條關係。同一類的名詞聚在同一區；連線越多的點越大。點任何一個名詞，打開它的條目。</p>
+      <p class="note"><span class="tnum">{nodes.length}</span> 個名詞 · <span class="tnum">{links.length}</span> 條關係</p>
+    </div>
+  </section>
+  <div class="wrap">
+    <svg class="graph" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`名詞關係圖，${nodes.length} 個名詞，${links.length} 條關係`}>
+      <g>{links.map((l: any) => { const s = pos.get(l.source.id ?? l.source)!, t = pos.get(l.target.id ?? l.target)!; return <line x1={s.x.toFixed(1)} y1={s.y.toFixed(1)} x2={t.x.toFixed(1)} y2={t.y.toFixed(1)} />; })}</g>
+      <g>{nodes.map((n) => (
+        <a href={`/terms/${n.id}`}>
+          <title>{`${n.label}（${n.zh}）`}</title>
+          <circle cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r={(3 + Math.sqrt(n.deg) * 1.6).toFixed(1)} />
+          <text x={(n.x + 7).toFixed(1)} y={(n.y + 4).toFixed(1)}>{n.label}</text>
+        </a>
+      ))}</g>
+    </svg>
+  </div>
+  <section class="wrap grid sec" style="border-top:0">
+    <div class="c1-3"><h2 class="cond">依類別</h2></div>
+    <div class="c4-12">
+      {categories.map((c) => { const list = terms.filter((t) => t.data.category === c.id); return list.length > 0 && (
+        <p><b>{c.zh}</b>　{list.map((t, i) => <>{i > 0 && '、'}<a href={`/terms/${t.id}`}>{t.data.term}</a></>)}</p>
+      ); })}
+    </div>
+  </section>
+</Base>

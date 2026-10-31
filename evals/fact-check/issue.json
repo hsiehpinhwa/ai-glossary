@@ -1,0 +1,25 @@
+{
+  "slug": "issue",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "issue 用來規劃、討論、追蹤工作",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/articles/about-issues",
+      "note": ""
+    },
+    {
+      "text": "可加標籤、指派、里程碑，拆成子 issue",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/articles/about-issues",
+      "note": ""
+    },
+    {
+      "text": "PR 用 fixes 關鍵字加 issue 編號，合併時自動關閉 issue",
+      "verdict": "supported",
+      "source_url": "https://docs.github.com/articles/about-issues",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,8 @@
+flowchart LR
+  convo([長對話<br/>指令、工具輸出、討論]) --> context-window[Context Window<br/>接近上限]
+  context-window --> summarize[模型寫摘要<br/>保留決策與未解問題]
+  summarize --> fresh[新的上下文<br/>摘要＋最近內容]
+  claude-md[CLAUDE.md<br/>每次請求都重新載入] --> fresh
+  memory[(Memory<br/>寫在外部的筆記)] --> fresh
+  fresh --> agent-loop[Agent Loop 繼續]
+  summarize -. 細節可能遺失 .-> lost[早期的具體指示]

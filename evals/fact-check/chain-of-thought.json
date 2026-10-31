@@ -1,0 +1,25 @@
+{
+  "slug": "chain-of-thought",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "2022 年 Jason Wei 等 Google 研究者發表",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/pdf/2201.11903",
+      "note": "Google Research, Brain Team"
+    },
+    {
+      "text": "在 prompt 放附推理步驟的範例，提升算術、常識、符號推理",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2201.11903",
+      "note": ""
+    },
+    {
+      "text": "能力要到模型夠大才出現",
+      "verdict": "supported",
+      "source_url": "https://arxiv.org/abs/2201.11903",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

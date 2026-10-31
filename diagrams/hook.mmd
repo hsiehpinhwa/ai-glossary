@@ -1,0 +1,8 @@
+flowchart LR
+  coding-agent[Coding Agent<br/>想執行工具] --> pre{PreToolUse hook}
+  guardrails[Guardrails<br/>禁止規則] -.-> pre
+  pre -- 擋下並說明原因 --> coding-agent
+  pre -- 放行 --> tool-use[Tool Use<br/>改檔案、跑指令]
+  tool-use --> post[PostToolUse hook<br/>自動排版、跑 lint]
+  post --> coding-agent
+  coding-agent -- 完成或等你回覆 --> notify[Stop 或 Notification hook<br/>發通知]

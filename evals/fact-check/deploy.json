@@ -1,0 +1,37 @@
+{
+  "slug": "deploy",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "每次成功建置產生一個 deployment 與專屬網址",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/deployments",
+      "note": ""
+    },
+    {
+      "text": "連結 Git repo 後每次 push 或 PR 自動部署，也可用 CLI",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/deployments",
+      "note": ""
+    },
+    {
+      "text": "preview 不影響正式網站，production 是使用者看到的版本，推到正式分支更新它",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/environment-variables",
+      "note": ""
+    },
+    {
+      "text": "可回滾到上一個部署",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/deployments",
+      "note": ""
+    },
+    {
+      "text": "環境變數要在平台上設定",
+      "verdict": "supported",
+      "source_url": "https://vercel.com/docs/environment-variables",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

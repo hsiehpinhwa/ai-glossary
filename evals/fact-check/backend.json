@@ -1,0 +1,31 @@
+{
+  "slug": "backend",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "後端接收請求、驗證身分、讀寫資料庫",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": ""
+    },
+    {
+      "text": "常用 Python、Java、Ruby 撰寫",
+      "verdict": "supported",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": ""
+    },
+    {
+      "text": "API key 等秘密放後端、由伺服器代為處理",
+      "verdict": "supported",
+      "source_url": "https://docs.cloud.google.com/docs/authentication/api-keys-best-practices",
+      "note": ""
+    },
+    {
+      "text": "可改用現成的後端服務，不必自己架伺服器",
+      "verdict": "unverifiable",
+      "source_url": "https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/",
+      "note": "AWS mentions Amplify/Lambda serverless; general claim, kept."
+    }
+  ],
+  "changes": []
+}

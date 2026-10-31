@@ -1,0 +1,8 @@
+flowchart LR
+  goal([任務]) --> model[模型看截圖<br/>決定動作]
+  model -- 點擊、輸入、捲動 --> tool-use[Tool Use 請求]
+  tool-use --> sandbox[Sandbox<br/>虛擬機或容器]
+  sandbox -- 新的截圖 --> model
+  model -- 完成 --> done[回報結果]
+  prompt-injection[Prompt Injection<br/>網頁裡的惡意指令] -.-> sandbox
+  human-in-the-loop[Human-in-the-loop<br/>付款、同意條款前確認] -.-> tool-use

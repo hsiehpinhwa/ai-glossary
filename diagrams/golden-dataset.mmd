@@ -1,0 +1,8 @@
+flowchart LR
+  observability[線上紀錄<br/>Observability] --> pick[挑出真實案例]
+  edge[邊界與困難案例] --> pick
+  pick --> review[專家確認標準答案]
+  review --> golden-dataset[(Golden Dataset<br/>固定版本)]
+  golden-dataset --> eval[每次修改後跑 Eval]
+  eval --> regression{分數下降？<br/>Regression}
+  regression -- 新的失敗案例 --> pick

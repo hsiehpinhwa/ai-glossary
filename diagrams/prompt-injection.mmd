@@ -1,0 +1,8 @@
+flowchart LR
+  attacker([攻擊者]) -- 藏入指令 --> page[網頁、email、文件]
+  user([使用者]) -- 請 AI 讀這份內容 --> ai[AI Agent]
+  page --> ai
+  ai -- 誤把資料當指令 --> tool-use[Tool Use<br/>寄信、刪檔、付款]
+  guardrails[Guardrails<br/>篩檢輸入與輸出] -.-> ai
+  human-in-the-loop[Human-in-the-loop<br/>重要動作要人確認] -.-> tool-use
+  sandbox[Sandbox<br/>限制權限] -.-> tool-use

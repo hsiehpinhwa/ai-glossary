@@ -1,0 +1,19 @@
+{
+  "slug": "prompt",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "應用程式會加上 system prompt、範例、對話紀錄",
+      "verdict": "supported",
+      "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+      "note": ""
+    },
+    {
+      "text": "同一 prompt 輸出可能不同，生成不是固定的",
+      "verdict": "supported",
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+      "note": "content generated from a model is non-deterministic"
+    }
+  ],
+  "changes": []
+}

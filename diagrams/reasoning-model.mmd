@@ -1,0 +1,8 @@
+flowchart LR
+  q([複雜問題]) --> reasoning-model[Reasoning Model]
+  effort[思考程度設定] --> reasoning-model
+  reasoning-model --> think[內部思考<br/>Reasoning Tokens]
+  think -- 拆解、嘗試、檢查 --> think
+  think --> ans[最終回答]
+  think -. 佔用 .-> context-window[(Context Window)]
+  chain-of-thought[Chain-of-Thought<br/>靠 prompt 引導] -. 對照 .-> llm[一般 LLM]

@@ -1,0 +1,9 @@
+flowchart LR
+  base[分岔點] --> mine[你的分支<br/>新 commit]
+  base --> theirs[另一條 branch<br/>新 commit]
+  mine --> m{Git 自動整合}
+  theirs --> m
+  m -- 沒有衝突 --> done[Merge Commit]
+  m -- 改到同一處 --> merge-conflict[Merge Conflict]
+  merge-conflict -- 人決定後 commit --> done
+  pull-request[Pull Request<br/>Merge 按鈕] -. 觸發 .-> m

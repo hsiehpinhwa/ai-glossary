@@ -1,0 +1,37 @@
+{
+  "slug": "vector-database",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "存 embedding，找最相似的資料",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/vector-database/",
+      "note": ""
+    },
+    {
+      "text": "附 metadata，可篩選",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/vector-database/",
+      "note": ""
+    },
+    {
+      "text": "用 ANN 以一點準確度換速度，常用 cosine similarity",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/vector-database/",
+      "note": ""
+    },
+    {
+      "text": "比向量索引多了 CRUD、備份、權限控管",
+      "verdict": "supported",
+      "source_url": "https://www.pinecone.io/learn/vector-database/",
+      "note": ""
+    },
+    {
+      "text": "RAG 中文件切 chunk、轉向量存入、提問時撈最接近的",
+      "verdict": "supported",
+      "source_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "note": ""
+    }
+  ],
+  "changes": []
+}

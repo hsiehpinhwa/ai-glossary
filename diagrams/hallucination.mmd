@@ -1,0 +1,7 @@
+flowchart LR
+  q([冷門或需要精確事實的問題]) --> llm[LLM]
+  llm -- 沒有依據時猜測 --> hallucination[Hallucination<br/>自信但錯誤]
+  rag[RAG<br/>找來相關資料] --> grounding[Grounding<br/>依資料回答]
+  grounding --> llm
+  llm -- 有依據 --> ok[附出處的回答]
+  hallucination --> eval[Eval<br/>追蹤錯誤率]

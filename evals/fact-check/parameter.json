@@ -1,0 +1,45 @@
+{
+  "slug": "parameter",
+  "checked_at": "2026-10-30",
+  "claims": [
+    {
+      "text": "Parameter 是訓練中調整、保存學到規律的大量數值，也叫 weights",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    },
+    {
+      "text": "7B、70B 指參數量",
+      "verdict": "unverifiable",
+      "source_url": "https://github.com/meta-llama/llama-models",
+      "note": "Llama 官方 repo 以 8B/70B/405B 標示大小，但未明說 B=billion；保留 needs_verification"
+    },
+    {
+      "text": "原文「7B、70B 指參數有幾十億個」：70B 為七百億，數量級不精確",
+      "verdict": "unsupported",
+      "source_url": "",
+      "note": "改寫為「7B 約是 70 億個」"
+    },
+    {
+      "text": "Google 教材：大型 Transformer 參數可達數千億甚至上兆",
+      "verdict": "supported",
+      "source_url": "https://developers.google.com/machine-learning/crash-course/llm/transformers",
+      "note": ""
+    },
+    {
+      "text": "下載 open-weight 模型主要就是下載參數檔",
+      "verdict": "supported",
+      "source_url": "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report",
+      "note": ""
+    },
+    {
+      "text": "temperature、max_tokens 是呼叫時的設定，不改變學到的內容",
+      "verdict": "supported",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "note": ""
+    }
+  ],
+  "changes": [
+    "parameter: 「7B、70B 指參數有幾十億個」→「指的就是參數量，7B 約是 70 億個」"
+  ]
+}
