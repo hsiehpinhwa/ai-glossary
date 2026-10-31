@@ -15,7 +15,7 @@ const argBase = process.argv.indexOf('--base');
 let base = argBase > -1 ? process.argv[argBase + 1] : null;
 let server;
 if (!base) {
-  base = 'http://localhost:4399';
+  base = 'http://localhost:4399/glossary';
   server = spawn('npx', ['astro', 'preview', '--port', '4399'], { cwd: root, stdio: 'ignore' });
   for (let i = 0; i < 50; i++) { try { await fetch(base); break; } catch { await new Promise((r) => setTimeout(r, 200)); } }
 }
@@ -83,7 +83,7 @@ try {
   await nj.goto(base + '/');
   const hrefs = await nj.$$eval('.tile', (ts) => ts.map((t) => t.getAttribute('href')));
   for (const h of hrefs) {
-    const res = await fetch(base + h);
+    const res = await fetch(new URL(h, base));
     if (!res.ok) fail('no-js', `${h} 回應 ${res.status}`);
   }
   const hiddenText = await nj.evaluate(() => getComputedStyle(document.querySelector('h1')).opacity);

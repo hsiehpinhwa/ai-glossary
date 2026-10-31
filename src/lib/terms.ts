@@ -22,3 +22,7 @@ export function diagramSvg(slug: string): string | null {
   const p = path.join(process.cwd(), 'src/generated/diagrams', slug + '.svg');
   return fs.existsSync(p) ? fs.readFileSync(p, 'utf8').replace(/^<!--.*?-->\n/, '') : null;
 }
+
+// 站內連結都要加上 base（/glossary）
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+export const href = (path: string) => BASE + path;

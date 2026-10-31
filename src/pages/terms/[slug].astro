@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Entry from '../../components/Entry.astro';
-import { getTerms, categories } from '../../lib/terms';
+import { getTerms, categories, href } from '../../lib/terms';
 
 export async function getStaticPaths() {
   const terms = await getTerms();
@@ -13,7 +13,7 @@ const cat = categories.find((c) => c.id === term.data.category)!;
 ---
 <Base title={`${term.data.term}（${term.data.zh}）｜AI 名詞百科`} description={term.data.summary} current="terms">
   <section class="wrap page" style={`--c:${cat.color}`}>
-    <a class="back" href={`/#${term.id}`}>← 回到名詞表 · {cat.zh}</a>
+    <a class="back" href={href(`/#${term.id}`)}>← 回到名詞表 · {cat.zh}</a>
     <div class="leaf">
       <Entry term={term} titles={titles} heading="h1" />
     </div>

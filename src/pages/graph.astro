@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getTerms, categories } from '../lib/terms';
+import { getTerms, categories, href } from '../lib/terms';
 import { layout } from '../lib/graph';
 
 const terms = await getTerms();
@@ -22,7 +22,7 @@ const color = Object.fromEntries(categories.map((c) => [c.id, c.color]));
     <svg class="graph" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`名詞關係圖，${nodes.length} 個名詞，${links.length} 條關係`}>
       <g>{links.map((l) => <line class="ln" x1={l.s.x.toFixed(1)} y1={l.s.y.toFixed(1)} x2={l.t.x.toFixed(1)} y2={l.t.y.toFixed(1)} />)}</g>
       <g>{nodes.map((n) => (
-        <a href={`/terms/${n.id}`} style={`--c:${color[n.cat]}`}>
+        <a href={href(`/terms/${n.id}`)} style={`--c:${color[n.cat]}`}>
           <title>{`${n.label}（${n.zh}）`}</title>
           <circle class="st" cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r={(3 + Math.sqrt(n.deg) * 1.6).toFixed(1)} />
           <text x={(n.x + 7).toFixed(1)} y={(n.y + 4).toFixed(1)}>{n.label}</text>
@@ -34,7 +34,7 @@ const color = Object.fromEntries(categories.map((c) => [c.id, c.color]));
     <div class="prose entry">
       <h2>依類別</h2>
       {categories.map((c) => { const list = terms.filter((t) => t.data.category === c.id); return list.length > 0 && (
-        <p style={`--c:${c.color}`}><b style="color:var(--c)">{c.zh}</b>　{list.map((t, i) => <>{i > 0 && '、'}<a href={`/terms/${t.id}`}>{t.data.term}</a></>)}</p>
+        <p style={`--c:${c.color}`}><b style="color:var(--c)">{c.zh}</b>　{list.map((t, i) => <>{i > 0 && '、'}<a href={href(`/terms/${t.id}`)}>{t.data.term}</a></>)}</p>
       ); })}
     </div>
   </section>

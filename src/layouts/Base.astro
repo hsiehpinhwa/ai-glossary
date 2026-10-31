@@ -1,5 +1,6 @@
 ---
 import '../styles/nova.css';
+import { href } from '../lib/terms';
 interface Props { title: string; description: string; current?: 'terms' | 'graph' | 'about' }
 const { title, description, current } = Astro.props;
 ---
@@ -18,12 +19,12 @@ const { title, description, current } = Astro.props;
 <body>
   <header class="head">
     <div class="wrap">
-      <a class="brand" href="/"><i aria-hidden="true"></i>AI 名詞百科</a>
+      <a class="brand" href={href("/")}><i aria-hidden="true"></i>AI 名詞百科</a>
       <span class="issue">第 1 版 · 2026 秋 · 100 個名詞</span>
       <nav aria-label="主要">
-        <a href="/" aria-current={current === 'terms' ? 'page' : undefined}>名詞</a>
-        <a href="/graph" aria-current={current === 'graph' ? 'page' : undefined}>關係圖</a>
-        <a href="/about" aria-current={current === 'about' ? 'page' : undefined}>關於</a>
+        <a href={href("/")} aria-current={current === 'terms' ? 'page' : undefined}>名詞</a>
+        <a href={href("/graph")} aria-current={current === 'graph' ? 'page' : undefined}>關係圖</a>
+        <a href={href("/about")} aria-current={current === 'about' ? 'page' : undefined}>關於</a>
       </nav>
     </div>
   </header>
@@ -31,6 +32,7 @@ const { title, description, current } = Astro.props;
   <footer class="foot">
     <div class="wrap">
       <p>為在社群與 YouTube 教學裡學 AI 的人整理的名詞表。每個條目附一手來源；標 ⚠️ 的內容尚待查證。</p>
+      <p>想看白話比喻與完整課程：<a href="https://dorphinai.com/">備課台</a> · <a href="https://dorphinai.com/directory/">白話AI 術語目錄</a></p>
       <p><a href="https://github.com/hsiehpinhwa/ai-glossary">GitHub 原始碼</a> · 內容最後查核 2026-10-30</p>
     </div>
   </footer>
