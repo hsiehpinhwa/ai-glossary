@@ -1,6 +1,6 @@
 ---
 import { render } from 'astro:content';
-import { REL_ZH, diagramSvg, type Term } from '../lib/terms';
+import { REL_ZH, diagramSvg, categories, type Term } from '../lib/terms';
 
 interface Props { term: Term; titles: Record<string, string>; heading?: 'h1' | 'h3'; inPanel?: boolean }
 const { term, titles, heading = 'h3', inPanel = false } = Astro.props;
@@ -8,11 +8,12 @@ const d = term.data;
 const { Content } = await render(term);
 const svg = diagramSvg(term.id);
 const H = heading;
+const color = categories.find((c) => c.id === d.category)?.color;
 ---
-<article class="entry">
+<article class="entry" style={`--c:${color}`}>
   <div class="stage-1">
     <div class="top">
-      <H class="h cond">{d.term}</H>
+      <H class="h">{d.term}</H>
       {inPanel && <button class="close" type="button" data-close>收合</button>}
     </div>
     <p class="zh">{d.zh}{d.aliases.length > 0 && <> · 也稱 {d.aliases.join('、')}</>}</p>

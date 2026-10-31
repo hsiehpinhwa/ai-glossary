@@ -58,6 +58,7 @@ try {
   const first = slugs[0];
   await page.focus(`.tile[data-slug="${first}"]`);
   await page.keyboard.press('Enter');
+  await page.waitForTimeout(400); // panel grows from 0fr over --mo-trans
   if (!(await page.isVisible('#panel-' + first))) fail('keyboard', 'Enter 沒有打開 panel');
   await page.keyboard.press('Escape');
   const focused = await page.evaluate(() => document.activeElement?.dataset?.slug);
