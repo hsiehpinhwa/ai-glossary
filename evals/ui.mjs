@@ -86,6 +86,15 @@ try {
     const res = await fetch(new URL(h, base));
     if (!res.ok) fail('no-js', `${h} 回應 ${res.status}`);
   }
+  // Every same-site link on the home page and one term page resolves
+  for (const page of ['/', `/terms/${slugs[0]}`]) {
+    await nj.goto(base + page);
+    const links = await nj.$$eval('a[href^="/"]', (as) => [...new Set(as.map((a) => a.getAttribute('href').split('#')[0]))]);
+    for (const h of links) {
+      const res = await fetch(new URL(h, base));
+      if (!res.ok) fail('links', `${page} → ${h} 回應 ${res.status}`);
+    }
+  }
   const hiddenText = await nj.evaluate(() => getComputedStyle(document.querySelector('h1')).opacity);
   if (hiddenText === '0') fail('no-js', '無 JS 時標題不可見');
   await ctx.close();
